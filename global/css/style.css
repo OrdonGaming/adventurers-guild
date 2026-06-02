@@ -1,0 +1,854 @@
+@font-face {
+font-family: "EvilEmpire";
+src: url("../fonts/Evil Empire.otf");
+}
+
+/* ==========================
+Base Page Styles
+========================== */
+
+html {
+min-height: 100%;
+}
+
+body {
+margin: 0;
+font-family: "Times New Roman", Times, serif;
+background-color: #f4f1e8;
+
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+}
+
+/* ==========================
+Type Hierarchy
+========================== */
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: "EvilEmpire", serif;
+    font-size: 72px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family: "EvilEmpire", serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-family: "EvilEmpire", serif;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+p,
+li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.news-date {
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ==========================
+Site Header
+========================== */
+
+.site-title {
+    height: 1.5in;
+    background-color: white;
+    border: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.site-title img {
+    width: 1.25in;
+    height: 1.25in;
+    margin-right: 25px;
+}
+
+.title-text {
+    text-align: center;
+    position: relative;
+}
+
+.title-text h1 {
+    margin: 0;
+    font-size: 72px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.title-text p {
+    font-family: "EvilEmpire", serif;
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+}
+
+.site-title a {
+    text-decoration: none;
+}
+
+.site-title-link {
+    color: inherit;
+}
+
+/* ==========================
+Navigation Bar
+========================== */
+
+.nav-bar {
+height: 0.5in;
+background-color: #2f3a3d;
+border: 2px solid black;
+
+display: flex;
+align-items: center;
+
+position: sticky;
+top: 0;
+z-index: 1000;
+
+}
+
+.nav-bar ul {
+width: 100%;
+margin: 0;
+padding: 0;
+
+list-style-type: none;
+
+display: flex;
+justify-content: space-evenly;
+
+}
+
+.nav-bar li {
+width: 140px;
+text-align: center;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "EvilEmpire", serif;
+    letter-spacing: 1px;
+
+    display: inline-block;
+
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.nav-bar a:hover {
+    color: #d4af37;
+    transform: scale(1.37);
+}
+
+/* ==========================
+Buttons
+========================== */
+
+.guild-button {
+    display: inline-block;
+    padding: 12px 24px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-family: "EvilEmpire", serif;
+    letter-spacing: 2px;
+
+    transition: all 0.2s ease;
+}
+
+.guild-button:hover {
+    background-color: #d4af37;
+    color: #2f3a3d;
+}
+
+/* ==========================
+Page Content
+========================== */
+
+.page-content {
+flex: 1;
+padding: 30px;
+background-color: #f4f1e8;
+border: 2px solid black;
+}
+
+/* ==========================
+Tables
+========================== */
+
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: #f5f5f5;
+margin-top: 20px;
+}
+
+th {
+background-color: #2f3a3d;
+color: white;
+padding: 10px;
+border: 1px solid black;
+}
+
+td {
+padding: 10px;
+border: 1px solid black;
+}
+
+td:nth-child(2) {
+width: 100px;
+height: 40px;
+}
+
+/* ==========================
+Homepage Sections
+========================== */
+
+.upper-content,
+.middle-content,
+.lower-content {
+margin-bottom: 40px;
+}
+
+/* ==========================
+Hero Slider
+========================== */
+
+.hero-slider {
+height: 350px;
+position: relative;
+overflow: hidden;
+border: 2px solid black;
+background-color: black;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+animation: zoom 30s infinite linear;
+}
+
+.slide1 {
+animation: fadeSlide1 30s infinite ease-in-out;
+}
+
+.slide2 {
+animation: fadeSlide2 30s infinite ease-in-out;
+}
+
+.slide3 {
+animation: fadeSlide3 30s infinite ease-in-out;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: white;
+    text-decoration: none;
+
+    background-color: rgba(47, 58, 61, 0.75);
+
+    padding: 20px 40px;
+
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+
+    z-index: 100;
+
+    transition: all 0.3s ease;
+}
+.hero-text:hover {
+    background-color: rgba(212, 175, 55, 0.9);
+
+    color: #2f3a3d;
+
+    transform: translate(-50%, -50%) scale(1.05);
+
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+}
+.hero-text h2,
+.hero-text p {
+    color: inherit;
+}
+
+.hero-text h2 {
+font-size: 42px;
+margin: 0;
+}
+
+.hero-text p {
+font-size: 24px;
+margin-top: 10px;
+}
+
+@keyframes fadeSlide1 {
+0% {
+opacity: 1;
+}
+
+27% {
+opacity: 1;
+}
+
+33% {
+opacity: 0;
+}
+
+94% {
+opacity: 0;
+}
+
+100% {
+opacity: 1;
+}
+}
+
+@keyframes fadeSlide2 {
+0% {
+opacity: 0;
+}
+
+27% {
+opacity: 0;
+}
+
+33% {
+opacity: 1;
+}
+
+60% {
+opacity: 1;
+}
+
+66% {
+opacity: 0;
+}
+
+100% {
+opacity: 0;
+}
+}
+
+@keyframes fadeSlide3 {
+0% {
+opacity: 0;
+}
+
+60% {
+opacity: 0;
+}
+
+66% {
+opacity: 1;
+}
+
+94% {
+opacity: 1;
+}
+
+100% {
+opacity: 0;
+}
+}
+
+@keyframes zoom {
+0% {
+transform: scale(1);
+}
+
+50% {
+transform: scale(1.06);
+}
+
+100% {
+transform: scale(1);
+}
+}
+
+/* ==========================
+Featured Content
+========================== */
+
+.middle-content h2,
+.lower-content h2 {
+text-align: center;
+}
+
+.featured-content {
+display: flex;
+justify-content: space-evenly;
+gap: 20px;
+}
+
+.feature-card {
+width: 30%;
+background-color: #fff8e7;
+border: 2px solid black;
+padding: 15px;
+text-align: center;
+box-sizing: border-box;
+}
+
+.feature-card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border: 1px solid black;
+}
+
+/* ==========================
+Latest News
+========================== */
+
+.latest-news {
+background-color: #fff8e7;
+border: 2px solid black;
+padding: 15px;
+
+display: flex;
+align-items: center;
+gap: 20px;
+
+}
+
+.latest-news img {
+    max-width: 250px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    display: block;
+}
+
+.news-text {
+flex: 1;
+}
+.news-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.news-date {
+    margin: 2px 0 0 0;
+    font-size: 13px;
+    color: #666666;
+    font-style: italic;
+}
+
+/* ==========================
+About Page
+========================== */
+
+.about-upper h2,
+.about-middle h2 {
+    text-align: center;
+}
+
+.about-intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-intro img {
+    width: 40%;
+    max-width: 400px;
+    border: 2px solid black;
+}
+
+.about-intro p {
+    flex: 1;
+}
+
+.about-middle {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.about-values {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    text-align: center;
+}
+
+.about-value-card {
+    width: 30%;
+}
+
+.about-value-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.about-history {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.about-history p {
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+}
+
+.about-values-intro {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+/* ==========================
+About Page Information Cards
+========================== */
+
+.about-info-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.about-info-card {
+    flex: 1;
+
+    background-color: #fff8e7;
+    border: 2px solid black;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.about-info-card h2 {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .about-info-cards {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .about-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-intro img {
+        width: 90%;
+    }
+
+    .about-values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-value-card {
+        width: 90%;
+    }
+
+}
+
+/* ==========================
+Footer
+========================== */
+
+.footer {
+min-height: 1.5in;
+height: auto;
+background-color: #2f3a3d;
+border: 2px solid black;
+color: white;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 15px;
+box-sizing: border-box;
+
+}
+
+.footer-content {
+width: 100%;
+max-width: 1200px;
+
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+.footer-section {
+width: 250px;
+text-align: center;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 2px;
+
+    color: white;
+}
+
+.footer-section ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.footer-section li {
+margin: 0px 0;
+}
+
+.footer-section a {
+font-size: 14px;
+color: white;
+text-decoration: none;
+}
+
+.footer-section a:hover {
+text-decoration: underline;
+}
+
+/* ==========================
+Copyright
+========================== */
+
+.copyright {
+height: 0.25in;
+background-color: #2f3a3d;
+border: 2px solid black;
+
+color: white;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+font-size: 14px;
+
+}
+
+/* ==========================
+Mobile Layout
+========================== */
+
+@media screen and (max-width: 768px) {
+
+.site-title {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.site-title img {
+    width: 1in;
+    height: 1in;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.title-text h1 {
+    font-size: 42px;
+}
+
+.title-text p {
+    font-size: 16px;
+}
+
+.nav-bar {
+    height: auto;
+    padding: 8px 0;
+    overflow: visible;
+    white-space: normal;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.nav-bar li {
+    width: 22%;
+    min-width: 0;
+    flex: 0 0 22%;
+
+    margin: 4px 0;
+    text-align: center;
+}
+
+.nav-bar a {
+    display: block;
+
+    padding: 6px 4px;
+
+    font-size: 13px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.hero-slider {
+    height: 250px;
+}
+
+.hero-text {
+    width: 75%;
+    padding: 15px;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.featured-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card {
+    width: 90%;
+}
+
+.latest-news {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer {
+    height: auto;
+}
+
+.footer-content {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-section {
+    width: 100%;
+}
+}
+
+/* ==========================
+Style Guide Table Mobile
+========================== */
+
+.style-guide-colors table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 9px;
+}
+
+.style-guide-colors th,
+.style-guide-colors td {
+    padding: 3px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
+    text-align: center;
+}
+
+.style-guide-colors th:nth-child(1),
+.style-guide-colors td:nth-child(1) {
+    width: 24%;
+}
+
+.style-guide-colors th:nth-child(2),
+.style-guide-colors td:nth-child(2) {
+    width: 14%;
+}
+
+.style-guide-colors th:nth-child(3),
+.style-guide-colors td:nth-child(3) {
+    width: 22%;
+}
+
+.style-guide-colors th:nth-child(4),
+.style-guide-colors td:nth-child(4) {
+    width: 40%;
+}
