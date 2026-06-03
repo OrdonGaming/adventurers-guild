@@ -818,54 +818,111 @@ About Page Information Cards
 }
 
 /* ==========================
-Rank List
+Ranks Page
 ========================== */
 
-.rank-list {
+.ranks-upper {
     max-width: 900px;
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+}
+
+.rank-list {
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Rank Container */
+
 .rank-row {
+    margin-bottom: 15px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+/* Rank Header */
+
+.rank-row summary {
     display: flex;
     align-items: center;
 
     gap: 20px;
 
-    padding: 15px;
+    padding: 15px 20px;
 
-    margin-bottom: 15px;
+    cursor: pointer;
+
+    list-style: none;
+}
+
+.rank-row summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Rank Icon */
+
+.rank-icon {
+    width: 50px;
+    height: 50px;
 
     border: 2px solid black;
 
-    background-color: #fff8e7;
-
-    text-decoration: none;
-
-    color: black;
-
-    transition: all 0.3s ease;
-}
-
-.rank-row:hover {
     background-color: #d4af37;
 
-    transform: scale(1.02);
+    flex-shrink: 0;
 }
 
-.rank-row img {
-    width: 60px;
-    height: 60px;
-}
+/* Rank Text */
 
-.rank-row h3 {
-    margin: 0;
-
+.rank-name {
     flex: 1;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 24px;
 }
 
-.rank-row span {
+.rank-levels {
     font-style: italic;
+}
+
+/* Expanded Content */
+
+.rank-details {
+    padding: 0 20px 20px 90px;
+}
+
+/* Open State */
+
+.rank-row[open] {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+}
+
+/* Rank Colors */
+
+.bronze-rank {
+    border-left: 10px solid #B08D57;
+}
+
+.silver-rank {
+    border-left: 10px solid #A8A9AD;
+}
+
+.gold-rank {
+    border-left: 10px solid #D4AF37;
+}
+
+.platinum-rank {
+    border-left: 10px solid #D3E5EF;
+}
+
+.adamantine-rank {
+    border-left: 10px solid #BAC8B0;
 }
 
 /* ==========================
