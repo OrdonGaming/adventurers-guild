@@ -849,23 +849,23 @@ Rank Container
 }
 
 .bronze-rank[open] {
-    box-shadow: 0 0 20px rgba(176, 141, 87, 0.75);
+    box-shadow: 0 0 20px #B08D57;
 }
 
 .silver-rank[open] {
-    box-shadow: 0 0 20px rgba(168, 169, 173, 0.75);
+    box-shadow: 0 0 20px #A8A9AD;
 }
 
 .gold-rank[open] {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.75);
+    box-shadow: 0 0 20px #D4AF37;
 }
 
 .platinum-rank[open] {
-    box-shadow: 0 0 20px rgba(211, 229, 239, 0.8);
+    box-shadow: 0 0 20px #D3E5EF;
 }
 
 .adamantine-rank[open] {
-    box-shadow: 0 0 20px rgba(186, 200, 176, 0.8);
+    box-shadow: 0 0 20px #BAC8B0;
 }
 
 /* ==========================
