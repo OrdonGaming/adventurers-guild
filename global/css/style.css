@@ -833,7 +833,9 @@ Ranks Page
     margin: 0 auto;
 }
 
-/* Rank Container */
+/* ==========================
+Rank Container
+========================== */
 
 .rank-row {
     margin-bottom: 15px;
@@ -844,9 +846,21 @@ Ranks Page
     border-radius: 8px;
 
     overflow: hidden;
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
-/* Rank Header */
+.rank-row[open] {
+    transform: scale(1.01);
+
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+}
+
+/* ==========================
+Rank Header
+========================== */
 
 .rank-row summary {
     display: flex;
@@ -865,7 +879,9 @@ Ranks Page
     display: none;
 }
 
-/* Rank Icon */
+/* ==========================
+Rank Icon
+========================== */
 
 .rank-icon {
     width: 50px;
@@ -878,32 +894,46 @@ Ranks Page
     flex-shrink: 0;
 }
 
-/* Rank Text */
+/* ==========================
+Rank Text
+========================== */
 
 .rank-name {
     flex: 1;
 
     font-family: "EvilEmpire", serif;
     font-size: 24px;
+    letter-spacing: 2px;
 }
 
 .rank-levels {
     font-style: italic;
 }
 
-/* Expanded Content */
+/* ==========================
+Expanded Rank Content
+========================== */
 
 .rank-details {
+    max-height: 0;
+    overflow: hidden;
+
+    padding: 0 20px 0 90px;
+
+    transition:
+        max-height 0.4s ease,
+        padding 0.4s ease;
+}
+
+.rank-row[open] .rank-details {
+    max-height: 500px;
+
     padding: 0 20px 20px 90px;
 }
 
-/* Open State */
-
-.rank-row[open] {
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
-}
-
-/* Rank Colors */
+/* ==========================
+Rank Colors
+========================== */
 
 .bronze-rank {
     border-left: 10px solid #B08D57;
