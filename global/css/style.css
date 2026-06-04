@@ -846,15 +846,9 @@ Rank Container
     border-radius: 8px;
 
     overflow: hidden;
-
-    transition:
-        box-shadow 0.45s ease-in-out,
-        transform 0.45s ease-in-out;
 }
 
 .rank-row[open] {
-    transform: scale(1.01);
-
     box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
 }
 
@@ -915,24 +909,6 @@ Expanded Rank Content
 ========================== */
 
 .rank-details {
-    max-height: 0;
-    overflow: hidden;
-
-    opacity: 0;
-
-    padding: 0 20px 0 90px;
-
-    transition:
-        max-height 0.75s ease-in-out,
-        opacity 0.45s ease-in-out,
-        padding 0.55s ease-in-out;
-}
-
-.rank-row[open] .rank-details {
-    max-height: 600px;
-
-    opacity: 1;
-
     padding: 0 20px 20px 90px;
 }
 
@@ -986,10 +962,6 @@ Ranks Page Mobile
     }
 
     .rank-details {
-        padding: 0 15px 0 15px;
-    }
-
-    .rank-row[open] .rank-details {
         padding: 0 15px 20px 15px;
     }
 
