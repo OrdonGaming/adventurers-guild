@@ -961,6 +961,41 @@ Rank Colors
 }
 
 /* ==========================
+Ranks Page Mobile
+========================== */
+
+@media screen and (max-width: 768px) {
+
+    .rank-row summary {
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    .rank-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rank-name {
+        font-size: 20px;
+    }
+
+    .rank-levels {
+        font-size: 14px;
+    }
+
+    .rank-details {
+        padding: 0 15px 0 15px;
+    }
+
+    .rank-row[open] .rank-details {
+        padding: 0 15px 20px 15px;
+    }
+
+}
+
+/* ==========================
 Footer
 ========================== */
 
