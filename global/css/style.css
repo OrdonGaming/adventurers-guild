@@ -848,8 +848,24 @@ Rank Container
     overflow: hidden;
 }
 
-.rank-row[open] {
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+.bronze-rank[open] {
+    box-shadow: 0 0 20px rgba(176, 141, 87, 0.75);
+}
+
+.silver-rank[open] {
+    box-shadow: 0 0 20px rgba(168, 169, 173, 0.75);
+}
+
+.gold-rank[open] {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.75);
+}
+
+.platinum-rank[open] {
+    box-shadow: 0 0 20px rgba(211, 229, 239, 0.8);
+}
+
+.adamantine-rank[open] {
+    box-shadow: 0 0 20px rgba(186, 200, 176, 0.8);
 }
 
 /* ==========================
