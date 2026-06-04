@@ -1220,3 +1220,25 @@ Style Guide Table Mobile
 .style-guide-colors td:nth-child(4) {
     width: 40%;
 }
+
+/* ==========================
+404 / Coming Soon Page
+========================== */
+
+.error-page {
+max-width: 800px;
+margin: 60px auto;
+text-align: center;
+}
+
+.error-code {
+font-family: "EvilEmpire", serif;
+font-size: 72px;
+color: #d4af37;
+margin: 20px 0;
+}
+
+.error-page p {
+max-width: 650px;
+margin: 0 auto 20px auto;
+}
