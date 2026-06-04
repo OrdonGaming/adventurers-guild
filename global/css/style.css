@@ -848,8 +848,8 @@ Rank Container
     overflow: hidden;
 
     transition:
-        box-shadow 0.3s ease,
-        transform 0.3s ease;
+        box-shadow 0.45s ease-in-out,
+        transform 0.45s ease-in-out;
 }
 
 .rank-row[open] {
@@ -918,15 +918,20 @@ Expanded Rank Content
     max-height: 0;
     overflow: hidden;
 
+    opacity: 0;
+
     padding: 0 20px 0 90px;
 
     transition:
-        max-height 0.4s ease,
-        padding 0.4s ease;
+        max-height 0.75s ease-in-out,
+        opacity 0.45s ease-in-out,
+        padding 0.55s ease-in-out;
 }
 
 .rank-row[open] .rank-details {
-    max-height: 500px;
+    max-height: 600px;
+
+    opacity: 1;
 
     padding: 0 20px 20px 90px;
 }
