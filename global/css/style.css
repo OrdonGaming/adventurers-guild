@@ -705,6 +705,10 @@ About Page
     text-align: center;
 }
 
+/* ==========================
+About Upper Section
+========================== */
+
 .about-intro {
     display: flex;
     align-items: center;
@@ -714,6 +718,7 @@ About Page
 .about-intro img {
     width: 40%;
     max-width: 400px;
+
     border: 2px solid black;
 }
 
@@ -721,16 +726,91 @@ About Page
     flex: 1;
 }
 
+/* ==========================
+About Middle Section
+========================== */
+
 .about-middle {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
+    max-width: 1100px;
+    margin: -60px auto 40px auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+
+    align-items: start;
 }
+
+.about-factions {
+    margin-top: 80px;
+
+    background-color: #fff8e7;
+    border: 2px solid black;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.about-factions img {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    border: 2px solid black;
+}
+
+/* ==========================
+Vision / Mission / Values Cards
+========================== */
+
+.about-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-info-card {
+    background-color: #fff8e7;
+    border: 2px solid black;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.about-info-card h2 {
+    margin-top: 0;
+}
+
+/* ==========================
+About History
+========================== */
+
+.about-history {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+}
+
+.about-history p {
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+}
+
+/* ==========================
+About Values
+========================== */
 
 .about-values {
     display: flex;
     justify-content: space-evenly;
     gap: 30px;
+
     text-align: center;
 }
 
@@ -741,69 +821,51 @@ About Page
 .about-value-card img {
     width: 160px;
     height: 160px;
+
     object-fit: cover;
+
     border: 2px solid black;
     border-radius: 50%;
 }
 
-.about-history {
-    max-width: 1000px;
-    margin: 0 auto 40px auto;
-    text-align: center;
-}
+/* ==========================
+About Easter Egg Image
+========================== */
 
-.about-history p {
-    max-width: 900px;
-    margin: 0 auto 15px auto;
-}
-
-.about-values-intro {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    text-align: center;
+.easter-egg-link img {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 /* ==========================
-About Page Information Cards
+About Page Mobile
 ========================== */
-
-.about-info-cards {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
-}
-
-.about-info-card {
-    flex: 1;
-
-    background-color: #fff8e7;
-    border: 2px solid black;
-
-    padding: 20px;
-    text-align: center;
-}
-
-.about-info-card h2 {
-    margin-top: 0;
-}
-
-@media screen and (max-width: 768px) {
-
-    .about-info-cards {
-        flex-direction: column;
-    }
-
-}
 
 @media screen and (max-width: 768px) {
 
     .about-intro {
         flex-direction: column;
+
         text-align: center;
     }
 
     .about-intro img {
         width: 90%;
+    }
+
+    .about-middle {
+        margin: 40px auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .about-factions {
+        margin-top: 0;
+    }
+
+    .about-info-cards {
+        flex-direction: column;
     }
 
     .about-values {
@@ -824,7 +886,6 @@ Ranks Page
 .ranks-upper {
     max-width: 900px;
     margin: 0 auto 40px auto;
-
     text-align: center;
 }
 
@@ -839,14 +900,110 @@ Rank Container
 
 .rank-row {
     margin-bottom: 15px;
-
     background-color: #fff8e7;
-
     border: 2px solid black;
     border-radius: 8px;
-
     overflow: hidden;
 }
+
+/* ==========================
+Rank Layout
+========================== */
+
+.rank-row summary {
+    display: grid;
+    grid-template-columns: 75px 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.rank-row summary::-webkit-details-marker {
+    display: none;
+}
+
+.rank-row[open] summary {
+    grid-template-columns: 210px 1fr auto;
+    min-height: 220px;
+}
+
+/* ==========================
+Rank Icon
+========================== */
+
+.rank-icon {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+
+    justify-self: center;
+    align-self: center;
+
+    transition:
+        width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rank-row[open] .rank-icon {
+    width: 192px;
+    height: 192px;
+}
+
+.rank-row {
+    transition: box-shadow 0.4s ease;
+}
+
+.rank-row summary {
+    transition:
+        grid-template-columns 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        min-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ==========================
+Rank Main Content
+========================== */
+
+.rank-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rank-name {
+    font-family: "EvilEmpire", serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.rank-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.rank-row[open] .rank-details {
+    display: block;
+}
+
+.rank-details p {
+    margin-top: 0;
+}
+
+/* ==========================
+Rank Levels
+========================== */
+
+.rank-levels {
+    font-style: italic;
+    white-space: nowrap;
+    align-self: center;
+}
+
+/* ==========================
+Expanded Rank Glow
+========================== */
 
 .bronze-rank[open] {
     box-shadow: 0 0 20px #B08D57;
@@ -866,66 +1023,6 @@ Rank Container
 
 .adamantine-rank[open] {
     box-shadow: 0 0 20px #BAC8B0;
-}
-
-/* ==========================
-Rank Header
-========================== */
-
-.rank-row summary {
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 15px 20px;
-
-    cursor: pointer;
-
-    list-style: none;
-}
-
-.rank-row summary::-webkit-details-marker {
-    display: none;
-}
-
-/* ==========================
-Rank Icon
-========================== */
-
-.rank-icon {
-    width: 50px;
-    height: 50px;
-
-    border: 2px solid black;
-
-    background-color: #d4af37;
-
-    flex-shrink: 0;
-}
-
-/* ==========================
-Rank Text
-========================== */
-
-.rank-name {
-    flex: 1;
-
-    font-family: "EvilEmpire", serif;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
-
-.rank-levels {
-    font-style: italic;
-}
-
-/* ==========================
-Expanded Rank Content
-========================== */
-
-.rank-details {
-    padding: 0 20px 20px 90px;
 }
 
 /* ==========================
@@ -959,9 +1056,14 @@ Ranks Page Mobile
 @media screen and (max-width: 768px) {
 
     .rank-row summary {
+        grid-template-columns: 55px 1fr;
         gap: 12px;
-
         padding: 12px;
+    }
+
+    .rank-row[open] summary {
+        grid-template-columns: 90px 1fr;
+        min-height: auto;
     }
 
     .rank-icon {
@@ -969,16 +1071,142 @@ Ranks Page Mobile
         height: 40px;
     }
 
+    .rank-row[open] .rank-icon {
+        width: 75px;
+        height: 75px;
+    }
+
     .rank-name {
         font-size: 20px;
     }
 
     .rank-levels {
+        grid-column: 2;
         font-size: 14px;
     }
 
-    .rank-details {
-        padding: 0 15px 20px 15px;
+}
+
+/* ==========================
+Locations Page
+========================== */
+
+.locations-upper {
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+/* ==========================
+Locations Map
+========================== */
+
+.locations-map {
+    display: block;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: auto;
+
+    margin: 30px auto;
+
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+/* ==========================
+Locations Grid
+========================== */
+
+.locations-list {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    justify-items: center;
+}
+
+/* ==========================
+Locations Table
+========================== */
+
+.locations-table {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    align-items: start;
+}
+
+.location-column {
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.location-column summary {
+    cursor: pointer;
+    list-style: none;
+
+    text-align: center;
+}
+
+.location-column summary::-webkit-details-marker {
+    display: none;
+}
+
+.location-column img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+.location-column h3 {
+    margin: 0;
+    padding: 12px;
+
+    background-color: #2f3a3d;
+    color: white;
+}
+
+.location-details {
+    padding: 15px;
+
+    text-align: left;
+}
+
+.location-details ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* ==========================
+Locations Mobile
+========================== */
+
+@media screen and (max-width: 900px) {
+
+    .locations-table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .locations-table {
+        grid-template-columns: 1fr;
     }
 
 }
