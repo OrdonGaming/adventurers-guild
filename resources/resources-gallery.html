@@ -62,202 +62,200 @@ Page Content
 
 <main class="page-content">
 
-    <!-- ==========================
-    Guild Archives Intro
-    ========================== -->
+<section class="gallery-upper">
 
-    <section class="gallery-upper">
+    <h2 class="decorative-header">
+        <span class="line"></span>
+        <span class="star star-left">✦</span>
+        Guild Archives
+        <span class="star star-right">✦</span>
+        <span class="line"></span>
+    </h2>
 
-        <h2 class="decorative-header">
-            <span class="line"></span>
-            <span class="star star-left">✦</span>
-            Guild Archives
-            <span class="star star-right">✦</span>
-            <span class="line"></span>
-        </h2>
+    <p>
+        The Guild Archives preserve artwork, screenshots, campaign moments,
+        maps, character portraits, and legendary memories from adventurers
+        across the realm.
+    </p>
 
-        <p>
-            The Guild Archives preserve artwork, screenshots, campaign moments,
-            maps, character portraits, and legendary memories from adventurers
-            across the realm.
-        </p>
+</section>
 
-    </section>
+<section class="gallery-wrapper">
 
-    <!-- ==========================
-    Gallery Cards and Image Grid
-    ========================== -->
+    <!-- Hidden Gallery Controls -->
 
-    <section class="gallery-wrapper">
+    <input type="radio" name="gallery-choice" id="gallery-none" checked>
 
-        <!-- Hidden Gallery Controls -->
+    <input type="radio" name="gallery-choice" id="expedition-gallery">
+    <input type="radio" name="gallery-choice" id="campaign-gallery">
+    <input type="radio" name="gallery-choice" id="artwork-gallery">
+    <input type="radio" name="gallery-choice" id="map-gallery">
+    <input type="radio" name="gallery-choice" id="portrait-gallery">
+    <input type="radio" name="gallery-choice" id="memory-gallery">
 
-        <input type="radio" name="gallery-choice" id="gallery-none" checked>
+    <!-- Gallery Category Cards -->
 
-        <input type="radio" name="gallery-choice" id="expedition-gallery">
-        <input type="radio" name="gallery-choice" id="campaign-gallery">
-        <input type="radio" name="gallery-choice" id="artwork-gallery">
-        <input type="radio" name="gallery-choice" id="map-gallery">
-        <input type="radio" name="gallery-choice" id="portrait-gallery">
-        <input type="radio" name="gallery-choice" id="memory-gallery">
+    <div class="gallery-grid">
 
-        <!-- Gallery Category Cards -->
+        <label for="expedition-gallery" class="gallery-card">
+            <img src="images/Phandalin_Image_Resized.jpg" alt="Expedition records preview image">
+            <h3>Expedition Records</h3>
+        </label>
 
-        <div class="gallery-grid">
+        <label for="campaign-gallery" class="gallery-card">
+            <img src="images/Oathbound Campaign Cover Image.png" alt="Campaign moments preview image">
+            <h3>Campaign Moments</h3>
+        </label>
 
-            <label for="expedition-gallery" class="gallery-card">
-                <img src="images/gallery-1.jpg" alt="Guild archive image">
-                <h3>Expedition Records</h3>
-            </label>
+        <label for="artwork-gallery" class="gallery-card">
+            <img src="images/gallery-3.jpg" alt="Guild artwork preview image">
+            <h3>Guild Artwork</h3>
+        </label>
 
-            <label for="campaign-gallery" class="gallery-card">
-                <img src="images/gallery-2.jpg" alt="Guild archive image">
-                <h3>Campaign Moments</h3>
-            </label>
+        <label for="map-gallery" class="gallery-card">
+            <img src="images/Map of Faerun.jpg" alt="Map records preview image">
+            <h3>Map Records</h3>
+        </label>
 
-            <label for="artwork-gallery" class="gallery-card">
-                <img src="images/gallery-3.jpg" alt="Guild archive image">
-                <h3>Guild Artwork</h3>
-            </label>
+        <label for="portrait-gallery" class="gallery-card">
+            <img src="images/Oathbound Party.png" alt="Character portraits preview image">
+            <h3>Character Portraits</h3>
+        </label>
 
-            <label for="map-gallery" class="gallery-card">
-                <img src="images/gallery-4.jpg" alt="Guild archive image">
-                <h3>Map Records</h3>
-            </label>
+        <label for="memory-gallery" class="gallery-card">
+            <img src="images/gallery-6.jpg" alt="Adventure memories preview image">
+            <h3>Adventure Memories</h3>
+        </label>
 
-            <label for="portrait-gallery" class="gallery-card">
-                <img src="images/gallery-5.jpg" alt="Guild archive image">
-                <h3>Character Portraits</h3>
-            </label>
+    </div>
 
-            <label for="memory-gallery" class="gallery-card">
-                <img src="images/gallery-6.jpg" alt="Guild archive image">
-                <h3>Adventure Memories</h3>
-            </label>
+    <!-- Gallery Results -->
 
-        </div>
+    <div class="gallery-results">
 
-        <!-- Gallery Results -->
+        <!-- Expedition Records -->
 
-        <div class="gallery-results">
+        <div class="gallery-result expedition-result">
 
-            <!-- Expedition Records -->
-
-            <div class="gallery-result expedition-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
+            <div class="gallery-result-header">
                 <h2>Expedition Records</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/expedition-1.jpg" alt="Expedition archive image">
-                    <img src="images/expedition-2.jpg" alt="Expedition archive image">
-                    <img src="images/expedition-3.jpg" alt="Expedition archive image">
-                    <img src="images/expedition-4.jpg" alt="Expedition archive image">
-                    <img src="images/expedition-5.jpg" alt="Expedition archive image">
-                    <img src="images/expedition-6.jpg" alt="Expedition archive image">
-                </div>
-
+                <label for="gallery-none" class="gallery-close">×</label>
             </div>
 
-            <!-- Campaign Moments -->
-
-            <div class="gallery-result campaign-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
-                <h2>Campaign Moments</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/campaign-1.jpg" alt="Campaign moment image">
-                    <img src="images/campaign-2.jpg" alt="Campaign moment image">
-                    <img src="images/campaign-3.jpg" alt="Campaign moment image">
-                    <img src="images/campaign-4.jpg" alt="Campaign moment image">
-                    <img src="images/campaign-5.jpg" alt="Campaign moment image">
-                    <img src="images/campaign-6.jpg" alt="Campaign moment image">
-                </div>
-
-            </div>
-
-            <!-- Guild Artwork -->
-
-            <div class="gallery-result artwork-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
-                <h2>Guild Artwork</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/artwork-1.jpg" alt="Guild artwork image">
-                    <img src="images/artwork-2.jpg" alt="Guild artwork image">
-                    <img src="images/artwork-3.jpg" alt="Guild artwork image">
-                    <img src="images/artwork-4.jpg" alt="Guild artwork image">
-                    <img src="images/artwork-5.jpg" alt="Guild artwork image">
-                    <img src="images/artwork-6.jpg" alt="Guild artwork image">
-                </div>
-
-            </div>
-
-            <!-- Map Records -->
-
-            <div class="gallery-result map-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
-                <h2>Map Records</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/map-1.jpg" alt="Map archive image">
-                    <img src="images/map-2.jpg" alt="Map archive image">
-                    <img src="images/map-3.jpg" alt="Map archive image">
-                    <img src="images/map-4.jpg" alt="Map archive image">
-                    <img src="images/map-5.jpg" alt="Map archive image">
-                    <img src="images/map-6.jpg" alt="Map archive image">
-                </div>
-
-            </div>
-
-            <!-- Character Portraits -->
-
-            <div class="gallery-result portrait-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
-                <h2>Character Portraits</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/portrait-1.jpg" alt="Character portrait image">
-                    <img src="images/portrait-2.jpg" alt="Character portrait image">
-                    <img src="images/portrait-3.jpg" alt="Character portrait image">
-                    <img src="images/portrait-4.jpg" alt="Character portrait image">
-                    <img src="images/portrait-5.jpg" alt="Character portrait image">
-                    <img src="images/portrait-6.jpg" alt="Character portrait image">
-                </div>
-
-            </div>
-
-            <!-- Adventure Memories -->
-
-            <div class="gallery-result memory-result">
-
-                <label for="gallery-none" class="gallery-close">×</label>
-
-                <h2>Adventure Memories</h2>
-
-                <div class="gallery-image-grid">
-                    <img src="images/memory-1.jpg" alt="Adventure memory image">
-                    <img src="images/memory-2.jpg" alt="Adventure memory image">
-                    <img src="images/memory-3.jpg" alt="Adventure memory image">
-                    <img src="images/memory-4.jpg" alt="Adventure memory image">
-                    <img src="images/memory-5.jpg" alt="Adventure memory image">
-                    <img src="images/memory-6.jpg" alt="Adventure memory image">
-                </div>
-
+            <div class="gallery-image-grid">
+                <img src="images/expedition-1.jpg" alt="Expedition archive image">
+                <img src="images/expedition-2.jpg" alt="Expedition archive image">
+                <img src="images/expedition-3.jpg" alt="Expedition archive image">
+                <img src="images/expedition-4.jpg" alt="Expedition archive image">
+                <img src="images/expedition-5.jpg" alt="Expedition archive image">
+                <img src="images/expedition-6.jpg" alt="Expedition archive image">
             </div>
 
         </div>
 
-    </section>
+        <!-- Campaign Moments -->
+
+        <div class="gallery-result campaign-result">
+
+            <div class="gallery-result-header">
+                <h2>Campaign Moments</h2>
+                <label for="gallery-none" class="gallery-close">×</label>
+            </div>
+
+            <div class="gallery-image-grid">
+                <img src="images/Oathbound Campaign Cover Image.png" alt="Oathbound Campaign Image">
+                <img src="images/campaign-2.jpg" alt="Campaign moment image">
+                <img src="images/campaign-3.jpg" alt="Campaign moment image">
+                <img src="images/campaign-4.jpg" alt="Campaign moment image">
+                <img src="images/campaign-5.jpg" alt="Campaign moment image">
+                <img src="images/campaign-6.jpg" alt="Campaign moment image">
+            </div>
+
+        </div>
+
+        <!-- Guild Artwork -->
+
+        <div class="gallery-result artwork-result">
+
+            <div class="gallery-result-header">
+                <h2>Guild Artwork</h2>
+                <label for="gallery-none" class="gallery-close">×</label>
+            </div>
+
+            <div class="gallery-image-grid">
+                <img src="images/artwork-1.jpg" alt="Guild artwork image">
+                <img src="images/artwork-2.jpg" alt="Guild artwork image">
+                <img src="images/artwork-3.jpg" alt="Guild artwork image">
+                <img src="images/artwork-4.jpg" alt="Guild artwork image">
+                <img src="images/artwork-5.jpg" alt="Guild artwork image">
+                <img src="images/artwork-6.jpg" alt="Guild artwork image">
+            </div>
+
+        </div>
+
+        <!-- Map Records -->
+
+        <div class="gallery-result map-result">
+
+            <div class="gallery-result-header">
+                <h2>Map Records</h2>
+                <label for="gallery-none" class="gallery-close">×</label>
+            </div>
+
+            <div class="gallery-image-grid">
+                <img src="images/map-1.jpg" alt="Map archive image">
+                <img src="images/map-2.jpg" alt="Map archive image">
+                <img src="images/map-3.jpg" alt="Map archive image">
+                <img src="images/map-4.jpg" alt="Map archive image">
+                <img src="images/map-5.jpg" alt="Map archive image">
+                <img src="images/map-6.jpg" alt="Map archive image">
+            </div>
+
+        </div>
+
+        <!-- Character Portraits -->
+
+        <div class="gallery-result portrait-result">
+
+            <div class="gallery-result-header">
+                <h2>Character Portraits</h2>
+                <label for="gallery-none" class="gallery-close">×</label>
+            </div>
+
+            <div class="gallery-image-grid">
+                <img src="images/Baynor_Detsk Character Portrait_1x1.png" alt="Baynor character portrait">
+                <img src="images/Oruson screenshot.png" alt="Oruson character portrait">
+                <img src="images/Scripts Character Portrait.png" alt="Scripts character portrait">
+                <img src="images/Sa'yvia Ve'lephi Character Portrait_1x1.png" alt="Sa'yvia Ve'lephi character portrait">
+                <img src="images/Varis Galanodel.jpeg" alt="Varis Galanodel character portrait">
+                <img src="images/Zaalevaris_Thal'kyrin Character Portrait.png" alt="Zaalevaris Thal'kyrin character portrait">
+            </div>
+
+        </div>
+
+        <!-- Adventure Memories -->
+
+        <div class="gallery-result memory-result">
+
+            <div class="gallery-result-header">
+                <h2>Adventure Memories</h2>
+                <label for="gallery-none" class="gallery-close">×</label>
+            </div>
+
+            <div class="gallery-image-grid">
+                <img src="images/memory-1.jpg" alt="Adventure memory image">
+                <img src="images/memory-2.jpg" alt="Adventure memory image">
+                <img src="images/memory-3.jpg" alt="Adventure memory image">
+                <img src="images/memory-4.jpg" alt="Adventure memory image">
+                <img src="images/memory-5.jpg" alt="Adventure memory image">
+                <img src="images/memory-6.jpg" alt="Adventure memory image">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
@@ -311,10 +309,6 @@ Footer
 </div>
 
 </footer>
-
-<!-- ==========================
-Copyright
-========================== -->
 
 <section class="copyright">
 
