@@ -9,9 +9,14 @@ Document Setup
 ========================== -->
 
 <meta charset="UTF-8">
+
 <title>Resources | The Adventurer's Guild</title>
-<link rel="stylesheet" href="../global/css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+      href="../global/css/style.css">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -24,14 +29,24 @@ Site Header
 <header class="site-title">
 
 <a href="../home/index.html">
-    <img src="../global/images/Adventurers Guild Symbol.jpg" alt="The Adventurer's Guild Logo">
+
+    <img src="../global/images/Adventurers Guild Symbol.jpg"
+         alt="The Adventurer's Guild logo">
+
 </a>
 
 <div class="title-text">
 
-    <a href="../home/index.html" class="site-title-link">
+    <a href="../home/index.html"
+       class="site-title-link">
+
         <h1>The Adventurer's Guild</h1>
+
     </a>
+
+    <p>
+        Strength in Unity, Legacy in Action!
+    </p>
 
 </div>
 
@@ -41,17 +56,60 @@ Site Header
 Navigation Bar
 ========================== -->
 
-<nav class="nav-bar">
+<nav class="nav-bar"
+     aria-label="Main navigation">
 
 <ul>
-    <li><a href="../home/index.html">Home</a></li>
-    <li><a href="../about/about-index.html">About the Guild</a></li>
-    <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
-    <li><a href="../locations/locations-index.html">Guild Locations</a></li>
-    <li><a href="../quests/quests-index.html">Quest Board</a></li>
-    <li><a href="../join/join-index.html">Join the Guild</a></li>
-    <li><a href="../resources/resources-index.html">Resources</a></li>
-    <li><a href="../news/news-index.html">News</a></li>
+
+    <li>
+        <a href="../home/index.html">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="../about/about-index.html">
+            About the Guild
+        </a>
+    </li>
+
+    <li>
+        <a href="../ranks/ranks-index.html">
+            Guild Ranks
+        </a>
+    </li>
+
+    <li>
+        <a href="../locations/locations-index.html">
+            Guild Locations
+        </a>
+    </li>
+
+    <li>
+        <a href="../quests/quests-index.html">
+            Quest Board
+        </a>
+    </li>
+
+    <li>
+        <a href="../join/join-index.html">
+            Join the Guild
+        </a>
+    </li>
+
+    <li>
+        <a href="../resources/resources-index.html"
+           aria-current="page">
+            Resources
+        </a>
+    </li>
+
+    <li>
+        <a href="../news/news-index.html">
+            News
+        </a>
+    </li>
+
 </ul>
 
 </nav>
@@ -62,140 +120,413 @@ Page Content
 
 <main class="page-content">
 
-<h2 class="decorative-header">
+<section class="resources-page">
+
+<!-- ==========================
+Resources Introduction
+========================== -->
+
+<header class="resources-intro">
+
+    <h2 class="decorative-header">
+
         <span class="line"></span>
-        <span class="star star-left">✦</span>
+
+        <span class="star star-left"
+              aria-hidden="true">
+            ✦
+        </span>
+
         Guild Resources
-        <span class="star star-right">✦</span>
+
+        <span class="star star-right"
+              aria-hidden="true">
+            ✦
+        </span>
+
         <span class="line"></span>
+
     </h2>
 
-    <p class="resources-intro">
-        The Resources Hall gathers useful tools, references, records,
-        and creative materials for adventurers and Guild Masters alike.
-        Whether you are preparing for your first quest or building an
-        entire campaign, these resources are here to support your journey.
+    <p>
+        Explore stories, images, guides, templates, and reference
+        materials created for members of the Adventurer's Guild.
+        These resources are available to support both players and
+        Game Masters throughout their adventures.
     </p>
 
+</header>
+
 <!-- ==========================
-Upper Content
+Upper Resources Section
 ========================== -->
 
-<section class="upper-content resources-upper">
+<section class="resources-upper">
 
-<!-- Guild Archives Preview -->
+    <!-- Guild Image Archives -->
 
-    <section class="guild-archives-preview">
+    <article class="resource-feature-card archive-feature-card">
 
-        <h2 class="decorative-header">
-            Guild Image Archives
-        </h2>
+        <a href="gallery-index.html"
+           class="resource-archive-image-link">
 
-        <p class="archives-intro">
-            The Guild Archives preserve stories, expeditions, discoveries,
-            and legendary moments from adventurers across the realm.
-            Browse artwork, campaign moments, guild records, and tales
-            submitted by guild members throughout Oathbound.
+            <img src="images/DnDMemories.png"
+                 alt="Collection of guild expedition images, maps, artwork, and character portraits"
+                 class="resource-archive-image">
+
+        </a>
+
+        <div class="resource-feature-content">
+
+            <h2>Guild Image Archives</h2>
+
+            <p>
+                Explore images collected from guild expeditions,
+                campaigns, settlements, maps, characters, artwork,
+                and memorable moments from across the realm.
+            </p>
+
+            <a href="gallery-index.html"
+               class="guild-button">
+                View the Archives
+            </a>
+
+        </div>
+
+    </article>
+
+    <!-- Submit Your Story -->
+
+    <article class="resource-feature-card">
+
+        <h2>Submit Your Story</h2>
+
+        <p>
+            Share a memorable adventure, character story, campaign
+            moment, piece of artwork, or other contribution with the
+            Adventurer's Guild community.
         </p>
 
-        <a href="resources-gallery.html" class="archive-featured-link">
-
-            <div class="archive-slideshow">
-
-                <img src="images/DnD Memories.png"
-                     alt="Guild Archive Feature">
-
-            </div>
-
-        </a>
-
-        <a href="resources-gallery.html" class="button">
-            View the Guild Archives
-        </a>
-
-    </section>
-
-</section>
-
-<!-- ==========================
-Decorative Divider
-========================== -->
-
-<div class="section-divider"></div>
-
-<!-- ==========================
-Middle Content
-========================== -->
-
-<section class="middle-content resources-middle">
-
-    <section class="guild-submissions">
-
-        <h2 class="decorative-header">
+        <a href="submit-story.html"
+           class="guild-button">
             Submit Your Story
-        </h2>
-
-        <p>
-            Have artwork, screenshots, maps, journal entries,
-            or memorable moments from your campaign?
-            Contribute them to the Guild Archives and help preserve
-            the stories of adventurers throughout the realm.
-        </p>
-
-        <a href="../global/404.html" class="button">
-            Submit Your Contribution
         </a>
 
-    </section>
-
-    <!-- GM & Player Resources -->
-
-    <section class="resources-content">
-
-        <h2>GM &amp; Player Resources</h2>
-
-        <p>
-            This section contains helpful resources for both Adventurers and Guild Masters.
-            Additional handbooks, templates, guides, and tools will be added as they become available.
-        </p>
-
-        <a href="../global/404.html" class="button">
-            View Resources
-        </a>
-
-    </section>
+    </article>
 
 </section>
 
 <!-- ==========================
-Decorative Divider
+Middle Resources Section
 ========================== -->
 
-<div class="section-divider"></div>
+<section class="resources-middle">
+
+    <h2 class="decorative-header resources-section-heading">
+
+        <span class="line"></span>
+
+        <span class="star star-left"
+              aria-hidden="true">
+            ✦
+        </span>
+
+        Guild Reference Tools
+
+        <span class="star star-right"
+              aria-hidden="true">
+            ✦
+        </span>
+
+        <span class="line"></span>
+
+    </h2>
+
+    <!-- ==========================
+    Reference Tool Cards
+    ========================== -->
+
+    <div class="resource-action-grid">
+
+        <!-- NPC Directory -->
+
+        <article class="resource-action-card">
+
+            <h3>NPC Directory</h3>
+
+            <p>
+                Browse important guild members, allies, leaders,
+                merchants, rivals, and other characters found
+                throughout the campaign world.
+            </p>
+
+            <a href="npc-directory.html"
+               class="guild-button">
+                Open Directory
+            </a>
+
+        </article>
+
+        <!-- Quest Templates -->
+
+        <article class="resource-action-card">
+
+            <h3>Quest Templates</h3>
+
+            <p>
+                Use ready-made structures for creating contracts,
+                objectives, rewards, complications, and outcomes
+                for new adventures.
+            </p>
+
+            <a href="quest-templates.html"
+               class="guild-button">
+                View Templates
+            </a>
+
+        </article>
+
+        <!-- Adventure Hooks -->
+
+        <article class="resource-action-card">
+
+            <h3>Adventure Hooks</h3>
+
+            <p>
+                Discover short ideas designed to begin encounters,
+                side quests, mysteries, journeys, and larger
+                campaign storylines.
+            </p>
+
+            <a href="adventure-hooks.html"
+               class="guild-button">
+                Browse Hooks
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
 
 <!-- ==========================
-Lower Content
+Lower Resources Section
 ========================== -->
 
-<section class="lower-content resources-lower">
+<section class="resources-lower">
 
-<!-- Guild Style Guide -->
+    <h2 class="decorative-header resources-section-heading">
 
-    <section class="resource-item">
+        <span class="line"></span>
 
-        <h2>Guild Style Guide</h2>
+        <span class="star star-left"
+              aria-hidden="true">
+            ✦
+        </span>
 
-        <p>
-            Interested in the visual design of The Adventurer's Guild?
-            View the official Style Guide to explore the site's color palette,
-            typography, branding, and design standards.
-        </p>
+        GM &amp; Player Downloads
 
-        <a href="styleguide.html" class="button">
-            View Style Guide
-        </a>
+        <span class="star star-right"
+              aria-hidden="true">
+            ✦
+        </span>
 
-    </section>
+        <span class="line"></span>
+
+    </h2>
+
+    <p class="resources-download-intro">
+        Download guild handbooks, campaign references, rules,
+        and guides for use during play.
+    </p>
+
+    <!-- ==========================
+    Download Columns
+    ========================== -->
+
+    <div class="resource-download-grid">
+
+        <!-- GM Resources -->
+
+        <section class="resource-download-column">
+
+            <h3>Game Master Resources</h3>
+
+            <p>
+                Reference documents for running the guild,
+                preparing adventures, and managing the campaign.
+            </p>
+
+            <ul class="resource-download-list">
+
+                <li>
+
+                    <a href="downloads/Adventurer's Guild Dungeon Master's Guide.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            GM's Guild Handbook
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/code-of-conduct.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Guild Code of Conduct
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/Adventurer's Guide to Furnishings and Decor.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Guide to Furnishings and Decor
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/quest-reward-guide.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Quest Reward Guide
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Player Resources -->
+
+        <section class="resource-download-column">
+
+            <h3>Player Resources</h3>
+
+            <p>
+                Guides and reference materials for creating
+                characters and participating in guild adventures.
+            </p>
+
+            <ul class="resource-download-list">
+
+                <li>
+
+                    <a href="downloads/Adventurer's Guild Player Handbook.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Player's Guild Handbook
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/code-of-conduct.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Guild Code of Conduct
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/character-creation-guide.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Character Creation Guide
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="downloads/adventurer-equipment-guide.pdf"
+                       class="resource-download-link"
+                       download>
+
+                        <span class="resource-download-title">
+                            Adventurer Equipment Guide
+                        </span>
+
+                        <span class="resource-file-type">
+                            PDF
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+</section>
 
 </section>
 
@@ -209,41 +540,110 @@ Footer
 
 <div class="footer-content">
 
+    <!-- Adventurer Resources -->
+
     <section class="footer-section">
 
         <h2>Adventurer Resources</h2>
 
         <ul>
-            <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
-            <li><a href="../quests/quests-index.html">Quest Board</a></li>
-            <li><a href="../join/join-index.html">Join the Guild</a></li>
-            <li><a href="../resources/player-resources.html">Guild Handbook</a></li>
+
+            <li>
+                <a href="../ranks/ranks-index.html">
+                    Guild Ranks
+                </a>
+            </li>
+
+            <li>
+                <a href="../quests/quests-index.html">
+                    Quest Board
+                </a>
+            </li>
+
+            <li>
+                <a href="../join/join-index.html">
+                    Join the Guild
+                </a>
+            </li>
+
+            <li>
+                <a href="downloads/Adventurer's Guild Player Handbook.pdf">
+                    Guild Handbook
+                </a>
+            </li>
+
         </ul>
 
     </section>
+
+    <!-- GM Resources -->
 
     <section class="footer-section">
 
         <h2>GM Resources</h2>
 
         <ul>
-            <li><a href="../locations/locations-index.html">Guild Locations</a></li>
-            <li><a href="../resources/npc-directory.html">NPC Directory</a></li>
-            <li><a href="../resources/gm-resources.html">Quest Templates</a></li>
-            <li><a href="../resources/gm-resources.html">Adventure Hooks</a></li>
+
+            <li>
+                <a href="../locations/locations-index.html">
+                    Guild Locations
+                </a>
+            </li>
+
+            <li>
+                <a href="../resources/npc-directory.html">
+                    NPC Directory
+                </a>
+            </li>
+
+            <li>
+                <a href="../resources/quest-templates.html">
+                    Quest Templates
+                </a>
+            </li>
+
+            <li>
+                <a href="../resources/adventure-hooks.html">
+                    Adventure Hooks
+                </a>
+            </li>
+
         </ul>
 
     </section>
+
+    <!-- Guild Notices -->
 
     <section class="footer-section">
 
         <h2>Guild Notices</h2>
 
         <ul>
-            <li><a href="../news/announcements.html">Latest Announcements</a></li>
-            <li><a href="../news/expeditions.html">Upcoming Expeditions</a></li>
-            <li><a href="../news/events.html">Guild Events</a></li>
-            <li><a href="../resources/code-of-conduct.html">Code of Conduct</a></li>
+
+            <li>
+                <a href="../news/news-index.html#announcements">
+                    Latest Announcements
+                </a>
+            </li>
+
+            <li>
+                <a href="../news/news-index.html#expeditions">
+                    Upcoming Expeditions
+                </a>
+            </li>
+
+            <li>
+                <a href="../news/news-index.html#events">
+                    Guild Events
+                </a>
+            </li>
+
+            <li>
+                <a href="downloads/code-of-conduct.pdf">
+                    Code of Conduct
+                </a>
+            </li>
+
         </ul>
 
     </section>
@@ -258,7 +658,10 @@ Copyright
 
 <section class="copyright">
 
-<p>&copy; 2026 The Adventurer's Guild. All Rights Reserved.</p>
+<p>
+    &copy; 2026 The Adventurer's Guild.
+    All Rights Reserved.
+</p>
 
 </section>
 
