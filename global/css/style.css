@@ -1265,6 +1265,604 @@ Guild Archives Preview
 }
 
 /* ==========================
+Quest Board Page
+========================== */
+
+.quest-board-page {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 40px auto;
+}
+
+.quest-board-intro {
+    max-width: 900px;
+
+    margin: 0 auto 35px auto;
+
+    text-align: center;
+}
+
+.quest-board-intro p {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+/* ==========================
+Hidden Rank Controls
+========================== */
+
+.quest-rank-control {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
+
+/* ==========================
+Quest Rank Tabs
+========================== */
+
+.quest-rank-tabs {
+    border-bottom: 3px solid #2f3a3d;
+}
+
+.quest-rank-tabs ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.quest-rank-tab {
+    display: block;
+
+    padding: 12px 24px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 2px solid black;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.quest-rank-tab:hover {
+    background-color: #d4af37;
+    color: #2f3a3d;
+
+    transform: translateY(-3px);
+}
+
+/* ==========================
+Selected Rank Tabs
+========================== */
+
+#bronze-rank:checked
+~ .quest-rank-tabs
+.bronze-tab,
+
+#silver-rank:checked
+~ .quest-rank-tabs
+.silver-tab,
+
+#gold-rank:checked
+~ .quest-rank-tabs
+.gold-tab,
+
+#platinum-rank:checked
+~ .quest-rank-tabs
+.platinum-tab,
+
+#adamantine-rank:checked
+~ .quest-rank-tabs
+.adamantine-tab {
+    background-color: #d4af37;
+    color: #2f3a3d;
+
+    transform: translateY(3px);
+}
+
+/* ==========================
+Keyboard Focus
+========================== */
+
+#bronze-rank:focus-visible
+~ .quest-rank-tabs
+.bronze-tab,
+
+#silver-rank:focus-visible
+~ .quest-rank-tabs
+.silver-tab,
+
+#gold-rank:focus-visible
+~ .quest-rank-tabs
+.gold-tab,
+
+#platinum-rank:focus-visible
+~ .quest-rank-tabs
+.platinum-tab,
+
+#adamantine-rank:focus-visible
+~ .quest-rank-tabs
+.adamantine-tab {
+    outline: 3px solid #d4af37;
+    outline-offset: 3px;
+}
+
+/* ==========================
+Quest Panels
+========================== */
+
+.quest-panel {
+    display: none;
+
+    padding: 30px;
+
+    background-color: #f4f1e8;
+
+    border: 2px solid black;
+    border-top: none;
+
+    box-sizing: border-box;
+}
+
+#bronze-rank:checked
+~ .bronze-panel,
+
+#silver-rank:checked
+~ .silver-panel,
+
+#gold-rank:checked
+~ .gold-panel,
+
+#platinum-rank:checked
+~ .platinum-panel,
+
+#adamantine-rank:checked
+~ .adamantine-panel {
+    display: block;
+}
+
+/* ==========================
+Quest Rank Headings
+========================== */
+
+.quest-rank-heading {
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.quest-rank-heading h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    font-size: 32px;
+}
+
+.quest-rank-heading p {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+/* ==========================
+Quest Grid
+========================== */
+
+.quest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+/* ==========================
+Quest Cards
+========================== */
+
+.quest-card {
+    min-width: 0;
+    min-height: 260px;
+
+    padding: 18px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.quest-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 12px
+        rgba(0, 0, 0, 0.2);
+}
+
+.quest-number {
+    margin-top: 0;
+
+    color: #6b4e16;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.quest-card h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #2f3a3d;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.quest-card p {
+    overflow-wrap: anywhere;
+}
+
+/* ==========================
+Quest Board Responsive Layout
+========================== */
+
+@media screen and (max-width: 1200px) {
+
+    .quest-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .quest-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .quest-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .quest-rank-tabs li {
+        flex: 1 1 140px;
+    }
+
+    .quest-rank-tab {
+        text-align: center;
+    }
+
+    .quest-panel {
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .quest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quest-rank-tabs li {
+        flex-basis: 100%;
+    }
+
+    .quest-rank-tab {
+        border-bottom: 2px solid black;
+        border-radius: 6px;
+    }
+
+    .quest-rank-tabs {
+        padding-bottom: 10px;
+
+        border-bottom: none;
+    }
+
+    .quest-panel {
+        border-top: 2px solid black;
+    }
+
+}
+
+/* ==========================
+Quest Card Information
+========================== */
+
+.quest-card h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #2f3a3d;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.quest-reward {
+    margin: 0 0 12px 0;
+
+    color: #6b4e16;
+}
+
+.quest-description {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+/* ==========================
+Join Page Introduction
+========================== */
+
+.join-intro {
+    max-width: 900px;
+
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+}
+
+.join-intro p {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+/* ==========================
+Join Page Layout
+========================== */
+
+.join-layout {
+    max-width: 1200px;
+
+    margin: 0 auto 40px auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* ==========================
+Join Page Cards
+========================== */
+
+.join-information,
+.join-form-card {
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+}
+
+.join-information h2,
+.join-form-card h2 {
+    margin-top: 0;
+
+    text-align: center;
+}
+
+.join-information h3 {
+    margin-bottom: 10px;
+}
+
+/* ==========================
+Join Page Table
+========================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.join-table {
+    width: 100%;
+
+    margin-top: 15px;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+.join-table caption {
+    margin-bottom: 10px;
+
+    font-weight: bold;
+    font-style: italic;
+
+    color: #2f3a3d;
+}
+
+.join-table th {
+    background-color: #2f3a3d;
+    color: white;
+
+    padding: 12px;
+
+    border: 1px solid black;
+
+    text-align: left;
+}
+
+.join-table td {
+    padding: 12px;
+
+    border: 1px solid black;
+
+    vertical-align: top;
+}
+
+.join-table tbody tr:nth-child(even) {
+    background-color: #f4f1e8;
+}
+
+/* Overrides the general table rule */
+
+.join-table td:nth-child(2) {
+    width: auto;
+    height: auto;
+}
+
+/* ==========================
+Join Page Form
+========================== */
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+
+    color: #2f3a3d;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #2f3a3d;
+    border-radius: 4px;
+
+    background-color: white;
+    color: #1f1f1f;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: 3px solid #d4af37;
+    outline-offset: 2px;
+}
+
+.join-submit {
+    align-self: flex-start;
+
+    cursor: pointer;
+}
+
+/* ==========================
+Join Form Fieldsets
+========================== */
+
+.join-form fieldset {
+    margin: 0;
+    padding: 20px;
+
+    background-color: #f4f1e8;
+
+    border: 2px solid #2f3a3d;
+    border-radius: 6px;
+}
+
+.join-form legend {
+    padding: 0 10px;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+    color: #2f3a3d;
+}
+
+.join-form fieldset .form-group {
+    margin-bottom: 18px;
+}
+
+.join-form fieldset .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.required-note {
+    margin-top: 0;
+
+    font-style: italic;
+    text-align: center;
+}
+
+/* ==========================
+Join Page Mobile
+========================== */
+
+@media screen and (max-width: 850px) {
+
+    .join-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .join-submit {
+        width: 100%;
+    }
+
+}
+
+/* ==========================
 Guild Submissions
 ========================== */
 
@@ -1276,61 +1874,486 @@ Guild Submissions
 }
 
 /* ==========================
-Resources Gallery Page
+Resources Page
 ========================== */
 
-.gallery-upper {
+.resources-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 40px auto;
+}
+
+/* ==========================
+Resources Introduction
+========================== */
+
+.resources-intro {
     max-width: 900px;
+
     margin: 0 auto 40px auto;
 
     text-align: center;
 }
 
-.gallery-upper p {
+.resources-intro p {
     max-width: 800px;
+
     margin: 0 auto;
 }
 
-.section-divider {
-    width: 80%;
+/* ==========================
+Resources Section Headings
+========================== */
+
+.resources-section-heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.resources-section-heading .line {
+    flex: 1;
+
+    max-width: 200px;
     height: 2px;
-    margin: 50px auto;
 
-    background: linear-gradient(
-        to right,
-        transparent,
-        #D4AF37,
-        transparent
-    );
-
-    position: relative;
+    background-color: #d4af37;
 }
 
-.section-divider::before {
-    content: "✦";
+.resources-section-heading .star {
+    display: inline-block;
 
-    position: absolute;
-    top: -15px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background-color: #f4f1e8;
-
-    padding: 0 15px;
-
-    color: #D4AF37;
-    font-size: 24px;
+    color: #d4af37;
 }
 
-.resources-intro {
+/* ==========================
+Upper Resources Section
+========================== */
+
+.resources-upper {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    margin-bottom: 55px;
+
+    align-items: center;
+}
+
+/* ==========================
+Upper Resource Cards
+========================== */
+
+.resource-feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 30px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
     text-align: center;
 
+    box-sizing: border-box;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.resource-feature-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(0, 0, 0, 0.2);
+}
+
+.resource-feature-card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.resource-feature-card p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.resource-feature-card .guild-button {
+    margin-top: 0;
+}
+
+/* ==========================
+Submit Your Story Card
+========================== */
+
+.resources-upper
+.resource-feature-card:not(.archive-feature-card) {
+    align-self: center;
+
+    min-height: 0;
+}
+
+/* ==========================
+Guild Archive Feature Card
+========================== */
+
+.archive-feature-card {
+    align-self: center;
+
+    padding: 0;
+}
+
+.resource-archive-image-link {
+    display: block;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-bottom: 2px solid black;
+
+    background-color: #2f3a3d;
+}
+
+.resource-archive-image {
+    display: block;
+
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.resource-archive-image-link:hover
+.resource-archive-image,
+
+.resource-archive-image-link:focus
+.resource-archive-image {
+    transform: scale(1.04);
+
+    opacity: 0.9;
+}
+
+.resource-archive-image-link:focus-visible {
+    outline: 4px solid #d4af37;
+    outline-offset: -4px;
+}
+
+.resource-feature-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 25px 30px 30px 30px;
+
+    box-sizing: border-box;
+}
+
+.resource-feature-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.resource-feature-content p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.resource-feature-content .guild-button {
+    margin-top: 0;
+}
+
+/* ==========================
+Middle Resources Section
+========================== */
+
+.resources-middle {
+    margin-bottom: 55px;
+}
+
+/* ==========================
+Reference Tool Grid
+========================== */
+
+.resource-action-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+/* ==========================
+Reference Tool Cards
+========================== */
+
+.resource-action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 280px;
+
+    padding: 25px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.resource-action-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(0, 0, 0, 0.2);
+}
+
+.resource-action-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #2f3a3d;
+}
+
+.resource-action-card p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.resource-action-card .guild-button {
+    margin-top: auto;
+}
+
+/* ==========================
+Lower Resources Section
+========================== */
+
+.resources-lower {
+    margin-bottom: 40px;
+}
+
+.resources-download-intro {
     max-width: 800px;
 
-    margin: 0 auto 40px auto;
+    margin: -10px auto 30px auto;
 
-    line-height: 1.6;
+    text-align: center;
+}
+
+/* ==========================
+Download Columns
+========================== */
+
+.resource-download-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+/* ==========================
+Download Column Cards
+========================== */
+
+.resource-download-column {
+    padding: 25px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.resource-download-column h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+.resource-download-column > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+/* ==========================
+Download Lists
+========================== */
+
+.resource-download-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.resource-download-list li {
+    margin-bottom: 12px;
+}
+
+.resource-download-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Download Links
+========================== */
+
+.resource-download-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 15px;
+
+    background-color: #f4f1e8;
+    color: #2f3a3d;
+
+    border: 2px solid #2f3a3d;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.resource-download-link:hover,
+.resource-download-link:focus {
+    background-color: #d4af37;
+    color: #2f3a3d;
+
+    transform: translateX(4px);
+}
+
+.resource-download-title {
+    font-weight: bold;
+}
+
+.resource-file-type {
+    display: inline-block;
+
+    padding: 3px 7px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ==========================
+Resources Tablet Layout
+========================== */
+
+@media screen and (max-width: 900px) {
+
+    .resource-action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-action-card {
+        min-height: 220px;
+    }
+
+}
+
+/* ==========================
+Resources Mobile Layout
+========================== */
+
+@media screen and (max-width: 700px) {
+
+    .resources-upper,
+    .resource-download-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-upper {
+        align-items: stretch;
+    }
+
+    .resources-upper
+    .resource-feature-card:not(.archive-feature-card) {
+        align-self: stretch;
+    }
+
+    .resource-archive-image {
+        height: 190px;
+    }
+
+    .resources-section-heading {
+        gap: 8px;
+
+        font-size: 28px;
+    }
+
+    .resources-section-heading .line {
+        max-width: 70px;
+    }
+
+    .resources-section-heading .star {
+        font-size: 20px;
+    }
+
+}
+
+/* ==========================
+Resources Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .resources-section-heading .star {
+        animation: none;
+    }
+
+    .resource-feature-card,
+    .resource-action-card,
+    .resource-download-link,
+    .resource-archive-image {
+        transition: none;
+    }
+
 }
 
 /* ==========================
@@ -1610,6 +2633,309 @@ Gallery Mobile
 
     .gallery-image-grid {
         grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+News Page
+========================== */
+
+.news-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 40px auto;
+}
+
+/* ==========================
+News Introduction
+========================== */
+
+.news-intro {
+    max-width: 900px;
+
+    margin: 0 auto 30px auto;
+
+    text-align: center;
+}
+
+.news-intro p {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+/* ==========================
+News Category Links
+========================== */
+
+.news-category-links {
+    margin-bottom: 35px;
+}
+
+.news-category-links ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.news-category-links a {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 2px solid black;
+    border-radius: 6px;
+
+    font-family: "EvilEmpire", serif;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.news-category-links a:hover,
+.news-category-links a:focus {
+    background-color: #d4af37;
+    color: #2f3a3d;
+
+    transform: translateY(-2px);
+}
+
+/* ==========================
+Featured News
+========================== */
+
+.featured-news {
+    margin-bottom: 45px;
+    padding: 30px;
+
+    background-color: #fff8e7;
+
+    border: 3px solid #d4af37;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.featured-news-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.featured-news h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #2f3a3d;
+
+    font-size: 30px;
+}
+
+.featured-news p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+News Sections
+========================== */
+
+.news-section {
+    margin-bottom: 50px;
+
+    scroll-margin-top: 90px;
+}
+
+/* ==========================
+News Section Headings
+========================== */
+
+.news-section-heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.news-section-heading .line {
+    flex: 1;
+
+    max-width: 200px;
+    height: 2px;
+
+    background-color: #d4af37;
+}
+
+.news-section-heading .star {
+    display: inline-block;
+
+    color: #d4af37;
+}
+
+/* ==========================
+News Grid
+========================== */
+
+.news-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+/* ==========================
+News Cards
+========================== */
+
+.news-card {
+    padding: 22px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 6px 12px
+        rgba(0, 0, 0, 0.2);
+}
+
+.news-card h3 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    color: #2f3a3d;
+
+    font-size: 22px;
+}
+
+.news-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+News Labels and Dates
+========================== */
+
+.news-category {
+    display: inline-block;
+
+    margin: 0 0 8px 0;
+    padding: 5px 9px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    font-weight: bold;
+}
+
+.news-card time,
+.featured-news time {
+    color: #6b4e16;
+
+    font-weight: bold;
+}
+
+/* ==========================
+News Page Tablet Layout
+========================== */
+
+@media screen and (max-width: 900px) {
+
+    .news-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ==========================
+News Page Mobile Layout
+========================== */
+
+@media screen and (max-width: 600px) {
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-category-links li,
+    .news-category-links a {
+        width: 100%;
+    }
+
+    .news-category-links a {
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+    .featured-news-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .news-section-heading {
+        gap: 8px;
+
+        font-size: 28px;
+    }
+
+    .news-section-heading .line {
+        max-width: 70px;
+    }
+
+    .news-section-heading .star {
+        font-size: 20px;
+    }
+
+}
+
+/* ==========================
+News Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .news-section-heading .star {
+        animation: none;
     }
 
 }
