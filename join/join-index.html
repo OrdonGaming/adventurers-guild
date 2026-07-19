@@ -9,7 +9,7 @@ Document Setup
 ========================== -->
 
 <meta charset="UTF-8">
-<title>About the Guild | The Adventurer's Guild</title>
+<title>Join the Guild | The Adventurer's Guild</title>
 <link rel="stylesheet" href="../global/css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +24,8 @@ Site Header
 <header class="site-title">
 
 <a href="../home/index.html">
-    <img src="../global/images/Adventurers Guild Symbol.jpg" alt="The Adventurer's Guild Logo">
+    <img src="../global/images/Adventurers Guild Symbol.jpg"
+         alt="The Adventurer's Guild Logo">
 </a>
 
 <div class="title-text">
@@ -32,6 +33,8 @@ Site Header
     <a href="../home/index.html" class="site-title-link">
         <h1>The Adventurer's Guild</h1>
     </a>
+
+    <p>Strength in Unity, Legacy in Action!</p>
 
 </div>
 
@@ -63,12 +66,236 @@ Page Content
 <main class="page-content">
 
 <!-- ==========================
-About the Guild
+Join Introduction
 ========================== -->
 
-<section class="about-content">
+<section class="join-intro">
 
-    <h2>Join the Guild</h2>
+    <h2 class="decorative-header">
+        <span class="line"></span>
+        <span class="star star-left">✦</span>
+        Join the Guild
+        <span class="star star-right">✦</span>
+        <span class="line"></span>
+    </h2>
+
+    <p>
+        The Adventurer's Guild welcomes capable travelers, explorers,
+        scholars, warriors, and problem-solvers from across the realm.
+        Membership provides access to guild resources, contracts,
+        training opportunities, and a community of fellow adventurers.
+    </p>
+
+</section>
+
+<!-- ==========================
+Join Page Layout
+========================== -->
+
+<section class="join-layout">
+
+    <!-- ==========================
+    Guild Information and Table
+    ========================== -->
+
+    <article class="join-information">
+
+        <h2>Before You Apply</h2>
+
+        <p>
+            New members begin at the Bronze Rank and may advance by
+            completing contracts, demonstrating good judgment, and
+            following the Guild Code of Conduct. Applicants should be
+            prepared to provide accurate information and accept the
+            responsibilities that come with guild membership.
+        </p>
+
+        <h3>Basic Membership Expectations</h3>
+
+        <ul>
+            <li>Follow guild rules and posted contract requirements.</li>
+            <li>Treat fellow adventurers and guild staff with respect.</li>
+            <li>Report discoveries, completed quests, and unusual dangers.</li>
+            <li>Protect civilians and avoid unnecessary harm.</li>
+        </ul>
+
+        <h3>Guild Services and Hours</h3>
+
+        <div class="table-wrapper">
+
+            <table class="join-table">
+
+                <caption>
+                    Guild offices, services, and available hours
+                </caption>
+
+                <thead>
+
+                    <tr>
+                        <th scope="col">Guild Office</th>
+                        <th scope="col">Purpose</th>
+                        <th scope="col">Available Hours</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Membership Office</td>
+                        <td>Applications and membership questions</td>
+                        <td>Monday–Friday, 8 a.m.–5 p.m.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Quest Desk</td>
+                        <td>Contracts and quest assignments</td>
+                        <td>Daily, 6 a.m.–8 p.m.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Records Office</td>
+                        <td>Rank, expedition, and discovery records</td>
+                        <td>Monday–Thursday, 9 a.m.–4 p.m.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </article>
+
+    <!-- ==========================
+    Guild Application Form
+    ========================== -->
+
+    <article class="join-form-card">
+
+        <h2>Guild Application</h2>
+
+        <p>
+            Complete the form below to begin your application. A guild
+            representative will use the information provided to identify
+            and contact you.
+        </p>
+
+        <form action="welcome.php"
+      method="post"
+      class="join-form">
+
+    <p class="required-note">
+        All fields are required.
+    </p>
+
+    <!-- Player Information -->
+
+    <fieldset>
+
+        <legend>Player Information</legend>
+
+        <div class="form-group">
+
+            <label for="player-name">
+                Player Name
+            </label>
+
+            <input type="text"
+                   id="player-name"
+                   name="name"
+                   autocomplete="name"
+                   required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input type="email"
+                   id="email"
+                   name="email"
+                   autocomplete="email"
+                   required>
+
+        </div>
+
+    </fieldset>
+
+    <!-- Character Information -->
+
+    <fieldset>
+
+        <legend>Character Information</legend>
+
+        <div class="form-group">
+
+            <label for="character-name">
+                Character Name
+            </label>
+
+            <input type="text"
+                   id="character-name"
+                   name="character-name"
+                   required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="character-species">
+                Character Species
+            </label>
+
+            <input type="text"
+                   id="character-species"
+                   name="character-species"
+                   placeholder="Example: Human, Elf, Dwarf"
+                   required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="character-class">
+                Character Class
+            </label>
+
+            <input type="text"
+                   id="character-class"
+                   name="character-class"
+                   placeholder="Example: Fighter, Wizard, Cleric"
+                   required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="character-level">
+                Character Level
+            </label>
+
+            <input type="number"
+                   id="character-level"
+                   name="character-level"
+                   min="1"
+                   max="20"
+                   required>
+
+        </div>
+
+    </fieldset>
+
+    <input type="submit"
+           class="guild-button join-submit"
+           value="Submit Application">
+
+</form>
+
+    </article>
 
 </section>
 
@@ -140,3 +367,7 @@ Copyright
 <p>&copy; 2026 The Adventurer's Guild. All Rights Reserved.</p>
 
 </section>
+
+</body>
+
+</html>
