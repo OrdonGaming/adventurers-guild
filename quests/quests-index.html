@@ -9,9 +9,14 @@ Document Setup
 ========================== -->
 
 <meta charset="UTF-8">
-<title>About the Guild | The Adventurer's Guild</title>
-<link rel="stylesheet" href="../global/css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quest Board | The Adventurer's Guild</title>
+
+<link rel="stylesheet"
+      href="../global/css/style.css">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -24,14 +29,24 @@ Site Header
 <header class="site-title">
 
 <a href="../home/index.html">
-    <img src="../global/images/Adventurers Guild Symbol.jpg" alt="The Adventurer's Guild Logo">
+
+    <img src="../global/images/Adventurers Guild Symbol.jpg"
+         alt="The Adventurer's Guild logo">
+
 </a>
 
 <div class="title-text">
 
-    <a href="../home/index.html" class="site-title-link">
+    <a href="../home/index.html"
+       class="site-title-link">
+
         <h1>The Adventurer's Guild</h1>
+
     </a>
+
+    <p>
+        Strength in Unity, Legacy in Action!
+    </p>
 
 </div>
 
@@ -41,17 +56,20 @@ Site Header
 Navigation Bar
 ========================== -->
 
-<nav class="nav-bar">
+<nav class="nav-bar"
+     aria-label="Main navigation">
 
 <ul>
+
     <li><a href="../home/index.html">Home</a></li>
     <li><a href="../about/about-index.html">About the Guild</a></li>
     <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
     <li><a href="../locations/locations-index.html">Guild Locations</a></li>
-    <li><a href="../quests/quests-index.html">Quest Board</a></li>
+    <li><a href="../quests/quests-index.html" aria-current="page">Quest Board</a></li>
     <li><a href="../join/join-index.html">Join the Guild</a></li>
     <li><a href="../resources/resources-index.html">Resources</a></li>
     <li><a href="../news/news-index.html">News</a></li>
+
 </ul>
 
 </nav>
@@ -62,13 +80,1649 @@ Page Content
 
 <main class="page-content">
 
+<section class="quest-board-page">
+
 <!-- ==========================
-About the Guild
+Quest Board Introduction
 ========================== -->
 
-<section class="about-content">
+<header class="quest-board-intro">
 
-    <h2>Quests</h2>
+    <h2 class="decorative-header">
+
+        <span class="line"></span>
+
+        <span class="star star-left">
+            ✦
+        </span>
+
+        Quest Board
+
+        <span class="star star-right">
+            ✦
+        </span>
+
+        <span class="line"></span>
+
+    </h2>
+
+    <p>
+        The Quest Board contains contracts submitted by guild offices,
+        local leaders, merchants, travelers, and communities throughout
+        the realm. Select a rank below to view the assignments available
+        to adventurers of that standing.
+    </p>
+
+</header>
+
+<!-- ==========================
+Quest Board Rank Controls
+========================== -->
+
+<section class="quest-board">
+
+    <input type="radio"
+           name="quest-rank"
+           id="bronze-rank"
+           class="quest-rank-control" checked>
+
+    <input type="radio"
+           name="quest-rank"
+           id="silver-rank"
+           class="quest-rank-control">
+
+    <input type="radio"
+           name="quest-rank"
+           id="gold-rank"
+           class="quest-rank-control">
+
+    <input type="radio"
+           name="quest-rank"
+           id="platinum-rank"
+           class="quest-rank-control">
+
+    <input type="radio"
+           name="quest-rank"
+           id="adamantine-rank"
+           class="quest-rank-control">
+
+    <!-- ==========================
+    Rank Tabs
+    ========================== -->
+
+    <div class="quest-rank-tabs"
+         aria-label="Choose a quest rank">
+
+        <ul>
+
+            <li>
+
+                <label for="bronze-rank"
+                       class="quest-rank-tab bronze-tab">
+
+                    Bronze
+
+                </label>
+
+            </li>
+
+            <li>
+
+                <label for="silver-rank"
+                       class="quest-rank-tab silver-tab">
+
+                    Silver
+
+                </label>
+
+            </li>
+
+            <li>
+
+                <label for="gold-rank"
+                       class="quest-rank-tab gold-tab">
+
+                    Gold
+
+                </label>
+
+            </li>
+
+            <li>
+
+                <label for="platinum-rank"
+                       class="quest-rank-tab platinum-tab">
+
+                    Platinum
+
+                </label>
+
+            </li>
+
+            <li>
+
+                <label for="adamantine-rank"
+                       class="quest-rank-tab adamantine-tab">
+
+                    Adamantine
+
+                </label>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+<!-- ==========================
+Bronze Rank Quests
+========================== -->
+
+<section class="quest-panel bronze-panel">
+
+    <header class="quest-rank-heading">
+
+        <h3>Bronze Rank Quests</h3>
+
+        <p>
+            Entry-level contracts intended for new guild members. These quests usually involve local problems, basic investigations, deliveries, and minor dangers.
+        </p>
+
+    </header>
+
+    <div class="quest-grid">
+
+        <article class="quest-card">
+
+            <h4>Missing Herbalist</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 20 gp
+            </p>
+
+            <p class="quest-description">
+                A local herbalist failed to return from gathering plants near the eastern woods. Find them and bring them home safely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Rats in the Cellar</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 10 gp
+            </p>
+
+            <p class="quest-description">
+                Large rats have infested the cellar beneath a neighborhood bakery. Remove them without damaging the stored supplies.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Broken Wagon</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 15 gp
+            </p>
+
+            <p class="quest-description">
+                A merchant wagon has broken down outside town. Guard the cargo while repairs are completed.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Lost Heirloom</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 12 gp
+            </p>
+
+            <p class="quest-description">
+                A family heirloom was lost near the riverbank during a recent storm. Search the area and return it to its owner.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Stray Blink Dog</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 18 gp
+            </p>
+
+            <p class="quest-description">
+                A frightened blink dog has been appearing throughout the market. Capture it safely and locate its owner.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Guard the Orchard</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 14 gp
+            </p>
+
+            <p class="quest-description">
+                Something has been stealing fruit from a nearby orchard at night. Identify the cause and stop the thefts.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Medicine Delivery</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 16 gp
+            </p>
+
+            <p class="quest-description">
+                Deliver a package of medicine to a small village before nightfall. The forest road has recently become unsafe.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Noisy Well</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 12 gp
+            </p>
+
+            <p class="quest-description">
+                Strange scratching noises have been heard beneath the town well. Investigate the source without contaminating the water.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Runaway Goats</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 8 gp
+            </p>
+
+            <p class="quest-description">
+                Six goats escaped from a hillside farm and wandered toward the old ruins. Return as many as possible unharmed.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Lanterns on the Road</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 20 gp
+            </p>
+
+            <p class="quest-description">
+                Travelers report strange lights following them along the northern road. Discover what is causing the lights.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Missing Fishing Nets</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 10 gp
+            </p>
+
+            <p class="quest-description">
+                Several fishing nets have disappeared from the docks. Find the missing equipment and identify who took it.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Escort the Scribe</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 18 gp
+            </p>
+
+            <p class="quest-description">
+                Escort a guild scribe to a nearby monument so they can record its inscriptions and return safely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Abandoned Camp</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 15 gp
+            </p>
+
+            <p class="quest-description">
+                Hunters discovered an abandoned campsite with food still cooking over the fire. Search for the missing campers.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Clear the Millstream</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 12 gp
+            </p>
+
+            <p class="quest-description">
+                Fallen branches and debris have blocked the stream powering the village mill. Clear the obstruction and check for danger.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Stolen Sign</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 7 gp
+            </p>
+
+            <p class="quest-description">
+                The painted sign from a popular tavern disappeared overnight. Recover it before the evening crowd arrives.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Bees in the Bell Tower</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 15 gp
+            </p>
+
+            <p class="quest-description">
+                A swarm of unusually aggressive bees has built a hive inside the town bell tower. Remove or relocate them safely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Tracks Near the Schoolhouse</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 20 gp
+            </p>
+
+            <p class="quest-description">
+                Large animal tracks have appeared near a rural schoolhouse. Identify the creature and prevent it from returning.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Recover the Courier Bag</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 18 gp
+            </p>
+
+            <p class="quest-description">
+                A courier lost a leather message bag while crossing a narrow forest trail. Recover it before its contents are found.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Flooded Shrine</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 16 gp
+            </p>
+
+            <p class="quest-description">
+                Heavy rain has flooded a small roadside shrine. Retrieve the sacred items before the water rises further.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Night Watch at Briar Farm</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 22 gp
+            </p>
+
+            <p class="quest-description">
+                Livestock have been disappearing from Briar Farm after sunset. Stand watch, discover the cause, and protect the remaining animals.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+Silver Rank Quests
+========================== -->
+
+<section class="quest-panel silver-panel">
+
+    <header class="quest-rank-heading">
+
+        <h3>Silver Rank Quests</h3>
+
+        <p>
+            Intermediate contracts intended for experienced and dependable guild members.
+        </p>
+
+    </header>
+
+    <div class="quest-grid">
+
+        <article class="quest-card">
+
+            <h4>Bandits at Hollow Pass</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 45 gp
+            </p>
+
+            <p class="quest-description">
+                A group of bandits has begun stopping merchants at Hollow Pass. Clear the road and recover any stolen goods.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Missing Patrol</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 50 gp
+            </p>
+
+            <p class="quest-description">
+                A town patrol vanished while investigating smoke near the western hills. Find the guards and determine what happened.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Shadows Beneath the Bridge</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 40 gp
+            </p>
+
+            <p class="quest-description">
+                Travelers have reported creatures moving beneath an old stone bridge after sunset. Investigate and make the crossing safe.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Cursed Necklace</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 35 gp
+            </p>
+
+            <p class="quest-description">
+                A merchant purchased a necklace that brings terrible nightmares. Identify the curse and deliver the necklace to the guild.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Wolves of Frostpine</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 45 gp
+            </p>
+
+            <p class="quest-description">
+                An unusually organized wolf pack is attacking travelers near Frostpine Forest. Discover what is controlling their behavior.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Sunken Caravan</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 55 gp
+            </p>
+
+            <p class="quest-description">
+                A merchant caravan was swept into a flooded ravine. Recover the cargo and search for any survivors.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Graveyard Disturbance</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 50 gp
+            </p>
+
+            <p class="quest-description">
+                Several graves have been opened from below. Investigate the cemetery and stop whatever is disturbing the dead.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Escort Through Blackwood</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 40 gp
+            </p>
+
+            <p class="quest-description">
+                Escort a traveling healer through Blackwood Forest while protecting their supplies from thieves and wild creatures.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Silent Mine</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 60 gp
+            </p>
+
+            <p class="quest-description">
+                Workers at a nearby silver mine have stopped responding. Enter the mine and determine why operations suddenly ceased.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Poison in the River</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 50 gp
+            </p>
+
+            <p class="quest-description">
+                Fish are dying downstream from an abandoned workshop. Locate the source of the contamination and stop it.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Stolen Spellbook</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 55 gp
+            </p>
+
+            <p class="quest-description">
+                A wizard's spellbook was stolen from a locked study. Track down the thief before the book is sold or misused.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Harpy Nest on Highcliff</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 60 gp
+            </p>
+
+            <p class="quest-description">
+                Harpies nesting above a mountain road have begun attacking travelers. Drive them away and recover the stolen belongings.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The False Tax Collector</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 35 gp
+            </p>
+
+            <p class="quest-description">
+                Someone posing as a royal tax collector is taking money from nearby villages. Identify and capture the impostor.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Smoke Over Ember Hill</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 45 gp
+            </p>
+
+            <p class="quest-description">
+                Thick smoke rises from tunnels beneath Ember Hill. Investigate the underground chambers before the fire spreads.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Vanishing Livestock</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 40 gp
+            </p>
+
+            <p class="quest-description">
+                Entire animals are disappearing from locked barns without leaving tracks. Watch the farm and uncover the cause.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Ruins of Moonwatch Tower</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 55 gp
+            </p>
+
+            <p class="quest-description">
+                Strange lights are flashing from an abandoned watchtower. Explore the ruins and recover any surviving records.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Bog Witch's Bargain</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 50 gp
+            </p>
+
+            <p class="quest-description">
+                A village elder accepted a bargain from a mysterious figure in the marsh. Learn the terms and break the agreement safely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Rescue at Stonefang Cave</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 60 gp
+            </p>
+
+            <p class="quest-description">
+                Three explorers are trapped inside Stonefang Cave after a collapse. Find another entrance and bring them back alive.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Whispering Scarecrow</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 40 gp
+            </p>
+
+            <p class="quest-description">
+                Farmers claim a scarecrow is moving between fields at night and whispering their names. Investigate the strange figure.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Raiders on the River</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 65 gp
+            </p>
+
+            <p class="quest-description">
+                Armed raiders are attacking cargo boats along the river. Guard the next shipment and locate their hidden base.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+Gold Rank Quests
+========================== -->
+
+<section class="quest-panel gold-panel">
+
+    <header class="quest-rank-heading">
+
+        <h3>Gold Rank Quests</h3>
+
+        <p>
+            Difficult assignments involving serious dangers, complicated objectives, and valuable rewards.
+        </p>
+
+    </header>
+
+    <div class="quest-grid">
+
+        <article class="quest-card">
+
+            <h4>The Ashen Keep</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 120 gp
+            </p>
+
+            <p class="quest-description">
+                Smoke rises from an abandoned fortress where armed figures have gathered. Investigate the keep and remove the threat.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Beast of the Deepwood</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 140 gp
+            </p>
+
+            <p class="quest-description">
+                A massive creature is destroying hunting camps deep within the forest. Track it and end the attacks.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Crimson Masquerade</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 110 gp
+            </p>
+
+            <p class="quest-description">
+                Attend a noble gathering in disguise and identify the assassin believed to be hiding among the guests.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Siege of Dunmere</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 160 gp
+            </p>
+
+            <p class="quest-description">
+                Raiders have surrounded the village of Dunmere. Break through their lines and help defend the settlement.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Petrified Grove</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 125 gp
+            </p>
+
+            <p class="quest-description">
+                Trees, animals, and travelers are turning to stone near an ancient grove. Find the source before it spreads.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Vault Beneath the Cathedral</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 150 gp
+            </p>
+
+            <p class="quest-description">
+                A sealed vault beneath the cathedral has opened on its own. Enter it and recover the missing relics.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Glass Serpent</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 135 gp
+            </p>
+
+            <p class="quest-description">
+                A crystalline serpent has emerged from the desert and begun attacking caravans. Hunt it before trade stops entirely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Plague Ship at Anchor</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 145 gp
+            </p>
+
+            <p class="quest-description">
+                A silent vessel has drifted into the harbor carrying a deadly sickness. Board it and discover what happened.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Fallen Observatory</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 130 gp
+            </p>
+
+            <p class="quest-description">
+                Strange beams of light are firing from a ruined observatory. Disable the device and recover its records.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Prisoners of Ironfang</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 155 gp
+            </p>
+
+            <p class="quest-description">
+                A warband has taken several villagers to Ironfang Hold. Infiltrate the stronghold and rescue the captives.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Drowned Temple</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 140 gp
+            </p>
+
+            <p class="quest-description">
+                A temple has risen from beneath the lake, bringing violent storms with it. Explore the ruins and stop the disturbance.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Dragonfire on the Ridge</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 175 gp
+            </p>
+
+            <p class="quest-description">
+                Flames have been seen near a mountain settlement. Determine whether a dragon is responsible and protect the residents.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Hollow Crown</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 125 gp
+            </p>
+
+            <p class="quest-description">
+                A stolen royal crown is being used in a dark ritual. Recover it before the ceremony is completed.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Storm Over Seawatch</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 150 gp
+            </p>
+
+            <p class="quest-description">
+                An unnatural storm has trapped ships near Seawatch. Reach the lighthouse and restore its magical beacon.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Bone Collector</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 135 gp
+            </p>
+
+            <p class="quest-description">
+                Graves across several villages have been emptied. Track the stolen remains and stop whoever is gathering them.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Ambush at King's Crossing</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 145 gp
+            </p>
+
+            <p class="quest-description">
+                An important envoy must cross hostile territory. Protect the delegation and uncover who ordered the attack.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Burning Archive</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 120 gp
+            </p>
+
+            <p class="quest-description">
+                Magical flames are consuming a historic archive. Rescue the trapped scholars and save the most valuable records.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Echoes of the Undercrypt</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 160 gp
+            </p>
+
+            <p class="quest-description">
+                Voices beneath the royal cemetery are calling people underground. Enter the crypt and silence the source.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Ironwood Rebellion</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 170 gp
+            </p>
+
+            <p class="quest-description">
+                A fortified logging camp has been seized by armed rebels. Recover the camp while protecting the workers inside.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Heart of the Volcano</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 190 gp
+            </p>
+
+            <p class="quest-description">
+                A magical disturbance is awakening a dormant volcano. Enter the ancient tunnels and stabilize the source.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+Platinum Rank Quests
+========================== -->
+
+<section class="quest-panel platinum-panel">
+
+    <header class="quest-rank-heading">
+
+        <h3>Platinum Rank Quests</h3>
+
+        <p>
+            High-risk contracts reserved for accomplished, trusted, and well-equipped adventurers.
+        </p>
+
+    </header>
+
+    <div class="quest-grid">
+
+        <article class="quest-card">
+
+            <h4>The Lich of Blackstone Abbey</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 350 gp
+            </p>
+
+            <p class="quest-description">
+                An ancient lich has awakened beneath Blackstone Abbey. Enter the ruins, destroy its phylactery, and end its return.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Dragon Beneath the Capital</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 400 gp
+            </p>
+
+            <p class="quest-description">
+                A sleeping dragon is stirring beneath the royal district. Reach its lair before it awakens beneath the city.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Shattered Portal</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 325 gp
+            </p>
+
+            <p class="quest-description">
+                A damaged portal is releasing hostile creatures into the countryside. Secure the site and close the gateway.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Siege of the Sky Fortress</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 450 gp
+            </p>
+
+            <p class="quest-description">
+                A floating fortress is attacking settlements from above. Board the stronghold and disable its magical weapons.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Frozen King</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 375 gp
+            </p>
+
+            <p class="quest-description">
+                An undead monarch has emerged from a glacier with an army of frozen warriors. Stop their advance into the northern valleys.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Prison of the Fire Titan</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 425 gp
+            </p>
+
+            <p class="quest-description">
+                The seals holding a fire titan beneath the mountains are failing. Restore them before the creature escapes.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Crimson Fleet</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 390 gp
+            </p>
+
+            <p class="quest-description">
+                A fleet of enchanted warships is blockading the coast. Infiltrate the command vessel and break the fleet's control.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The City Without Shadows</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 340 gp
+            </p>
+
+            <p class="quest-description">
+                Every shadow in a remote city has vanished, along with several residents. Discover what is taking them.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Hunt for the World Serpent</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 500 gp
+            </p>
+
+            <p class="quest-description">
+                A colossal serpent has awakened beneath the sea. Track its movements and prevent it from reaching the mainland.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Cursed Battlefield</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 325 gp
+            </p>
+
+            <p class="quest-description">
+                Fallen soldiers rise each night on an abandoned battlefield. Find the source of the curse and lay the army to rest.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Vault of the First Mage</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 450 gp
+            </p>
+
+            <p class="quest-description">
+                A legendary magical vault has opened beneath the desert. Recover its central artifact before rival factions arrive.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Devouring Mist</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 360 gp
+            </p>
+
+            <p class="quest-description">
+                A living mist is consuming villages and leaving no survivors. Enter the fog and destroy the creature controlling it.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Fall of the Iron Colossus</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 475 gp
+            </p>
+
+            <p class="quest-description">
+                An ancient metal war machine is marching toward the capital. Climb aboard and disable its magical core.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Queen's Doppelganger</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 350 gp
+            </p>
+
+            <p class="quest-description">
+                Evidence suggests an impostor has replaced the queen. Reveal the deception without endangering the royal family.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Bleeding Mountain</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 400 gp
+            </p>
+
+            <p class="quest-description">
+                Red liquid is pouring from a sacred mountain while creatures flee its caves. Enter the depths and stop the disturbance.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Sunken Citadel</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 425 gp
+            </p>
+
+            <p class="quest-description">
+                A lost citadel has risen from the ocean surrounded by violent currents. Explore it and recover the royal seal within.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Night of Endless Moonlight</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 375 gp
+            </p>
+
+            <p class="quest-description">
+                The moon has remained fixed over one region for several days. Locate the ritual causing the unnatural night.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Hollow Giant</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 390 gp
+            </p>
+
+            <p class="quest-description">
+                A dead giant is walking toward a major trade city. Enter its hollow body and destroy the magic moving it.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Fortress of the Fallen Angel</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 500 gp
+            </p>
+
+            <p class="quest-description">
+                A fallen celestial has seized a mountain fortress and gathered devoted followers. Defeat it before its army marches.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Crown of Storms</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 550 gp
+            </p>
+
+            <p class="quest-description">
+                A stolen crown is creating storms across the kingdom. Recover the artifact and defeat the warlord who controls it.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+Adamantine Rank Quests
+========================== -->
+
+<section class="quest-panel adamantine-panel">
+
+    <header class="quest-rank-heading">
+
+        <h3>Adamantine Rank Quests</h3>
+
+        <p>
+            Legendary assignments involving dangers that may threaten entire nations, regions, or realms.
+        </p>
+
+    </header>
+
+    <div class="quest-grid">
+
+        <article class="quest-card">
+
+            <h4>The End of the Sun</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,500 gp
+            </p>
+
+            <p class="quest-description">
+                The sun is growing weaker each day. Recover the stolen celestial flame before the world is covered in darkness.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Worldroot Blight</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,250 gp
+            </p>
+
+            <p class="quest-description">
+                A magical disease is spreading through the roots beneath the realm. Find its source before every forest withers.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>War of the Five Dragons</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,000 gp
+            </p>
+
+            <p class="quest-description">
+                Five ancient dragons are preparing for war. Prevent the conflict before their armies destroy the surrounding kingdoms.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Broken Moon</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,800 gp
+            </p>
+
+            <p class="quest-description">
+                Pieces of the moon are falling toward the world. Reach an ancient observatory and restore the celestial barrier.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Throne of the Void Emperor</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,200 gp
+            </p>
+
+            <p class="quest-description">
+                A forgotten emperor has returned from beyond reality. Enter his fortress and destroy the throne anchoring him to the world.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Last Abyssal Gate</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,600 gp
+            </p>
+
+            <p class="quest-description">
+                The final seal on an ancient gate has failed. Close the portal before an invading army enters the realm.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Clockwork Apocalypse</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,700 gp
+            </p>
+
+            <p class="quest-description">
+                An army of ancient machines has awakened beneath the capital. Destroy their command engine before they begin their conquest.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Sea That Rose</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,400 gp
+            </p>
+
+            <p class="quest-description">
+                The ocean is rising without warning and swallowing coastal cities. Find the artifact controlling the tides.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Dreaming God</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,500 gp
+            </p>
+
+            <p class="quest-description">
+                A sleeping god is reshaping reality through its dreams. Enter the dream realm and awaken it safely.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Crownless King</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,350 gp
+            </p>
+
+            <p class="quest-description">
+                An immortal king is raising the dead across the northern kingdoms. Recover his crown and end his command.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Silence Between Stars</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,100 gp
+            </p>
+
+            <p class="quest-description">
+                Magic is disappearing wherever a strange darkness crosses the sky. Discover what is consuming the realm's power.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Titan Beneath the World</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,300 gp
+            </p>
+
+            <p class="quest-description">
+                Earthquakes signal that an ancient titan is awakening underground. Restore its chains before it reaches the surface.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Black Comet</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,900 gp
+            </p>
+
+            <p class="quest-description">
+                A comet carrying a hostile creature is approaching the world. Redirect it or destroy what waits inside.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The City Beyond Time</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,650 gp
+            </p>
+
+            <p class="quest-description">
+                An entire city has vanished from history. Enter the broken timeline and return it before the change becomes permanent.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Devourer of Names</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,450 gp
+            </p>
+
+            <p class="quest-description">
+                A creature is erasing people from memory and written history. Find it before the realm forgets its own rulers.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Ashes of Heaven</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,400 gp
+            </p>
+
+            <p class="quest-description">
+                Burning fragments are falling from the celestial realm. Stop the war above before it destroys the world below.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Realm Without Dawn</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,750 gp
+            </p>
+
+            <p class="quest-description">
+                One kingdom has been trapped in endless night. Defeat the power holding back the sunrise.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Fractured Leylines</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 1,550 gp
+            </p>
+
+            <p class="quest-description">
+                The magical pathways beneath the realm are breaking apart. Repair their central nexus before magic becomes unstable.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>Return of the First Wyrm</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 2,600 gp
+            </p>
+
+            <p class="quest-description">
+                The oldest dragon has awakened and demanded control of the realm. Defeat it or find a way to prevent its invasion.
+            </p>
+
+        </article>
+
+        <article class="quest-card">
+
+            <h4>The Final Seal</h4>
+
+            <p class="quest-reward">
+                <strong>Reward:</strong> 3,000 gp
+            </p>
+
+            <p class="quest-description">
+                The prison holding an ancient world-ending entity is collapsing. Restore the final seal before the creature escapes.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
 
 </section>
 
@@ -137,6 +1791,13 @@ Copyright
 
 <section class="copyright">
 
-<p>&copy; 2026 The Adventurer's Guild. All Rights Reserved.</p>
+<p>
+    &copy; 2026 The Adventurer's Guild.
+    All Rights Reserved.
+</p>
 
 </section>
+
+</body>
+
+</html>
