@@ -14,6 +14,9 @@ min-height: 100%;
 body {
 margin: 0;
 font-family: "Times New Roman", Times, serif;
+font-size: 18px;
+line-height: 1.6;
+
 background-color: #f4f1e8;
 
 display: flex;
@@ -25,12 +28,6 @@ min-height: 100vh;
 /* ==========================
 Type Hierarchy
 ========================== */
-
-body {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    line-height: 1.6;
-}
 
 h1 {
     font-family: "EvilEmpire", serif;
@@ -892,14 +889,34 @@ Ranks Page
 ========================== */
 
 .ranks-upper {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
+    max-width: 950px;
+
+    margin: 0 auto 45px auto;
+
     text-align: center;
 }
 
+.ranks-upper h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.ranks-upper p {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    line-height: 1.75;
+}
+
+/* ==========================
+Rank List
+========================== */
+
 .rank-list {
     max-width: 1000px;
-    margin: 0 auto;
+
+    margin: 0 auto 65px auto;
 }
 
 /* ==========================
@@ -908,10 +925,15 @@ Rank Container
 
 .rank-row {
     margin-bottom: 15px;
+
     background-color: #fff8e7;
+
     border: 2px solid black;
     border-radius: 8px;
+
     overflow: hidden;
+
+    transition: box-shadow 0.4s ease;
 }
 
 /* ==========================
@@ -921,11 +943,22 @@ Rank Layout
 .rank-row summary {
     display: grid;
     grid-template-columns: 75px 1fr auto;
+
     gap: 20px;
+
     align-items: center;
+
     padding: 15px 20px;
+
     cursor: pointer;
+
     list-style: none;
+
+    transition:
+        grid-template-columns 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        min-height 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .rank-row summary::-webkit-details-marker {
@@ -934,6 +967,7 @@ Rank Layout
 
 .rank-row[open] summary {
     grid-template-columns: 210px 1fr auto;
+
     min-height: 220px;
 }
 
@@ -951,23 +985,15 @@ Rank Icon
     align-self: center;
 
     transition:
-        width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-        height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        width 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .rank-row[open] .rank-icon {
     width: 192px;
     height: 192px;
-}
-
-.rank-row {
-    transition: box-shadow 0.4s ease;
-}
-
-.rank-row summary {
-    transition:
-        grid-template-columns 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-        min-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ==========================
@@ -988,6 +1014,7 @@ Rank Main Content
 
 .rank-details {
     display: none;
+
     margin-top: 10px;
 }
 
@@ -1004,9 +1031,11 @@ Rank Levels
 ========================== */
 
 .rank-levels {
-    font-style: italic;
-    white-space: nowrap;
     align-self: center;
+
+    font-style: italic;
+
+    white-space: nowrap;
 }
 
 /* ==========================
@@ -1014,23 +1043,23 @@ Expanded Rank Glow
 ========================== */
 
 .bronze-rank[open] {
-    box-shadow: 0 0 20px #B08D57;
+    box-shadow: 0 0 20px #b08d57;
 }
 
 .silver-rank[open] {
-    box-shadow: 0 0 20px #A8A9AD;
+    box-shadow: 0 0 20px #a8a9ad;
 }
 
 .gold-rank[open] {
-    box-shadow: 0 0 20px #D4AF37;
+    box-shadow: 0 0 20px #d4af37;
 }
 
 .platinum-rank[open] {
-    box-shadow: 0 0 20px #D3E5EF;
+    box-shadow: 0 0 20px #d3e5ef;
 }
 
 .adamantine-rank[open] {
-    box-shadow: 0 0 20px #BAC8B0;
+    box-shadow: 0 0 20px #bac8b0;
 }
 
 /* ==========================
@@ -1038,23 +1067,416 @@ Rank Colors
 ========================== */
 
 .bronze-rank {
-    border-left: 10px solid #B08D57;
+    border-left: 10px solid #b08d57;
 }
 
 .silver-rank {
-    border-left: 10px solid #A8A9AD;
+    border-left: 10px solid #a8a9ad;
 }
 
 .gold-rank {
-    border-left: 10px solid #D4AF37;
+    border-left: 10px solid #d4af37;
 }
 
 .platinum-rank {
-    border-left: 10px solid #D3E5EF;
+    border-left: 10px solid #d3e5ef;
 }
 
 .adamantine-rank {
-    border-left: 10px solid #BAC8B0;
+    border-left: 10px solid #bac8b0;
+}
+
+/* ==========================
+Rank Advancement Section
+========================== */
+
+.rank-advancement {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 50px auto;
+
+    scroll-margin-top: 90px;
+}
+
+/* ==========================
+Rank Advancement Introduction
+========================== */
+
+.rank-advancement-intro {
+    max-width: 950px;
+
+    margin: 0 auto 35px auto;
+
+    text-align: center;
+}
+
+.rank-advancement-intro h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.rank-advancement-intro p {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    line-height: 1.75;
+}
+
+/* ==========================
+Advancement Steps
+========================== */
+
+.rank-advancement-steps {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+/* ==========================
+Advancement Step Cards
+========================== */
+
+.advancement-step {
+    position: relative;
+
+    padding: 70px 25px 25px 25px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.advancement-step:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 7px 14px
+        rgba(0, 0, 0, 0.18);
+}
+
+.advancement-step h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #2f3a3d;
+}
+
+.advancement-step p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.advancement-step p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Advancement Step Numbers
+========================== */
+
+.advancement-number {
+    position: absolute;
+
+    top: -24px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #2f3a3d;
+    color: #d4af37;
+
+    border: 3px solid #d4af37;
+    border-radius: 50%;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 30px;
+    line-height: 1;
+
+    box-shadow:
+        0 0 14px
+        rgba(212, 175, 55, 0.35);
+}
+
+/* ==========================
+Rank Rule Grid
+========================== */
+
+.rank-rule-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+/* ==========================
+Rank Rule Cards
+========================== */
+
+.rank-rule-card {
+    padding: 25px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.rank-rule-card h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    color: #2f3a3d;
+
+    text-align: center;
+}
+
+.rank-rule-card ul {
+    margin: 0;
+
+    padding-left: 24px;
+}
+
+.rank-rule-card li {
+    margin-bottom: 12px;
+}
+
+.rank-rule-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Dungeon Master Guidance
+========================== */
+
+.rank-dm-guidance {
+    max-width: 950px;
+
+    margin: 0 auto;
+    padding: 28px 35px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 3px solid #d4af37;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    scroll-margin-top: 90px;
+
+    box-shadow:
+        0 6px 14px
+        rgba(0, 0, 0, 0.18);
+}
+
+.rank-dm-guidance h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.rank-dm-guidance p {
+    max-width: 850px;
+
+    margin: 0 auto 15px auto;
+}
+
+.rank-dm-guidance p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Hidden Achievement Trigger
+========================== */
+
+.rank-achievement-trigger,
+.rank-achievement-trigger:link,
+.rank-achievement-trigger:visited {
+    display: inline-block;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+/* Remove hover glow and movement */
+
+.rank-achievement-trigger:hover,
+.rank-achievement-trigger:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+    text-shadow: none;
+
+    transform: none;
+}
+
+.rank-achievement-trigger:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 5px;
+}
+
+/* ==========================
+Achievement 3 Lightbox
+========================== */
+
+#achievement-3 {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+}
+
+#achievement-3:target {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+Achievement Image Link
+========================== */
+
+#achievement-3 > a:not(.lightbox-close) {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Achievement Image
+========================== */
+
+#achievement-3 img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #d4af37;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================
+Achievement Close Button
+========================== */
+
+#achievement-3 .lightbox-close {
+    position: fixed;
+
+    top: 18px;
+    right: 28px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 10001;
+}
+
+#achievement-3 .lightbox-close:hover,
+#achievement-3 .lightbox-close:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Ranks Page Tablet
+========================== */
+
+@media screen and (max-width: 950px) {
+
+    .rank-advancement-steps {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .advancement-step {
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        padding-top: 55px;
+    }
+
 }
 
 /* ==========================
@@ -1063,14 +1485,22 @@ Ranks Page Mobile
 
 @media screen and (max-width: 768px) {
 
+    .ranks-upper,
+    .rank-advancement-intro {
+        margin-bottom: 35px;
+    }
+
     .rank-row summary {
         grid-template-columns: 55px 1fr;
+
         gap: 12px;
+
         padding: 12px;
     }
 
     .rank-row[open] summary {
         grid-template-columns: 90px 1fr;
+
         min-height: auto;
     }
 
@@ -1090,7 +1520,692 @@ Ranks Page Mobile
 
     .rank-levels {
         grid-column: 2;
+
         font-size: 14px;
+    }
+
+    .rank-rule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rank-dm-guidance {
+        padding: 25px 20px;
+    }
+
+    #achievement-3 {
+        padding: 18px;
+    }
+
+    #achievement-3 img {
+        max-width: 94vw;
+        max-height: 84vh;
+    }
+
+}
+
+/* ==========================
+Ranks Page Small Mobile
+========================== */
+
+@media screen and (max-width: 500px) {
+
+    .ranks-upper .decorative-header,
+    .rank-advancement-intro .decorative-header {
+        gap: 7px;
+
+        font-size: 27px;
+    }
+
+    .ranks-upper .decorative-header .line,
+    .rank-advancement-intro .decorative-header .line {
+        max-width: 40px;
+    }
+
+    .rank-row[open] summary {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .rank-row[open] .rank-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .rank-main {
+        align-items: center;
+    }
+
+    .rank-levels {
+        grid-column: 1;
+    }
+
+    .advancement-step,
+    .rank-rule-card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #achievement-3 {
+        padding: 10px;
+    }
+
+    #achievement-3 img {
+        max-width: 96vw;
+        max-height: 82vh;
+    }
+
+    #achievement-3 .lightbox-close {
+        top: 10px;
+        right: 15px;
+
+        font-size: 42px;
+    }
+
+}
+
+/* ==========================
+Ranks Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .rank-row,
+    .rank-row summary,
+    .rank-icon,
+    .advancement-step {
+        transition: none;
+    }
+
+}
+
+/* ==========================
+Rank Detail Pages
+========================== */
+
+.bronze-theme {
+    --rank-accent: #b08d57;
+}
+
+.silver-theme {
+    --rank-accent: #a8a9ad;
+}
+
+.gold-theme {
+    --rank-accent: #d4af37;
+}
+
+.platinum-theme {
+    --rank-accent: #d3e5ef;
+}
+
+.adamantine-theme {
+    --rank-accent: #bac8b0;
+}
+
+/* ==========================
+Rank Detail Hero
+========================== */
+
+.rank-detail-hero {
+    display: grid;
+    grid-template-columns:
+        240px minmax(0, 1fr);
+
+    gap: 40px;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 55px auto;
+    padding: 35px;
+
+    background-color: #fff8e7;
+
+    border: 3px solid var(--rank-accent);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 7px 16px
+        rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================
+Rank Detail Emblem
+========================== */
+
+.rank-detail-emblem {
+    display: block;
+
+    width: 220px;
+    height: 220px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+/* ==========================
+Rank Detail Hero Text
+========================== */
+
+.rank-detail-hero-text h2 {
+    margin: 0 0 8px 0;
+
+    color: #2f3a3d;
+
+    font-size: 52px;
+    letter-spacing: 3px;
+}
+
+.rank-detail-kicker {
+    margin: 0 0 8px 0;
+
+    color: #6b4e16;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.rank-detail-levels {
+    margin: 0 0 18px 0;
+
+    color: #6b4e16;
+
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ==========================
+Rank Detail Sections
+========================== */
+
+.rank-detail-section {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto 55px auto;
+}
+
+.rank-detail-intro {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    line-height: 1.75;
+    text-align: center;
+}
+
+/* ==========================
+Rank Stage Grid
+========================== */
+
+.rank-stage-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+/* ==========================
+Rank Stage Cards
+========================== */
+
+.rank-stage-card {
+    position: relative;
+
+    padding:
+        55px 25px
+        25px 25px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-top: 8px solid var(--rank-accent);
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Rank Stage Number
+========================== */
+
+.rank-stage-number {
+    position: absolute;
+
+    top: -22px;
+    left: 25px;
+
+    padding: 9px 18px;
+
+    background-color: #2f3a3d;
+    color: var(--rank-accent);
+
+    border: 3px solid var(--rank-accent);
+    border-radius: 24px;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+/* ==========================
+Rank Stage Level
+========================== */
+
+.rank-stage-level {
+    margin: 0 0 15px 0;
+
+    color: #6b4e16;
+
+    font-weight: bold;
+    text-align: right;
+}
+
+/* ==========================
+Rank Stage Lists
+========================== */
+
+.rank-stage-card ul {
+    margin: 0;
+
+    padding-left: 24px;
+}
+
+.rank-stage-card li {
+    margin-bottom: 12px;
+}
+
+/* ==========================
+Rank Training Panel
+========================== */
+
+.rank-training-panel {
+    display: grid;
+    grid-template-columns:
+        260px minmax(0, 1fr);
+
+    gap: 30px;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 55px auto;
+    padding: 30px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 3px solid var(--rank-accent);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Rank Training Heading
+========================== */
+
+.rank-training-heading {
+    text-align: center;
+}
+
+.rank-training-heading .rank-detail-kicker,
+.rank-training-heading h2 {
+    color: var(--rank-accent);
+}
+
+.rank-training-heading h2 {
+    margin: 0;
+}
+
+/* ==========================
+Rank Training Content
+========================== */
+
+.rank-training-content p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+Rank Benefit Grid
+========================== */
+
+.rank-benefit-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+/* ==========================
+Rank Benefit Cards
+========================== */
+
+.rank-benefit-card {
+    padding: 24px;
+
+    background-color: #fff8e7;
+
+    border: 2px solid black;
+    border-left: 8px solid var(--rank-accent);
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+.rank-benefit-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #2f3a3d;
+}
+
+/* ==========================
+Quest Reward Table Wrapper
+========================== */
+
+.quest-reward-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+/* ==========================
+Quest Reward Table
+========================== */
+
+.quest-reward-table {
+    width: 100%;
+    min-width: 760px;
+
+    border-collapse: collapse;
+
+    background-color: #fff8e7;
+}
+
+/* ==========================
+Quest Reward Table Caption
+========================== */
+
+.quest-reward-table caption {
+    padding: 16px;
+
+    background-color: #2f3a3d;
+    color: var(--rank-accent);
+
+    font-family: "EvilEmpire", serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* ==========================
+Quest Reward Table Cells
+========================== */
+
+.quest-reward-table th,
+.quest-reward-table td {
+    padding: 14px 16px;
+
+    border: 1px solid #555;
+
+    text-align: center;
+}
+
+/* ==========================
+Quest Reward Table Header
+========================== */
+
+.quest-reward-table thead th {
+    background-color: var(--rank-accent);
+    color: #1f1f1f;
+}
+
+/* ==========================
+Quest Type Column
+========================== */
+
+.quest-reward-table tbody th {
+    width: 55%;
+
+    text-align: left;
+}
+
+.quest-reward-table tbody th span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* ==========================
+Rank Advancement Panel
+========================== */
+
+.rank-advancement-panel {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 40px auto;
+    padding: 30px;
+
+    background-color: #fff8e7;
+
+    border: 3px solid var(--rank-accent);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+/* ==========================
+Rank Page Navigation
+========================== */
+
+.rank-page-navigation {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+/* ==========================
+Rank Page Buttons
+========================== */
+
+.rank-page-button,
+.rank-page-button:link,
+.rank-page-button:visited {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 10px 16px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 2px solid var(--rank-accent);
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.rank-page-button:hover,
+.rank-page-button:focus {
+    background-color: var(--rank-accent);
+    color: #1f1f1f;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Disabled Rank Page Button
+========================== */
+
+.rank-page-button-disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+/* ==========================
+Dungeon Master Guidance
+========================== */
+
+.rank-detail-dm-guidance {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 50px auto;
+    padding: 30px 35px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    border: 3px solid var(--rank-accent);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.rank-detail-dm-guidance h2 {
+    margin-top: 0;
+
+    color: var(--rank-accent);
+
+    text-align: center;
+}
+
+/* ==========================
+Rank Detail Tablet
+========================== */
+
+@media screen and (max-width: 950px) {
+
+    .rank-detail-hero {
+        grid-template-columns:
+            180px minmax(0, 1fr);
+    }
+
+    .rank-detail-emblem {
+        width: 165px;
+        height: 165px;
+    }
+
+    .rank-benefit-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ==========================
+Rank Detail Mobile
+========================== */
+
+@media screen and (max-width: 768px) {
+
+    .rank-detail-hero,
+    .rank-training-panel {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .rank-detail-hero {
+        padding: 25px 20px;
+    }
+
+    .rank-detail-hero-text h2 {
+        font-size: 40px;
+    }
+
+    .rank-stage-grid,
+    .rank-benefit-grid,
+    .rank-page-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .rank-stage-grid {
+        gap: 40px;
+    }
+
+    .rank-stage-level {
+        text-align: left;
+    }
+
+    .rank-page-button-disabled {
+        display: none;
+    }
+
+}
+
+/* ==========================
+Rank Detail Small Mobile
+========================== */
+
+@media screen and (max-width: 500px) {
+
+    .rank-detail-emblem {
+        width: 140px;
+        height: 140px;
+    }
+
+    .rank-detail-hero-text h2 {
+        font-size: 34px;
+    }
+
+    .rank-stage-card,
+    .rank-benefit-card,
+    .rank-advancement-panel,
+    .rank-detail-dm-guidance {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .rank-stage-number {
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        white-space: nowrap;
+    }
+
+    .rank-stage-level {
+        margin-top: 8px;
+
+        text-align: center;
     }
 
 }
@@ -1863,6 +2978,358 @@ Join Page Mobile
 }
 
 /* ==========================
+Welcome Confirmation Page
+========================== */
+
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 900px;
+    min-height: 60vh;
+
+    margin: 0 auto 40px auto;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ==========================
+Welcome Introduction
+========================== */
+
+.welcome-intro {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 35px auto;
+
+    text-align: center;
+}
+
+.welcome-intro h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.welcome-intro p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* ==========================
+Welcome Confirmation Card
+========================== */
+
+.welcome-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 40px;
+
+    background-color: #fff8e7;
+
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 18px
+        rgba(0, 0, 0, 0.18);
+}
+
+.welcome-card h2 {
+    width: 100%;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    color: #2f3a3d;
+
+    text-align: center;
+}
+
+.welcome-card p {
+    width: 100%;
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* ==========================
+Welcome Seal
+========================== */
+
+.welcome-seal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 15px auto;
+
+    background-color: #2f3a3d;
+    color: #d4af37;
+
+    border: 4px solid #d4af37;
+    border-radius: 50%;
+
+    font-family: "EvilEmpire", serif;
+    font-size: 44px;
+    line-height: 1;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 18px
+        rgba(212, 175, 55, 0.45);
+}
+
+/* ==========================
+Welcome Message
+========================== */
+
+.welcome-message {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 22px;
+    text-align: center;
+}
+
+.welcome-message strong {
+    color: #6b4e16;
+
+    font-weight: bold;
+}
+
+/* ==========================
+Submitted Information
+========================== */
+
+.welcome-summary {
+    display: block;
+
+    width: 100%;
+    max-width: 560px;
+
+    margin: 30px auto;
+    padding: 0;
+
+    background-color: #f4f1e8;
+
+    border: 2px solid #2f3a3d;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.welcome-summary-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    width: 100%;
+
+    align-items: stretch;
+
+    border-bottom: 1px solid #2f3a3d;
+}
+
+.welcome-summary-row:last-child {
+    border-bottom: none;
+}
+
+/* ==========================
+Submitted Information Labels
+========================== */
+
+.welcome-summary dt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 16px 18px;
+
+    background-color: #2f3a3d;
+    color: white;
+
+    box-sizing: border-box;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+/* ==========================
+Submitted Information Values
+========================== */
+
+.welcome-summary dd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 16px 18px;
+
+    background-color: #f4f1e8;
+    color: #1f1f1f;
+
+    box-sizing: border-box;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================
+Welcome Note
+========================== */
+
+.welcome-note {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto 25px auto;
+
+    font-style: italic;
+    text-align: center;
+}
+
+/* ==========================
+Welcome Actions
+========================== */
+
+.welcome-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    gap: 15px;
+
+    margin: 25px auto 0 auto;
+
+    text-align: center;
+}
+
+.welcome-actions .guild-button {
+    display: inline-block;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+/* ==========================
+Welcome Error State
+========================== */
+
+.welcome-error-card {
+    border-color: #8b2f2f;
+}
+
+.welcome-error-seal {
+    background-color: #8b2f2f;
+    color: white;
+
+    border-color: #8b2f2f;
+
+    box-shadow:
+        0 0 18px
+        rgba(139, 47, 47, 0.35);
+}
+
+/* ==========================
+Welcome Page Mobile
+========================== */
+
+@media screen and (max-width: 650px) {
+
+    .welcome-page {
+        min-height: auto;
+    }
+
+    .welcome-card {
+        padding: 25px 18px;
+    }
+
+    .welcome-summary {
+        width: 100%;
+    }
+
+    .welcome-summary-row {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-summary dt {
+        min-height: 55px;
+
+        border-bottom: 1px solid #2f3a3d;
+
+        font-size: 18px;
+        font-weight: bold;
+
+        text-align: center;
+    }
+
+    .welcome-summary dd {
+        min-height: 55px;
+
+        font-size: 18px;
+        font-weight: bold;
+
+        text-align: center;
+    }
+
+    .welcome-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-actions .guild-button {
+        width: 100%;
+        max-width: 350px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+}
+
+/* ==========================
 Guild Submissions
 ========================== */
 
@@ -2429,7 +3896,7 @@ Gallery Cards
 .gallery-card p {
     display: none;
 }
-}
+
 /* ==========================
 Gallery Result Container
 ========================== */
