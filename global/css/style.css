@@ -4014,6 +4014,195 @@ Join Page Small Mobile
 }
 
 /* ==========================
+Join Achievement Trigger
+========================== */
+
+.join-achievement-trigger,
+.join-achievement-trigger:link,
+.join-achievement-trigger:visited {
+    display: inline-block;
+
+    margin-right: 7px;
+
+    color: #d4af37;
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.join-achievement-trigger:hover,
+.join-achievement-trigger:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+
+    transform: scale(1.15);
+
+    text-shadow:
+        0 0 8px
+        rgba(212, 175, 55, 0.8);
+}
+
+.join-achievement-trigger:focus-visible {
+    outline: 2px solid #2f3a3d;
+    outline-offset: 4px;
+}
+
+/* ==========================
+Join Achievement Lightbox
+========================== */
+
+.join-achievement-lightbox {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+}
+
+.join-achievement-lightbox:target {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+Join Achievement Image Link
+========================== */
+
+.join-achievement-image-link {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Join Achievement Image
+========================== */
+
+.join-achievement-lightbox img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #d4af37;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================
+Join Achievement Close Button
+========================== */
+
+.join-achievement-close,
+.join-achievement-close:link,
+.join-achievement-close:visited {
+    position: fixed;
+
+    top: 18px;
+    right: 28px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 10001;
+}
+
+.join-achievement-close:hover,
+.join-achievement-close:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Join Achievement Mobile
+========================== */
+
+@media screen and (max-width: 650px) {
+
+    .join-achievement-lightbox {
+        padding: 15px;
+    }
+
+    .join-achievement-lightbox img {
+        max-width: 94vw;
+        max-height: 84vh;
+    }
+
+    .join-achievement-close {
+        top: 10px;
+        right: 15px;
+
+        font-size: 42px;
+    }
+
+    .join-achievement-trigger {
+        margin-right: 4px;
+
+        font-size: 19px;
+    }
+
+}
+
+/* ==========================
 Welcome Confirmation Page
 ========================== */
 
