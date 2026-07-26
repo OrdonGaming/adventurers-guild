@@ -3232,14 +3232,29 @@ Quest Reward
 }
 
 /* ==========================
+Join Page
+========================== */
+
+.join-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 40px auto;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
 Join Page Introduction
 ========================== */
 
 .join-intro {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto 40px auto;
 
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -3254,15 +3269,21 @@ Join Page Layout
 ========================== */
 
 .join-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(0, 1fr);
+
+    gap: 30px;
+
+    width: 100%;
     max-width: 1200px;
 
     margin: 0 auto 40px auto;
 
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 30px;
-
     align-items: start;
+
+    box-sizing: border-box;
 }
 
 /* ==========================
@@ -3271,14 +3292,19 @@ Join Page Cards
 
 .join-information,
 .join-form-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    padding: 25px;
+
     background-color: #fff8e7;
 
     border: 2px solid black;
     border-radius: 8px;
 
-    padding: 25px;
-
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .join-information h2,
@@ -3292,63 +3318,124 @@ Join Page Cards
     margin-bottom: 10px;
 }
 
+.join-information p,
+.join-information li,
+.join-form-card p {
+    overflow-wrap: anywhere;
+}
+
 /* ==========================
 Join Page Table
 ========================== */
 
 .table-wrapper {
     width: 100%;
+    max-width: 100%;
 
-    overflow-x: auto;
+    overflow: visible;
+
+    box-sizing: border-box;
 }
 
 .join-table {
     width: 100%;
+    min-width: 0;
 
     margin-top: 15px;
 
+    table-layout: fixed;
     border-collapse: collapse;
 
     background-color: white;
 }
 
 .join-table caption {
-    margin-bottom: 10px;
-
-    font-weight: bold;
-    font-style: italic;
+    margin-bottom: 8px;
 
     color: #2f3a3d;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.join-table th,
+.join-table td {
+    width: auto;
+    height: auto;
+
+    padding: 8px;
+
+    border: 1px solid black;
+
+    font-size: 15px;
+    line-height: 1.35;
+
+    vertical-align: top;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .join-table th {
     background-color: #2f3a3d;
     color: white;
 
-    padding: 12px;
-
-    border: 1px solid black;
-
     text-align: left;
 }
 
-.join-table td {
-    padding: 12px;
+.join-table th:nth-child(1),
+.join-table td:nth-child(1) {
+    width: 27%;
+}
 
-    border: 1px solid black;
+.join-table th:nth-child(2),
+.join-table td:nth-child(2) {
+    width: 40%;
+}
 
-    vertical-align: top;
+.join-table th:nth-child(3),
+.join-table td:nth-child(3) {
+    width: 33%;
 }
 
 .join-table tbody tr:nth-child(even) {
     background-color: #f4f1e8;
 }
 
-/* Overrides the general table rule */
+/* ==========================
+Join Table Mobile
+========================== */
 
-.join-table td:nth-child(2) {
-    width: auto;
-    height: auto;
+@media screen and (max-width: 600px) {
+
+    .join-table caption {
+        font-size: 14px;
+    }
+
+    .join-table th,
+    .join-table td {
+        padding: 6px 4px;
+
+        font-size: 12px;
+        line-height: 1.25;
+    }
+
+    .join-table th:nth-child(1),
+    .join-table td:nth-child(1) {
+        width: 26%;
+    }
+
+    .join-table th:nth-child(2),
+    .join-table td:nth-child(2) {
+        width: 39%;
+    }
+
+    .join-table th:nth-child(3),
+    .join-table td:nth-child(3) {
+        width: 35%;
+    }
+
 }
 
 /* ==========================
@@ -3360,6 +3447,12 @@ Join Page Form
     flex-direction: column;
 
     gap: 20px;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -3367,29 +3460,39 @@ Join Page Form
     flex-direction: column;
 
     gap: 6px;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    box-sizing: border-box;
 }
 
 .form-group label {
-    font-weight: bold;
-
     color: #2f3a3d;
+
+    font-weight: bold;
 }
 
 .form-group input {
+    display: block;
+
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
 
     padding: 12px;
-
-    border: 2px solid #2f3a3d;
-    border-radius: 4px;
 
     background-color: white;
     color: #1f1f1f;
 
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
+    border: 2px solid #2f3a3d;
+    border-radius: 4px;
 
     box-sizing: border-box;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
 }
 
 .form-group input:focus {
@@ -3397,17 +3500,15 @@ Join Page Form
     outline-offset: 2px;
 }
 
-.join-submit {
-    align-self: flex-start;
-
-    cursor: pointer;
-}
-
 /* ==========================
 Join Form Fieldsets
 ========================== */
 
 .join-form fieldset {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
     margin: 0;
     padding: 20px;
 
@@ -3415,16 +3516,22 @@ Join Form Fieldsets
 
     border: 2px solid #2f3a3d;
     border-radius: 6px;
+
+    box-sizing: border-box;
 }
 
 .join-form legend {
+    max-width: 100%;
+
     padding: 0 10px;
+
+    color: #2f3a3d;
 
     font-family: "EvilEmpire", serif;
     font-size: 22px;
     letter-spacing: 1px;
 
-    color: #2f3a3d;
+    white-space: normal;
 }
 
 .join-form fieldset .form-group {
@@ -3443,17 +3550,95 @@ Join Form Fieldsets
 }
 
 /* ==========================
-Join Page Mobile
+Join Submit Button
+========================== */
+
+.join-submit {
+    align-self: flex-start;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+/* ==========================
+Join Page Tablet
 ========================== */
 
 @media screen and (max-width: 850px) {
 
     .join-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .join-submit {
         width: 100%;
+    }
+
+}
+
+/* ==========================
+Join Page Mobile
+========================== */
+
+@media screen and (max-width: 600px) {
+
+    .join-page {
+        width: 100%;
+    }
+
+    .join-layout {
+        gap: 22px;
+    }
+
+    .join-information,
+    .join-form-card {
+        padding: 18px;
+    }
+
+    .join-form fieldset {
+        padding: 16px;
+    }
+
+    .join-form legend {
+        padding: 0 6px;
+
+        font-size: 20px;
+    }
+
+    .form-group input {
+        padding: 10px;
+
+        font-size: 16px;
+    }
+
+}
+
+/* ==========================
+Join Page Small Mobile
+========================== */
+
+@media screen and (max-width: 400px) {
+
+    .join-information,
+    .join-form-card {
+        padding: 14px;
+    }
+
+    .join-form fieldset {
+        padding: 13px;
+    }
+
+    .join-intro .decorative-header {
+        gap: 6px;
+
+        font-size: 28px;
+    }
+
+    .join-intro .decorative-header .line {
+        max-width: 35px;
     }
 
 }
