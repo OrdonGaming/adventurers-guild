@@ -2762,6 +2762,199 @@ Locations Mobile
 }
 
 /* ==========================
+Location Achievement Trigger
+========================== */
+
+.location-achievement-trigger,
+.location-achievement-trigger:link,
+.location-achievement-trigger:visited {
+    display: inline-block;
+
+    margin-left: 7px;
+
+    color: #d4af37;
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.location-achievement-trigger:hover,
+.location-achievement-trigger:focus {
+    color: #d4af37;
+
+    opacity: 1;
+
+    text-decoration: none;
+
+    transform: scale(1.15);
+
+    text-shadow:
+        0 0 8px
+        rgba(212, 175, 55, 0.8);
+}
+
+.location-achievement-trigger:focus-visible {
+    outline: 2px solid #2f3a3d;
+    outline-offset: 4px;
+}
+
+/* ==========================
+Location Achievement Lightbox
+========================== */
+
+.location-achievement-lightbox {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color:
+        rgba(0, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+}
+
+.location-achievement-lightbox:target {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+Achievement Image Link
+========================== */
+
+.location-achievement-image-link {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Achievement Image
+========================== */
+
+.location-achievement-lightbox img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #d4af37;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================
+Achievement Close Button
+========================== */
+
+.location-achievement-close,
+.location-achievement-close:link,
+.location-achievement-close:visited {
+    position: fixed;
+
+    top: 18px;
+    right: 28px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 10001;
+}
+
+.location-achievement-close:hover,
+.location-achievement-close:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Location Achievement Mobile
+========================== */
+
+@media screen and (max-width: 650px) {
+
+    .location-achievement-lightbox {
+        padding: 15px;
+    }
+
+    .location-achievement-lightbox img {
+        max-width: 94vw;
+        max-height: 84vh;
+    }
+
+    .location-achievement-close {
+        top: 10px;
+        right: 15px;
+
+        font-size: 42px;
+    }
+
+    .location-achievement-trigger {
+        margin-left: 4px;
+
+        font-size: 19px;
+    }
+
+}
+
+/* ==========================
 Guild Archives Preview
 ========================== */
 
