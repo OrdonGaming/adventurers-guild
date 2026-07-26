@@ -3178,6 +3178,60 @@ Quest Card Information
 }
 
 /* ==========================
+Quest Type and Difficulty
+========================== */
+
+.quest-type,
+.quest-difficulty {
+    display: inline-block;
+
+    margin: 0 8px 12px 0;
+    padding: 5px 9px;
+
+    color: white;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.quest-type {
+    background-color: #2f3a3d;
+}
+
+.quest-type strong {
+    color: #d4af37;
+}
+
+.quest-difficulty-easy {
+    background-color: #4f6f52;
+}
+
+.quest-difficulty-normal {
+    background-color: #6b4e16;
+}
+
+.quest-difficulty-hard {
+    background-color: #8b2f2f;
+}
+
+.quest-difficulty strong {
+    color: white;
+}
+
+/* ==========================
+Quest Reward
+========================== */
+
+.quest-reward {
+    margin: 0 0 12px 0;
+
+    color: #6b4e16;
+}
+
+/* ==========================
 Join Page Introduction
 ========================== */
 
