@@ -4826,6 +4826,780 @@ Reference Tool Cards
 }
 
 /* ==========================
+NPC Directory Page
+Add this section to the end of:
+global/css/style.css
+========================== */
+
+.npc-directory-page {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.npc-directory-intro {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.npc-directory-intro p {
+    max-width: 820px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+}
+
+.npc-category-links {
+    margin: 0 auto 3rem;
+    padding: 1rem;
+    background-color: #2f3a3d;
+    border: 2px solid #111111;
+}
+
+.npc-category-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.npc-category-links a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    text-align: center;
+    text-decoration: none;
+}
+
+.npc-category-links a:hover,
+.npc-category-links a:focus {
+    color: #2f3a3d;
+    background-color: #d4af37;
+}
+
+.npc-directory-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 6rem;
+}
+
+.npc-section-heading {
+    margin-bottom: 1.75rem;
+}
+
+.npc-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.npc-card-grid-centered {
+    grid-template-columns: minmax(0, 650px);
+    justify-content: center;
+}
+
+.npc-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #fff8e7;
+    border: 2px solid #2f3a3d;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+.npc-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #d4af37;
+}
+
+.npc-monogram {
+    display: grid;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    color: #d4af37;
+    background-color: #2f3a3d;
+    border: 3px double #d4af37;
+    border-radius: 50%;
+    font-family: "EvilEmpire", "Times New Roman", serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+}
+
+.npc-card-category {
+    margin: 0 0 0.25rem;
+    color: #5b3a73;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.npc-card h3 {
+    margin: 0;
+    color: #2f3a3d;
+}
+
+.npc-facts {
+    margin: 1.25rem 0;
+}
+
+.npc-facts div {
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: 0.75rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgb(47 58 61 / 25%);
+}
+
+.npc-facts dt {
+    font-weight: bold;
+}
+
+.npc-facts dd {
+    margin: 0;
+}
+
+.npc-card > p {
+    line-height: 1.6;
+}
+
+.npc-quote {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #5b3a73;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.npc-directory-notice {
+    max-width: 850px;
+    margin: 1rem auto 0;
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #d4af37;
+    text-align: center;
+}
+
+.npc-directory-notice h2 {
+    margin-top: 0;
+}
+
+.npc-directory-notice p {
+    line-height: 1.7;
+}
+
+.npc-directory-notice .guild-button {
+    margin-top: 0.75rem;
+}
+
+/* ==========================
+NPC Directory Responsive Layout
+========================== */
+
+@media (max-width: 900px) {
+
+    .npc-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .npc-card-grid-centered {
+        grid-template-columns: minmax(0, 650px);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .npc-category-links ul {
+        flex-direction: column;
+    }
+
+    .npc-card-grid,
+    .npc-card-grid-centered {
+        grid-template-columns: 1fr;
+    }
+
+    .npc-card {
+        padding: 1.1rem;
+    }
+
+    .npc-card-header {
+        align-items: flex-start;
+    }
+
+    .npc-monogram {
+        flex-basis: 54px;
+        width: 54px;
+        height: 54px;
+        font-size: 1.1rem;
+    }
+
+    .npc-facts div {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+}
+
+/* ==========================
+Quest Templates Page
+Add this section to the end of:
+global/css/style.css
+========================== */
+
+.quest-templates-page {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.quest-templates-intro {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.quest-templates-intro p {
+    max-width: 830px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+}
+
+.quest-template-links {
+    margin: 0 auto 3rem;
+    padding: 1rem;
+    background-color: #2f3a3d;
+    border: 2px solid #111111;
+}
+
+.quest-template-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.quest-template-links a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    text-align: center;
+    text-decoration: none;
+}
+
+.quest-template-links a:hover,
+.quest-template-links a:focus {
+    color: #2f3a3d;
+    background-color: #d4af37;
+}
+
+.quest-template-overview {
+    margin-bottom: 3.5rem;
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #d4af37;
+}
+
+.quest-template-overview > h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.quest-template-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.quest-template-overview-grid article {
+    padding: 1.25rem;
+    background-color: #f4f1e8;
+    border: 1px solid #2f3a3d;
+}
+
+.quest-template-overview-grid h3 {
+    margin-top: 0;
+}
+
+.quest-template-overview-grid p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.quest-template-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 6rem;
+}
+
+.quest-template-heading {
+    margin-bottom: 1.75rem;
+}
+
+.quest-template-card {
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #2f3a3d;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+.quest-template-featured {
+    border-color: #d4af37;
+    box-shadow: 0 5px 14px rgb(0 0 0 / 20%);
+}
+
+.quest-template-card-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #d4af37;
+}
+
+.quest-template-type {
+    margin: 0 0 0.35rem;
+    color: #5b3a73;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.quest-template-card-header h2,
+.quest-template-card-header h3 {
+    margin: 0;
+}
+
+.quest-template-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.quest-template-columns h3,
+.quest-template-columns h4 {
+    margin-top: 0;
+    color: #2f3a3d;
+}
+
+.quest-template-fields {
+    margin: 0;
+}
+
+.quest-template-fields div {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgb(47 58 61 / 25%);
+}
+
+.quest-template-fields div:last-child {
+    border-bottom: 0;
+}
+
+.quest-template-fields dt {
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.quest-template-fields dd {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.quest-preparation-list {
+    margin: 0;
+    padding-left: 1.35rem;
+}
+
+.quest-preparation-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.quest-rank-table-wrapper {
+    overflow-x: auto;
+    background-color: #fff8e7;
+    border: 2px solid #2f3a3d;
+}
+
+.quest-rank-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+.quest-rank-table caption {
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #2f3a3d;
+    font-weight: bold;
+}
+
+.quest-rank-table th,
+.quest-rank-table td {
+    padding: 0.9rem;
+    border: 1px solid #2f3a3d;
+    text-align: left;
+    vertical-align: top;
+}
+
+.quest-rank-table thead th {
+    color: #ffffff;
+    background-color: #2f3a3d;
+}
+
+.quest-rank-table tbody th {
+    color: #2f3a3d;
+    background-color: #f4f1e8;
+}
+
+.quest-rank-table tbody tr:nth-child(even) td {
+    background-color: rgb(244 241 232 / 65%);
+}
+
+.quest-report-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+}
+
+.quest-completion-card {
+    border-color: #d4af37;
+}
+
+.quest-template-notice {
+    max-width: 850px;
+    margin: 1rem auto 0;
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #d4af37;
+    text-align: center;
+}
+
+.quest-template-notice h2 {
+    margin-top: 0;
+}
+
+.quest-template-notice p {
+    line-height: 1.7;
+}
+
+.quest-template-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ==========================
+Quest Templates Responsive Layout
+========================== */
+
+@media (max-width: 900px) {
+
+    .quest-template-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quest-template-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .quest-report-fields {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .quest-template-links ul {
+        flex-direction: column;
+    }
+
+    .quest-template-card,
+    .quest-template-overview,
+    .quest-template-notice {
+        padding: 1.1rem;
+    }
+
+    .quest-template-button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quest-template-button-row .guild-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ==========================
+Adventure Hooks Page
+Add this section to the end of:
+global/css/style.css
+========================== */
+
+.adventure-hooks-page {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+.adventure-hooks-intro {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.adventure-hooks-intro p {
+    max-width: 830px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+}
+
+.adventure-hook-links {
+    margin: 0 auto 3rem;
+    padding: 1rem;
+    background-color: #2f3a3d;
+    border: 2px solid #111111;
+}
+
+.adventure-hook-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.adventure-hook-links a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: #ffffff;
+    border: 1px solid #d4af37;
+    text-align: center;
+    text-decoration: none;
+}
+
+.adventure-hook-links a:hover,
+.adventure-hook-links a:focus {
+    color: #2f3a3d;
+    background-color: #d4af37;
+}
+
+.adventure-hook-builder,
+.adventure-hook-expansion {
+    margin-bottom: 3.5rem;
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #d4af37;
+    scroll-margin-top: 6rem;
+}
+
+.adventure-hook-builder > h2,
+.adventure-hook-expansion > h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.hook-builder-grid,
+.hook-expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.hook-builder-grid article,
+.hook-expansion-grid article {
+    padding: 1.25rem;
+    background-color: #f4f1e8;
+    border: 1px solid #2f3a3d;
+}
+
+.hook-builder-grid article {
+    position: relative;
+    padding-top: 3.75rem;
+}
+
+.hook-builder-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    color: #d4af37;
+    background-color: #2f3a3d;
+    border: 2px solid #d4af37;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.hook-builder-grid h3,
+.hook-expansion-grid h3 {
+    margin-top: 0;
+}
+
+.hook-builder-grid p,
+.hook-expansion-grid p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.adventure-hook-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 6rem;
+}
+
+.adventure-hook-heading {
+    margin-bottom: 1.75rem;
+}
+
+.adventure-hook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.adventure-hook-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #fff8e7;
+    border: 2px solid #2f3a3d;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+}
+
+.adventure-hook-card-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #d4af37;
+}
+
+.adventure-hook-category {
+    margin: 0 0 0.35rem;
+    color: #5b3a73;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.adventure-hook-card-header h3 {
+    margin: 0;
+    color: #2f3a3d;
+}
+
+.adventure-hook-opening {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.adventure-hook-details {
+    margin: auto 0 0;
+}
+
+.adventure-hook-details div {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgb(47 58 61 / 25%);
+}
+
+.adventure-hook-details div:last-child {
+    border-bottom: 0;
+}
+
+.adventure-hook-details dt {
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+.adventure-hook-details dd {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.adventure-hook-notice {
+    max-width: 850px;
+    margin: 1rem auto 0;
+    padding: 1.75rem;
+    background-color: #fff8e7;
+    border: 2px solid #d4af37;
+    text-align: center;
+}
+
+.adventure-hook-notice h2 {
+    margin-top: 0;
+}
+
+.adventure-hook-notice p {
+    line-height: 1.7;
+}
+
+.adventure-hook-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ==========================
+Adventure Hooks Responsive Layout
+========================== */
+
+@media (max-width: 1000px) {
+
+    .hook-builder-grid,
+    .hook-expansion-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .adventure-hook-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .adventure-hook-links ul {
+        flex-direction: column;
+    }
+
+    .hook-builder-grid,
+    .hook-expansion-grid,
+    .adventure-hook-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-hook-card,
+    .adventure-hook-builder,
+    .adventure-hook-expansion,
+    .adventure-hook-notice {
+        padding: 1.1rem;
+    }
+
+    .adventure-hook-button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .adventure-hook-button-row .guild-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ==========================
 Lower Resources Section
 ========================== */
 
