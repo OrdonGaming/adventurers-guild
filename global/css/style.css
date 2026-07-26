@@ -2215,9 +2215,35 @@ Locations Page
 ========================== */
 
 .locations-upper {
-    max-width: 1000px;
-    margin: 0 auto 40px auto;
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 55px auto;
+
     text-align: center;
+}
+
+/* ==========================
+Locations Introduction
+========================== */
+
+.locations-introduction {
+    max-width: 900px;
+
+    margin: 0 auto 18px auto;
+
+    line-height: 1.75;
+}
+
+.locations-instructions {
+    max-width: 800px;
+
+    margin: 25px auto 0 auto;
+
+    color: #6b4e16;
+
+    font-weight: bold;
+    font-style: italic;
 }
 
 /* ==========================
@@ -2229,44 +2255,73 @@ Locations Map
 
     width: 100%;
     max-width: 1000px;
-
     height: auto;
 
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
 
-    border: 2px solid black;
+    border: 3px solid #2f3a3d;
     border-radius: 8px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 7px 16px
+        rgba(0, 0, 0, 0.18);
 }
 
 /* ==========================
-Locations Grid
+Interactive Locations Area
 ========================== */
 
-.locations-list {
-    max-width: 1000px;
-    margin: 0 auto;
+.locations-interactive {
+    position: relative;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    width: 100%;
+    max-width: 1150px;
 
-    justify-items: center;
+    margin: 0 auto 60px auto;
 }
 
 /* ==========================
-Locations Table
+Hidden Location Selectors
+========================== */
+
+.location-selector {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+/* ==========================
+Location Category Grid
 ========================== */
 
 .locations-table {
-    max-width: 1200px;
-    margin: 0 auto;
-
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
     gap: 20px;
 
     align-items: start;
 }
+
+/* ==========================
+Location Category Columns
+========================== */
 
 .location-column {
     background-color: #fff8e7;
@@ -2274,11 +2329,25 @@ Locations Table
     border: 2px solid black;
     border-radius: 8px;
 
+    box-sizing: border-box;
     overflow: hidden;
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.12);
 }
 
+/* ==========================
+Location Category Summary
+========================== */
+
 .location-column summary {
+    position: relative;
+
+    padding: 22px 18px 18px;
+
     cursor: pointer;
+
     list-style: none;
 
     text-align: center;
@@ -2288,48 +2357,406 @@ Locations Table
     display: none;
 }
 
-.location-column img {
-    width: 100%;
-    height: auto;
+.location-column summary::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    display: block;
-}
+    width: 28px;
+    height: 28px;
 
-.location-column h3 {
-    margin: 0;
-    padding: 12px;
+    margin: 12px auto 0 auto;
 
     background-color: #2f3a3d;
-    color: white;
+    color: #d4af37;
+
+    border-radius: 50%;
+
+    content: "+";
+
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
 }
 
-.location-details {
-    padding: 15px;
+.location-column[open] summary::after {
+    content: "−";
+}
 
-    text-align: left;
+.location-column summary:hover {
+    background-color: #f2ead5;
+}
+
+.location-column summary img {
+    display: block;
+
+    width: 100%;
+    max-width: 145px;
+    height: 145px;
+
+    margin: 0 auto 12px auto;
+
+    object-fit: contain;
+}
+
+.location-column summary h3 {
+    margin: 0;
+
+    color: #2f3a3d;
+
+    font-size: 24px;
+}
+
+/* ==========================
+Location Lists
+========================== */
+
+.location-details {
+    padding: 0 18px 18px;
+
+    border-top: 2px solid #d4af37;
 }
 
 .location-details ul {
     margin: 0;
-    padding-left: 20px;
+    padding: 18px 0 0;
+
+    list-style: none;
+}
+
+.location-details li {
+    margin-bottom: 10px;
+}
+
+.location-details li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Clickable Location Names
+========================== */
+
+.location-details label {
+    display: block;
+
+    padding: 11px 13px;
+
+    background-color: #f4f1e8;
+    color: #2f3a3d;
+
+    border: 1px solid #777;
+    border-left: 5px solid #d4af37;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    line-height: 1.35;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.location-details label:hover {
+    background-color: #e8dfc6;
+
+    transform: translateX(3px);
+}
+
+/* ==========================
+Selected Location Name
+========================== */
+
+#location-grand-guild-hall:checked
+~ .locations-table
+label[for="location-grand-guild-hall"],
+
+#location-council-chambers:checked
+~ .locations-table
+label[for="location-council-chambers"],
+
+#location-masters-office:checked
+~ .locations-table
+label[for="location-masters-office"],
+
+#location-hall-of-records:checked
+~ .locations-table
+label[for="location-hall-of-records"],
+
+#location-high-contract-office:checked
+~ .locations-table
+label[for="location-high-contract-office"],
+
+#location-aeridell-branch:checked
+~ .locations-table
+label[for="location-aeridell-branch"],
+
+#location-park-royal-hall:checked
+~ .locations-table
+label[for="location-park-royal-hall"],
+
+#location-rivergate-hall:checked
+~ .locations-table
+label[for="location-rivergate-hall"],
+
+#location-highwatch-hall:checked
+~ .locations-table
+label[for="location-highwatch-hall"],
+
+#location-frontier-outposts:checked
+~ .locations-table
+label[for="location-frontier-outposts"],
+
+#location-village-contract-houses:checked
+~ .locations-table
+label[for="location-village-contract-houses"],
+
+#location-roadside-guild-posts:checked
+~ .locations-table
+label[for="location-roadside-guild-posts"],
+
+#location-regional-guild-offices:checked
+~ .locations-table
+label[for="location-regional-guild-offices"],
+
+#location-training-grounds:checked
+~ .locations-table
+label[for="location-training-grounds"],
+
+#location-guild-archives:checked
+~ .locations-table
+label[for="location-guild-archives"],
+
+#location-supply-depots:checked
+~ .locations-table
+label[for="location-supply-depots"],
+
+#location-member-lodging:checked
+~ .locations-table
+label[for="location-member-lodging"],
+
+#location-guild-stables:checked
+~ .locations-table
+label[for="location-guild-stables"],
+
+#location-research-laboratories:checked
+~ .locations-table
+label[for="location-research-laboratories"] {
+    background-color: #2f3a3d;
+    color: white;
+
+    border-color: #d4af37;
+    border-left-color: #d4af37;
+}
+
+/* ==========================
+Location Description Box
+========================== */
+
+.location-description-box {
+    min-height: 235px;
+
+    margin-top: 30px;
+    padding: 30px 35px;
+
+    background-color: #fff8e7;
+
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 6px 14px
+        rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+Location Descriptions
+========================== */
+
+.location-description {
+    display: none;
+
+    animation:
+        location-description-fade
+        0.3s ease;
+}
+
+.location-description-category {
+    margin: 0 0 7px 0;
+
+    color: #6b4e16;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.location-description h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #2f3a3d;
+
+    font-size: 34px;
+}
+
+.location-description p {
+    line-height: 1.7;
+}
+
+.location-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================
+Display Selected Description
+========================== */
+
+#location-avadon:checked
+~ .location-description-box
+.description-avadon,
+
+#location-grand-guild-hall:checked
+~ .location-description-box
+.description-grand-guild-hall,
+
+#location-council-chambers:checked
+~ .location-description-box
+.description-council-chambers,
+
+#location-masters-office:checked
+~ .location-description-box
+.description-masters-office,
+
+#location-hall-of-records:checked
+~ .location-description-box
+.description-hall-of-records,
+
+#location-high-contract-office:checked
+~ .location-description-box
+.description-high-contract-office,
+
+#location-aeridell-branch:checked
+~ .location-description-box
+.description-aeridell-branch,
+
+#location-park-royal-hall:checked
+~ .location-description-box
+.description-park-royal-hall,
+
+#location-rivergate-hall:checked
+~ .location-description-box
+.description-rivergate-hall,
+
+#location-highwatch-hall:checked
+~ .location-description-box
+.description-highwatch-hall,
+
+#location-frontier-outposts:checked
+~ .location-description-box
+.description-frontier-outposts,
+
+#location-village-contract-houses:checked
+~ .location-description-box
+.description-village-contract-houses,
+
+#location-roadside-guild-posts:checked
+~ .location-description-box
+.description-roadside-guild-posts,
+
+#location-regional-guild-offices:checked
+~ .location-description-box
+.description-regional-guild-offices,
+
+#location-training-grounds:checked
+~ .location-description-box
+.description-training-grounds,
+
+#location-guild-archives:checked
+~ .location-description-box
+.description-guild-archives,
+
+#location-supply-depots:checked
+~ .location-description-box
+.description-supply-depots,
+
+#location-member-lodging:checked
+~ .location-description-box
+.description-member-lodging,
+
+#location-guild-stables:checked
+~ .location-description-box
+.description-guild-stables,
+
+#location-research-laboratories:checked
+~ .location-description-box
+.description-research-laboratories {
+    display: block;
+}
+
+/* ==========================
+Description Fade Animation
+========================== */
+
+@keyframes location-description-fade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+/* ==========================
+Locations Tablet
+========================== */
+
+@media screen and (max-width: 1000px) {
+
+    .locations-table {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
 }
 
 /* ==========================
 Locations Mobile
 ========================== */
 
-@media screen and (max-width: 900px) {
-
-    .locations-table {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     .locations-table {
         grid-template-columns: 1fr;
+    }
+
+    .locations-map {
+        margin-top: 24px;
+    }
+
+    .location-description-box {
+        min-height: 0;
+
+        padding: 25px 22px;
+    }
+
+    .location-description h2 {
+        font-size: 29px;
     }
 
 }
