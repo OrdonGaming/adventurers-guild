@@ -15,7 +15,7 @@ Document Setup
 </title>
 
 <link rel="stylesheet"
-      href="../global/css/style.css?v=7">
+      href="../global/css/style.css?v=12">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
@@ -175,8 +175,20 @@ Guild Information and Table
 
 <article class="join-information">
 
-    <h2>
+    <h2 id="before-you-apply-heading">
+
+        <a href="#achievement-6"
+           class="join-achievement-trigger"
+           aria-label="Open hidden achievement 6 of 10">
+
+            <span aria-hidden="true">
+                ✦
+            </span>
+
+        </a>
+
         Before You Apply
+
     </h2>
 
     <p>
@@ -440,6 +452,38 @@ Character Information
     </form>
 
 </article>
+
+</section>
+
+
+<!-- ==========================
+Achievement 6 Lightbox
+========================== -->
+
+<section class="join-achievement-lightbox"
+         id="achievement-6"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 6 of 10: Answering the Call">
+
+    <!-- Close Button -->
+
+    <a href="#before-you-apply-heading"
+       class="join-achievement-close"
+       aria-label="Close achievement">
+        &times;
+    </a>
+
+    <!-- Achievement Image -->
+
+    <a href="#before-you-apply-heading"
+       class="join-achievement-image-link"
+       aria-label="Close achievement and return to Before You Apply">
+
+        <img src="images/answering_the_call_achievement_unlocked.png"
+             alt="Achievement unlocked: Answering the Call. You prepared for the journey before taking your first step. Every great adventure begins with the courage to answer the call. Achievement 6 of 10 hidden achievements.">
+
+    </a>
 
 </section>
 
