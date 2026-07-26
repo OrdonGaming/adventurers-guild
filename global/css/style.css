@@ -3425,6 +3425,183 @@ Quest Reward
 }
 
 /* ==========================
+Quest Achievement Card
+========================== */
+
+.quest-achievement-card {
+    position: relative;
+
+    cursor: pointer;
+}
+
+.quest-achievement-card-link {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border-radius: inherit;
+
+    z-index: 5;
+}
+
+.quest-achievement-card-link:focus-visible {
+    outline: 4px solid #d4af37;
+    outline-offset: 4px;
+}
+
+/* ==========================
+Quest Achievement Lightbox
+========================== */
+
+.quest-achievement-lightbox {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+}
+
+.quest-achievement-lightbox:target {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+Quest Achievement Image Link
+========================== */
+
+.quest-achievement-image-link {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Quest Achievement Image
+========================== */
+
+.quest-achievement-lightbox img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #d4af37;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================
+Quest Achievement Close Button
+========================== */
+
+.quest-achievement-close,
+.quest-achievement-close:link,
+.quest-achievement-close:visited {
+    position: fixed;
+
+    top: 18px;
+    right: 28px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 10001;
+}
+
+.quest-achievement-close:hover,
+.quest-achievement-close:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Quest Achievement Mobile
+========================== */
+
+@media screen and (max-width: 650px) {
+
+    .quest-achievement-lightbox {
+        padding: 15px;
+    }
+
+    .quest-achievement-lightbox img {
+        max-width: 94vw;
+        max-height: 84vh;
+    }
+
+    .quest-achievement-close {
+        top: 10px;
+        right: 15px;
+
+        font-size: 42px;
+    }
+
+}
+
+/* ==========================
+Quest Achievement Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .quest-achievement-card {
+        transition: none;
+    }
+
+}
+
+/* ==========================
 Join Page
 ========================== */
 
