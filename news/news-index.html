@@ -13,7 +13,7 @@ Document Setup
 <title>News &amp; Announcements | The Adventurer's Guild</title>
 
 <link rel="stylesheet"
-      href="../global/css/style.css">
+      href="../global/css/style.css?v=16">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
@@ -247,7 +247,13 @@ Latest Announcements
 
     <div class="news-grid">
 
-        <article class="news-card">
+        <article class="news-card news-achievement-card"
+                 id="new-member-orientation-card">
+
+            <a href="#achievement-9"
+               class="news-achievement-card-link"
+               aria-label="Open hidden achievement 9 of 10 from New Member Orientation Scheduled">
+            </a>
 
             <p class="news-category">
                 Guild Announcement
@@ -467,7 +473,13 @@ Guild Events
 
         </article>
 
-        <article class="news-card">
+        <article class="news-card news-achievement-card"
+                 id="bronze-rank-training-card">
+
+            <a href="#achievement-10"
+               class="news-achievement-card-link"
+               aria-label="Open hidden achievement 10 of 10 from Bronze Rank Training Day">
+            </a>
 
             <p class="news-category">
                 Training
@@ -512,6 +524,70 @@ Guild Events
         </article>
 
     </div>
+
+</section>
+
+
+<!-- ==========================
+Achievement 9 Lightbox
+========================== -->
+
+<section class="news-achievement-lightbox"
+         id="achievement-9"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 9 of 10: Informed Initiate">
+
+    <!-- Close Button -->
+
+    <a href="#new-member-orientation-card"
+       class="news-achievement-close"
+       aria-label="Close achievement">
+        &times;
+    </a>
+
+    <!-- Achievement Image -->
+
+    <a href="#new-member-orientation-card"
+       class="news-achievement-image-link"
+       aria-label="Close achievement and return to New Member Orientation Scheduled">
+
+        <img src="images/informed_initiate_achievement_unlocked.png"
+             alt="Achievement unlocked: Informed Initiate. You sought the knowledge every new member needs before beginning guild service. Preparation turns uncertainty into purpose. Achievement 9 of 10 hidden achievements.">
+
+    </a>
+
+</section>
+
+
+<!-- ==========================
+Achievement 10 Lightbox
+========================== -->
+
+<section class="news-achievement-lightbox"
+         id="achievement-10"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 10 of 10: Field Ready">
+
+    <!-- Close Button -->
+
+    <a href="#bronze-rank-training-card"
+       class="news-achievement-close"
+       aria-label="Close achievement">
+        &times;
+    </a>
+
+    <!-- Achievement Image -->
+
+    <a href="#bronze-rank-training-card"
+       class="news-achievement-image-link"
+       aria-label="Close achievement and return to Bronze Rank Training Day">
+
+        <img src="images/field_ready_achievement_unlocked.png"
+             alt="Achievement unlocked: Field Ready. You sought the training needed to face the road ahead. Skill grows through preparation, practice, and the courage to begin. Achievement 10 of 10 hidden achievements.">
+
+    </a>
 
 </section>
 
