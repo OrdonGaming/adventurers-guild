@@ -2959,10 +2959,18 @@ Guild Archives Preview
 ========================== */
 
 .guild-archives-preview {
-    text-align: center;
-
+    width: 100%;
     max-width: 1200px;
+
     margin: 0 auto 60px auto;
+
+    text-align: center;
+}
+
+.guild-archives-preview .archive-feature-card {
+    max-width: 1000px;
+
+    margin: 0 auto;
 }
 
 .archives-intro {
@@ -4621,22 +4629,6 @@ Resources Section Headings
 }
 
 /* ==========================
-Upper Resources Section
-========================== */
-
-.resources-upper {
-    display: grid;
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 30px;
-
-    margin-bottom: 55px;
-
-    align-items: center;
-}
-
-/* ==========================
 Upper Resource Cards
 ========================== */
 
@@ -4684,17 +4676,6 @@ Upper Resource Cards
 
 .resource-feature-card .guild-button {
     margin-top: 0;
-}
-
-/* ==========================
-Submit Your Story Card
-========================== */
-
-.resources-upper
-.resource-feature-card:not(.archive-feature-card) {
-    align-self: center;
-
-    min-height: 0;
 }
 
 /* ==========================
@@ -4995,18 +4976,8 @@ Resources Mobile Layout
 
 @media screen and (max-width: 700px) {
 
-    .resources-upper,
     .resource-download-grid {
         grid-template-columns: 1fr;
-    }
-
-    .resources-upper {
-        align-items: stretch;
-    }
-
-    .resources-upper
-    .resource-feature-card:not(.archive-feature-card) {
-        align-self: stretch;
     }
 
     .resource-archive-image {
@@ -5910,4 +5881,220 @@ margin: 20px 0;
 .error-page p {
 max-width: 650px;
 margin: 0 auto 20px auto;
+}
+
+/* ==========================
+Resources Achievement Trigger
+========================== */
+
+.resources-achievement-trigger,
+.resources-achievement-trigger:link,
+.resources-achievement-trigger:visited {
+    display: inline-block;
+
+    margin-right: 7px;
+
+    color: #d4af37;
+
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+.resources-achievement-trigger:hover,
+.resources-achievement-trigger:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+
+    transform: scale(1.15);
+
+    text-shadow:
+        0 0 8px
+        rgba(212, 175, 55, 0.8);
+}
+
+.resources-achievement-trigger:focus-visible {
+    outline: 2px solid #2f3a3d;
+    outline-offset: 4px;
+}
+
+/* ==========================
+Resources Achievement Lightbox
+========================== */
+
+.resources-achievement-lightbox {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+}
+
+.resources-achievement-lightbox:target {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+Resources Achievement Image Link
+========================== */
+
+.resources-achievement-image-link {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+/* ==========================
+Resources Achievement Image
+========================== */
+
+.resources-achievement-lightbox img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 3px solid #d4af37;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================
+Resources Achievement Close Button
+========================== */
+
+.resources-achievement-close,
+.resources-achievement-close:link,
+.resources-achievement-close:visited {
+    position: fixed;
+
+    top: 18px;
+    right: 28px;
+
+    margin: 0;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 10001;
+}
+
+.resources-achievement-close:hover,
+.resources-achievement-close:focus {
+    color: #d4af37;
+
+    text-decoration: none;
+}
+
+/* ==========================
+Resources Achievement Mobile
+========================== */
+
+@media screen and (max-width: 650px) {
+
+    .resources-achievement-lightbox {
+        padding: 15px;
+    }
+
+    .resources-achievement-lightbox img {
+        max-width: 94vw;
+        max-height: 84vh;
+    }
+
+    .resources-achievement-close {
+        top: 10px;
+        right: 15px;
+
+        font-size: 42px;
+    }
+
+    .resources-achievement-trigger {
+        margin-right: 4px;
+
+        font-size: 19px;
+    }
+
+}
+
+.hidden-achievement-star {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    font-size: 0.9em;
+
+    vertical-align: middle;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hidden-achievement-star:hover,
+.hidden-achievement-star:focus {
+    color: #f0c95a;
+
+    text-decoration: none;
+
+    transform: scale(1.1);
 }
