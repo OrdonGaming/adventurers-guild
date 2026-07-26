@@ -13,7 +13,7 @@ Document Setup
 <title>Resources | The Adventurer's Guild</title>
 
 <link rel="stylesheet"
-      href="../global/css/style.css">
+      href="../global/css/style.css?v=14">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
@@ -158,12 +158,10 @@ Resources Introduction
 </header>
 
 <!-- ==========================
-Upper Resources Section
+Guild Image Archives
 ========================== -->
 
-<section class="resources-upper">
-
-    <!-- Guild Image Archives -->
+<section class="guild-archives-preview">
 
     <article class="resource-feature-card archive-feature-card">
 
@@ -186,31 +184,12 @@ Upper Resources Section
                 and memorable moments from across the realm.
             </p>
 
-            <a href="gallery-index.html"
+            <a href="resources-gallery.html"
                class="guild-button">
                 View the Archives
             </a>
 
         </div>
-
-    </article>
-
-    <!-- Submit Your Story -->
-
-    <article class="resource-feature-card">
-
-        <h2>Submit Your Story</h2>
-
-        <p>
-            Share a memorable adventure, character story, campaign
-            moment, piece of artwork, or other contribution with the
-            Adventurer's Guild community.
-        </p>
-
-        <a href="submit-story.html"
-           class="guild-button">
-            Submit Your Story
-        </a>
 
     </article>
 
@@ -350,7 +329,21 @@ Lower Resources Section
 
         <section class="resource-download-column">
 
-            <h3>Game Master Resources</h3>
+            <h3 id="game-master-resources-heading">
+
+                <a href="#achievement-7"
+                   class="resources-achievement-trigger"
+                   aria-label="Open hidden achievement 7 of 10">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                </a>
+
+                Game Master Resources
+
+            </h3>
 
             <p>
                 Reference documents for running the guild,
@@ -447,7 +440,21 @@ Lower Resources Section
 
         <section class="resource-download-column">
 
-            <h3>Player Resources</h3>
+            <h3 id="player-resources-heading">
+
+                Player Resources
+
+                <a href="#achievement-8"
+                   class="resources-achievement-trigger resources-achievement-trigger-after"
+                   aria-label="Open hidden achievement 8 of 10">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                </a>
+
+            </h3>
 
             <p>
                 Guides and reference materials for creating
@@ -541,6 +548,70 @@ Lower Resources Section
         </section>
 
     </div>
+
+</section>
+
+
+<!-- ==========================
+Achievement 7 Lightbox
+========================== -->
+
+<section class="resources-achievement-lightbox"
+         id="achievement-7"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 7 of 10: Master of Many Paths">
+
+    <!-- Close Button -->
+
+    <a href="#game-master-resources-heading"
+       class="resources-achievement-close"
+       aria-label="Close achievement">
+        &times;
+    </a>
+
+    <!-- Achievement Image -->
+
+    <a href="#game-master-resources-heading"
+       class="resources-achievement-image-link"
+       aria-label="Close achievement and return to Game Master Resources">
+
+        <img src="images/master_of_many_paths_achievement_unlocked.png"
+             alt="Achievement unlocked: Master of Many Paths. You found the tools used to shape worlds and guide heroes. Every great story begins with someone willing to build the path. Achievement 7 of 10 hidden achievements.">
+
+    </a>
+
+</section>
+
+
+<!-- ==========================
+Achievement 8 Lightbox
+========================== -->
+
+<section class="resources-achievement-lightbox"
+         id="achievement-8"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 8 of 10: Prepared Adventurer">
+
+    <!-- Close Button -->
+
+    <a href="#player-resources-heading"
+       class="resources-achievement-close"
+       aria-label="Close achievement">
+        &times;
+    </a>
+
+    <!-- Achievement Image -->
+
+    <a href="#player-resources-heading"
+       class="resources-achievement-image-link"
+       aria-label="Close achievement and return to Player Resources">
+
+        <img src="images/achievement_unlocked_player_resources.png"
+             alt="Achievement unlocked: Prepared Adventurer. You have studied the tools of the trade and armed yourself with knowledge. Those who prepare well are ready when adventure begins. Achievement 8 of 10 hidden achievements.">
+
+    </a>
 
 </section>
 
