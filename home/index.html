@@ -1,512 +1,258 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>
 
 <!-- ==========================
 Document Setup
 ========================== -->
-
-<meta charset="UTF-8">
-
-<title>The Adventurer's Guild</title>
-
-<link rel="stylesheet"
-      href="../global/css/style.css?v=16">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Explore The Adventurer's Guild, a fantasy website featuring guild ranks, quests, locations, resources, news, and membership in the world of Avadon.">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>The Adventurer's Guild | Quests, Ranks, and Resources</title>
+    <link rel="stylesheet"
+          href="../global/css/style.css">
 </head>
-
 <body>
 
-<!-- ==========================
-Site Header
-========================== -->
-
-<header class="site-title">
-
-    <a href="../home/index.html">
-
-        <img src="../global/images/Adventurers Guild Symbol.jpg"
-             alt="The Adventurer's Guild Logo">
-
-    </a>
-
-    <div class="title-text">
-
-        <a href="../home/index.html"
-           class="site-title-link">
-
-            <h1>
-                The Adventurer's Guild
-            </h1>
-
+    <!-- ==========================
+    Site Header
+    ========================== -->
+    <header class="site-title">
+        <a href="../home/index.html">
+            <img src="../global/images/Adventurers%20Guild%20Symbol.jpg"
+                 alt="The Adventurer's Guild Logo">
         </a>
-
-        <p>
-            Strength in Unity, Legacy in Action!
-        </p>
-
-    </div>
-
-</header>
-
-<!-- ==========================
-Navigation Bar
-========================== -->
-
-<nav class="nav-bar"
-     aria-label="Main navigation">
-
-    <ul>
-
-        <li>
+        <div class="title-text">
             <a href="../home/index.html"
-               aria-current="page">
-                Home
+               class="site-title-link">
+                <h1>The Adventurer's Guild</h1>
             </a>
-        </li>
-
-        <li>
-            <a href="../about/about-index.html">
-                About the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../ranks/ranks-index.html">
-                Guild Ranks
-            </a>
-        </li>
-
-        <li>
-            <a href="../locations/locations-index.html">
-                Guild Locations
-            </a>
-        </li>
-
-        <li>
-            <a href="../quests/quests-index.html">
-                Quest Board
-            </a>
-        </li>
-
-        <li>
-            <a href="../join/join-index.html">
-                Join the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/resources-index.html">
-                Resources
-            </a>
-        </li>
-
-        <li>
-            <a href="../news/news-index.html">
-                News
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
-<!-- ==========================
-Page Content
-========================== -->
-
-<main class="page-content">
-
-<!-- ==========================
-Upper Content
-========================== -->
-
-<section class="upper-content">
-
-    <div class="hero-slider">
-
-        <div class="slide slide1">
-
-            <img src="images/Oathbound Campaign Overview Image.jpg"
-                 alt="Oathbound Campaign Overview">
-
+            <p>Strength in Unity, Legacy in Action!</p>
         </div>
+    </header>
 
-        <div class="slide slide2">
+    <!-- ==========================
+    Main Navigation
+    ========================== -->
+    <nav class="nav-bar"
+         aria-label="Main navigation">
+        <ul>
+            <li><a href="../home/index.html" aria-current="page">Home</a></li>
+            <li><a href="../about/about-index.html">About the Guild</a></li>
+            <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+            <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+            <li><a href="../quests/quests-index.html">Quest Board</a></li>
+            <li><a href="../join/join-index.html">Join the Guild</a></li>
+            <li><a href="../resources/resources-index.html">Resources</a></li>
+            <li><a href="../news/news-index.html">News</a></li>
+        </ul>
+    </nav>
 
-            <img src="images/Oathbound Campaign Session Logistics Image.jpg"
-                 alt="Oathbound Campaign Session Logistics">
+    <!-- ==========================
+    Main Page Content
+    ========================== -->
+    <main class="page-content">
 
-        </div>
+        <!-- ==========================
+        Hero Section
+        ========================== -->
+        <section class="upper-content">
+            <div class="hero-slider">
+                <div class="slide slide1">
+                    <img src="images/Oathbound%20Campaign%20Overview%20Image.jpg"
+                         alt="Oathbound Campaign Overview">
+                </div>
+                <div class="slide slide2">
+                    <img src="images/Oathbound%20Campaign%20Session%20Logistics%20Image.jpg"
+                         alt="Oathbound Campaign Session Logistics">
+                </div>
+                <div class="slide slide3">
+                    <img src="images/Oathbound%20Campaign%20Synopsis%20Image.jpg"
+                         alt="Oathbound Campaign Synopsis">
+                </div>
+                <div class="hero-container">
+                    <a href="../join/join-index.html"
+                       class="hero-text">
+                        <div class="hero-button-content">
+                            <h2>Welcome, Adventurer!</h2>
+                            <p>Your Legacy Begins Here!</p>
+                        </div>
+                    </a>
+                    <a href="#achievement"
+                       class="hero-easter-egg"
+                       aria-label="Open hidden achievement 1 of 10">
+                        ✦
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div class="slide slide3">
+        <!-- ==========================
+        Featured Content Section
+        ========================== -->
+        <section class="middle-content">
+            <h2 class="decorative-header">
+                <span class="line"></span>
+                <span class="star star-left"
+                      aria-hidden="true">✦</span>
+                Featured Content
+                <span class="star star-right"
+                      aria-hidden="true">✦</span>
+                <span class="line"></span>
+            </h2>
+            <div class="featured-content">
 
-            <img src="images/Oathbound Campaign Synopsis Image.jpg"
-                 alt="Oathbound Campaign Synopsis">
-
-        </div>
-
-        <div class="hero-container">
-
-            <a href="../join/join-index.html"
-               class="hero-text">
-
-                <span class="hero-button-content">
-
-                    <h2>
-                        Welcome, Adventurer!
-                    </h2>
-
+                <!-- Our Mission Card -->
+                <article class="feature-card">
+                    <img src="images/Famous%20Adventurers%20Image.webp"
+                         alt="Adventurers standing together">
+                    <h3>Our Mission</h3>
                     <p>
-                        Your Legacy Begins Here!
+                        The guild exists to unite adventurers, support their
+                        journeys, and protect the realm.
                     </p>
+                    <a class="guild-button"
+                       href="../about/about-index.html">
+                        Learn More
+                    </a>
+                </article>
 
-                </span>
+                <!-- Guild Ranks Card -->
+                <article class="feature-card">
+                    <img src="images/Guild%20Ranks.webp"
+                         alt="Guild rank badges">
+                    <h3>Guild Ranks</h3>
+                    <p>
+                        Learn how adventurers advance through Bronze, Silver,
+                        Gold, Platinum, and Adamantine ranks.
+                    </p>
+                    <a class="guild-button"
+                       href="../ranks/ranks-index.html">
+                        View Ranks
+                    </a>
+                </article>
 
-            </a>
+                <!-- Quest Board Card -->
+                <article class="feature-card">
+                    <img src="images/Generic%20Quest%20board.png"
+                         alt="A wooden quest board with posted contracts">
+                    <h3>Quest Board</h3>
+                    <p>
+                        Review available contracts, choose your next mission,
+                        and begin your next adventure.
+                    </p>
+                    <a class="guild-button"
+                       href="../quests/quests-index.html">
+                        Take Quests
+                    </a>
+                </article>
+            </div>
+        </section>
 
-            <a href="#achievement"
-               class="hero-easter-egg"
-               aria-label="Open hidden achievement 1 of 10">
-                ✦
-            </a>
+        <!-- ==========================
+        Latest News Section
+        ========================== -->
+        <section class="lower-content">
+            <h2 class="decorative-header">
+                <span class="line"></span>
+                <span class="star star-left"
+                      aria-hidden="true">✦</span>
+                Latest News
+                <span class="star star-right"
+                      aria-hidden="true">✦</span>
+                <span class="line"></span>
+            </h2>
+            <article class="latest-news">
+                <img src="images/hidden_achievements.png"
+                     alt="Hidden achievements await curious Guild members">
+                <div class="news-text">
+                    <h3 class="news-title">Achievements Now Available</h3>
+                    <p class="news-date">
+                        <time datetime="2026-07-25">
+                            Posted: July 25, 2026
+                        </time>
+                    </p>
+                    <p>
+                        New achievements are now available on the Guild website.
+                        Curious members should explore and click around to find
+                        all 10!
+                    </p>
+                </div>
+                <a class="guild-button"
+                   href="../news/news-index.html">
+                    Read More
+                </a>
+            </article>
+        </section>
+    </main>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Middle Content
-========================== -->
-
-<section class="middle-content">
-
-    <h2 class="decorative-header">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Featured Content
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <div class="featured-content">
-
-        <!-- Our Mission -->
-
-        <article class="feature-card">
-
-            <img src="images/Famous Adventurers Image.webp"
-                 alt="Adventurers standing together">
-
-            <h3>
-                Our Mission
-            </h3>
-
-            <p>
-                The guild exists to unite adventurers, support their
-                journeys, and protect the realm.
-            </p>
-
-            <a class="guild-button"
-               href="../about/about-index.html">
-                Learn More
-            </a>
-
-        </article>
-
-        <!-- Guild Ranks -->
-
-        <article class="feature-card">
-
-            <img src="images/Guild Ranks.webp"
-                 alt="Guild rank badges">
-
-            <h3>
-                Guild Ranks
-            </h3>
-
-            <p>
-                Learn how adventurers advance through Bronze, Silver,
-                Gold, Platinum, and Adamantine ranks.
-            </p>
-
-            <a class="guild-button"
-               href="../ranks/ranks-index.html">
-                View Ranks
-            </a>
-
-        </article>
-
-        <!-- Quest Board -->
-
-        <article class="feature-card">
-
-            <img src="images/Generic Quest board.png"
-                 alt="A wooden quest board with posted contracts">
-
-            <h3>
-                Quest Board
-            </h3>
-
-            <p>
-                Review available contracts, choose your next mission,
-                and begin your next adventure.
-            </p>
-
-            <a class="guild-button"
-               href="../quests/quests-index.html">
-                Take Quests
-            </a>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Lower Content
-========================== -->
-
-<section class="lower-content">
-
-    <h2 class="decorative-header">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Latest News
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <article class="latest-news">
-
-        <img src="images/hidden_achievements.png"
-             alt="Curious Adventurer hidden achievement">
-
-        <div class="news-text">
-
-            <h3 class="news-title">
-                Achievements Now Available
-            </h3>
-
-            <p class="news-date">
-
-                <time datetime="2026-07-25">
-                    Posted: July 25, 2026
-                </time>
-
-            </p>
-
-            <p>
-                New achievements are now available on the Guild website.
-                Curious members should explore and click around to find
-                all 10!
-            </p>
-
-        </div>
-
-        <a class="guild-button"
-           href="../news/news-index.html">
-            Read More
+    <!-- ==========================
+    Achievement 1 Lightbox
+    ========================== -->
+    <div id="achievement"
+         class="lightbox"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Achievement 1 of 10: Curious Adventurer">
+        <a href="#"
+           class="lightbox-close"
+           aria-label="Close achievement">
+            &times;
         </a>
-
-    </article>
-
-</section>
-
-</main>
-
-<!-- ==========================
-Achievement 1 Lightbox
-========================== -->
-
-<div id="achievement"
-     class="lightbox"
-     role="dialog"
-     aria-modal="true"
-     aria-label="Achievement 1 of 10: Curious Adventurer">
-
-    <a href="#"
-       class="lightbox-close"
-       aria-label="Close achievement">
-        &times;
-    </a>
-
-    <img src="images/Achievement_1 - Curious Adventurer.png"
-         alt="Achievement unlocked: Curious Adventurer. Achievement 1 of 10 hidden achievements.">
-
-</div>
-
-<!-- ==========================
-Footer
-========================== -->
-
-<footer class="footer">
-
-    <div class="footer-content">
-
-        <!-- Adventurer Resources -->
-
-        <section class="footer-section">
-
-            <h2>
-                Adventurer Resources
-            </h2>
-
-            <ul>
-
-                <li>
-                    <a href="../ranks/ranks-index.html">
-                        Guild Ranks
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../quests/quests-index.html">
-                        Quest Board
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../join/join-index.html">
-                        Join the Guild
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../resources/player-resources.html">
-                        Guild Handbook
-                    </a>
-                </li>
-
-            </ul>
-
-        </section>
-
-        <!-- GM Resources -->
-
-        <section class="footer-section">
-
-            <h2>
-                GM Resources
-            </h2>
-
-            <ul>
-
-                <li>
-                    <a href="../locations/locations-index.html">
-                        Guild Locations
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../resources/npc-directory.html">
-                        NPC Directory
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../resources/gm-resources.html">
-                        Quest Templates
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../resources/gm-resources.html">
-                        Adventure Hooks
-                    </a>
-                </li>
-
-            </ul>
-
-        </section>
-
-        <!-- Guild Notices -->
-
-        <section class="footer-section">
-
-            <h2>
-                Guild Notices
-            </h2>
-
-            <ul>
-
-                <li>
-                    <a href="../news/news-index.html#announcements">
-                        Latest Announcements
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../news/news-index.html#expeditions">
-                        Upcoming Expeditions
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../news/news-index.html#events">
-                        Guild Events
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../resources/code-of-conduct.html">
-                        Code of Conduct
-                    </a>
-                </li>
-
-            </ul>
-
-        </section>
-
+        <img src="images/Achievement_1%20-%20Curious%20Adventurer.png"
+             alt="Achievement unlocked: Curious Adventurer. Achievement 1 of 10 hidden achievements.">
     </div>
 
-</footer>
+    <!-- ==========================
+    Site Footer
+    ========================== -->
+    <footer class="footer">
+        <div class="footer-content">
 
-<!-- ==========================
-Copyright
-========================== -->
+            <!-- Adventurer Resources -->
+            <section class="footer-section">
+                <h2>Adventurer Resources</h2>
+                <ul>
+                    <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                    <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                    <li><a href="../join/join-index.html">Join the Guild</a></li>
+                    <li><a href="../resources/resources-index.html">Guild Handbook</a></li>
+                </ul>
+            </section>
 
-<section class="copyright">
+            <!-- Game Master Resources -->
+            <section class="footer-section">
+                <h2>GM Resources</h2>
+                <ul>
+                    <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                    <li><a href="../resources/npc-directory.html">NPC Directory</a></li>
+                    <li><a href="../resources/quest-templates.html">Quest Templates</a></li>
+                    <li><a href="../resources/adventure-hooks.html">Adventure Hooks</a></li>
+                </ul>
+            </section>
 
-    <p>
-        &copy; 2026 The Adventurer's Guild.
-        All Rights Reserved.
-    </p>
+            <!-- Guild Notices -->
+            <section class="footer-section">
+                <h2>Guild Notices</h2>
+                <ul>
+                    <li><a href="../news/news-index.html#announcements">Latest Announcements</a></li>
+                    <li><a href="../news/news-index.html#expeditions">Upcoming Expeditions</a></li>
+                    <li><a href="../news/news-index.html#events">Guild Events</a></li>
+                    <li><a href="../resources/resources-index.html">Code of Conduct</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
 
-</section>
-
+    <!-- ==========================
+    Copyright
+    ========================== -->
+    <div class="copyright">
+        <p>
+            &copy; 2026 The Adventurer's Guild. All Rights Reserved.
+        </p>
+    </div>
 </body>
-
 </html>
