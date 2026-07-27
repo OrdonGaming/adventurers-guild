@@ -1,831 +1,368 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-<head>
+    <!-- ==========================
+    Document Setup
+    ========================== -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Explore The Adventurer&#x27;s Guild ranking system, including Bronze, Silver, Gold, Platinum, and Adamantine ranks and their responsibilities.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guild Ranks | Advancement and Responsibilities</title>
+        <link rel="stylesheet" href="../global/css/style.css">
+    </head>
+    <body>
 
-<!-- ==========================
-Document Setup
-========================== -->
+        <!-- ==========================
+        Site Header
+        ========================== -->
+        <header class="site-title">
+            <a href="../home/index.html"><img src="../global/images/Adventurers%20Guild%20Symbol.jpg" alt="The Adventurer&#x27;s Guild Logo"></a>
+            <div class="title-text">
+                <a href="../home/index.html" class="site-title-link"><h1>The Adventurer's Guild</h1></a>
+                <p>Strength in Unity, Legacy in Action!</p>
+            </div>
+        </header>
 
-<meta charset="UTF-8">
+        <!-- ==========================
+        Main Navigation
+        ========================== -->
+        <nav class="nav-bar" aria-label="Main navigation">
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../about/about-index.html">About the Guild</a></li>
+                <li><a href="../ranks/ranks-index.html" aria-current="page">Guild Ranks</a></li>
+                <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                <li><a href="../join/join-index.html">Join the Guild</a></li>
+                <li><a href="../resources/resources-index.html">Resources</a></li>
+                <li><a href="../news/news-index.html">News</a></li>
+            </ul>
+        </nav>
 
-<title>Guild Ranks | The Adventurer's Guild</title>
+        <!-- ==========================
+        Main Page Content
+        ========================== -->
+        <main class="page-content">
 
-<link rel="stylesheet"
-      href="../global/css/style.css">
+            <!-- ==========================
+            Guild Ranks Introduction
+            ========================== -->
+            <section class="ranks-upper">
+                <h2 class="decorative-header">
+                    <span class="line"></span>
+                    <span class="star star-left" aria-hidden="true">✦</span>
+                    Guild Ranks
+                    <span class="star star-right" aria-hidden="true">✦</span>
+                    <span class="line"></span>
+                </h2>
+                <p>
+                    The Adventurer’s Guild uses a structured rank system to organize members according to their experience, proven skill, reliability, and the level of responsibility they are prepared to accept. Every new member begins at Bronze Rank and earns advancement by completing contracts, supporting fellow adventurers, following the Guild Code of Conduct, and demonstrating sound judgment in dangerous situations.
+                </p>
+            </section>
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+            <!-- ==========================
+            Rank List
+            ========================== -->
+            <section class="rank-list" aria-label="Adventurer rank levels">
 
-</head>
-
-<body>
-
-<!-- ==========================
-Site Header
-========================== -->
-
-<header class="site-title">
-
-    <a href="../home/index.html">
-
-        <img src="../global/images/Adventurers Guild Symbol.jpg"
-             alt="The Adventurer's Guild Logo">
-
-    </a>
-
-    <div class="title-text">
-
-        <a href="../home/index.html"
-           class="site-title-link">
-
-            <h1>The Adventurer's Guild</h1>
-
-        </a>
-
-        <p>
-            Strength in Unity, Legacy in Action!
-        </p>
-
-    </div>
-
-</header>
-
-<!-- ==========================
-Navigation Bar
-========================== -->
-
-<nav class="nav-bar"
-     aria-label="Main navigation">
-
-    <ul>
-
-        <li>
-            <a href="../home/index.html">
-                Home
-            </a>
-        </li>
-
-        <li>
-            <a href="../about/about-index.html">
-                About the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../ranks/ranks-index.html"
-               aria-current="page">
-                Guild Ranks
-            </a>
-        </li>
-
-        <li>
-            <a href="../locations/locations-index.html">
-                Guild Locations
-            </a>
-        </li>
-
-        <li>
-            <a href="../quests/quests-index.html">
-                Quest Board
-            </a>
-        </li>
-
-        <li>
-            <a href="../join/join-index.html">
-                Join the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/resources-index.html">
-                Resources
-            </a>
-        </li>
-
-        <li>
-            <a href="../news/news-index.html">
-                News
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
-<!-- ==========================
-Page Content
-========================== -->
-
-<main class="page-content">
-
-<!-- ==========================
-Guild Ranks Introduction
-========================== -->
-
-<section class="ranks-upper">
-
-    <h2 class="decorative-header">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Guild Ranks
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <p>
-        The Adventurer’s Guild uses a structured rank system to
-        organize members according to their experience, proven skill,
-        reliability, and the level of responsibility they are prepared
-        to accept. Every new member begins at Bronze Rank and earns
-        advancement by completing contracts, supporting fellow
-        adventurers, following the Guild Code of Conduct, and
-        demonstrating sound judgment in dangerous situations.
-    </p>
-
-</section>
-
-<!-- ==========================
-Rank List
-========================== -->
-
-<section class="rank-list"
-         aria-label="Adventurer rank levels">
-
-<!-- ==========================
-Bronze Rank
-========================== -->
-
-<details class="rank-row bronze-rank"
-         name="guild-ranks">
-
-    <summary>
-
-        <img src="images/Bronze%20Image.webp"
-            alt="Bronze Rank Symbol"
-            class="rank-icon">
-
-        <div class="rank-main">
-
-            <span class="rank-name">
+                <!-- ==========================
                 Bronze Rank
-            </span>
+                ========================== -->
+                <details class="rank-row bronze-rank" name="guild-ranks">
+                    <summary>
+                        <img src="images/Bronze%20Image.webp" alt="Bronze Rank Symbol" class="rank-icon">
+                        <span class="rank-main"><span class="rank-name">Bronze Rank</span></span>
+                        <span class="rank-levels">Levels 1-4</span>
+                    </summary>
+                    <div class="rank-details">
+                        <p>
+                            Bronze adventurers are new members of the guild. They take beginner contracts, local missions, and lower-risk quests while proving their reliability.
+                        </p>
+                        <a class="guild-button" href="bronze-rank.html">View Bronze Rank</a>
+                    </div>
+                </details>
 
-            <div class="rank-details">
-
-                <p>
-                    Bronze adventurers are new members of the guild.
-                    They take beginner contracts, local missions, and
-                    lower-risk quests while proving their reliability.
-                </p>
-
-                <a class="guild-button"
-                   href="bronze-rank.html">
-                    View Bronze Rank
-                </a>
-
-            </div>
-
-        </div>
-
-        <span class="rank-levels">
-            Levels 1-4
-        </span>
-
-    </summary>
-
-</details>
-
-<!-- ==========================
-Silver Rank
-========================== -->
-
-<details class="rank-row silver-rank"
-         name="guild-ranks">
-
-    <summary>
-
-        <img src="images/Silver%20Image.webp"
-             alt="Silver Rank Symbol"
-             class="rank-icon">
-
-        <div class="rank-main">
-
-            <span class="rank-name">
+                <!-- ==========================
                 Silver Rank
-            </span>
+                ========================== -->
+                <details class="rank-row silver-rank" name="guild-ranks">
+                    <summary>
+                        <img src="images/Silver%20Image.webp" alt="Silver Rank Symbol" class="rank-icon">
+                        <span class="rank-main"><span class="rank-name">Silver Rank</span></span>
+                        <span class="rank-levels">Levels 5-8</span>
+                    </summary>
+                    <div class="rank-details">
+                        <p>Silver adventurers have proven themselves through successful contracts and are trusted with more dangerous regional quests.</p>
+                        <a class="guild-button" href="silver-rank.html">View Silver Rank</a>
+                    </div>
+                </details>
 
-            <div class="rank-details">
-
-                <p>
-                    Silver adventurers have proven themselves through
-                    successful contracts and are trusted with more
-                    dangerous regional quests.
-                </p>
-
-                <a class="guild-button"
-                   href="silver-rank.html">
-                    View Silver Rank
-                </a>
-
-            </div>
-
-        </div>
-
-        <span class="rank-levels">
-            Levels 5-8
-        </span>
-
-    </summary>
-
-</details>
-
-<!-- ==========================
-Gold Rank
-========================== -->
-
-<details class="rank-row gold-rank"
-         name="guild-ranks">
-
-    <summary>
-
-        <img src="images/Gold%20Image.webp"
-             alt="Gold Rank Symbol"
-             class="rank-icon">
-
-        <div class="rank-main">
-
-            <span class="rank-name">
+                <!-- ==========================
                 Gold Rank
-            </span>
+                ========================== -->
+                <details class="rank-row gold-rank" name="guild-ranks">
+                    <summary>
+                        <img src="images/Gold%20Image.webp" alt="Gold Rank Symbol" class="rank-icon">
+                        <span class="rank-main"><span class="rank-name">Gold Rank</span></span>
+                        <span class="rank-levels">Levels 9-12</span>
+                    </summary>
+                    <div class="rank-details">
+                        <p>Gold adventurers are respected guild members who handle major threats, important contracts, and missions requiring advanced skill.</p>
+                        <a class="guild-button" href="gold-rank.html">View Gold Rank</a>
+                    </div>
+                </details>
 
-            <div class="rank-details">
-
-                <p>
-                    Gold adventurers are respected guild members who
-                    handle major threats, important contracts, and
-                    missions requiring advanced skill.
-                </p>
-
-                <a class="guild-button"
-                   href="gold-rank.html">
-                    View Gold Rank
-                </a>
-
-            </div>
-
-        </div>
-
-        <span class="rank-levels">
-            Levels 9-12
-        </span>
-
-    </summary>
-
-</details>
-
-<!-- ==========================
-Platinum Rank
-========================== -->
-
-<details class="rank-row platinum-rank"
-         name="guild-ranks">
-
-    <summary>
-
-        <img src="images/Platinum%20Image.webp"
-             alt="Platinum Rank Symbol"
-             class="rank-icon">
-
-        <div class="rank-main">
-
-            <span class="rank-name">
+                <!-- ==========================
                 Platinum Rank
-            </span>
+                ========================== -->
+                <details class="rank-row platinum-rank" name="guild-ranks">
+                    <summary>
+                        <img src="images/Platinum%20Image.webp" alt="Platinum Rank Symbol" class="rank-icon">
+                        <span class="rank-main"><span class="rank-name">Platinum Rank</span></span>
+                        <span class="rank-levels">Levels 13-16</span>
+                    </summary>
+                    <div class="rank-details">
+                        <p>
+                            Platinum adventurers are elite members of the guild trusted with high-risk assignments, powerful enemies, and matters of great importance.
+                        </p>
+                        <a class="guild-button" href="platinum-rank.html">View Platinum Rank</a>
+                    </div>
+                </details>
 
-            <div class="rank-details">
-
-                <p>
-                    Platinum adventurers are elite members of the guild
-                    trusted with high-risk assignments, powerful enemies,
-                    and matters of great importance.
-                </p>
-
-                <a class="guild-button"
-                   href="platinum-rank.html">
-                    View Platinum Rank
-                </a>
-
-            </div>
-
-        </div>
-
-        <span class="rank-levels">
-            Levels 13-16
-        </span>
-
-    </summary>
-
-</details>
-
-<!-- ==========================
-Adamantine Rank
-========================== -->
-
-<details class="rank-row adamantine-rank"
-         name="guild-ranks">
-
-    <summary>
-
-        <img src="images/Adamantine%20Image.webp"
-             alt="Adamantine Rank Symbol"
-             class="rank-icon">
-
-        <div class="rank-main">
-
-            <span class="rank-name">
+                <!-- ==========================
                 Adamantine Rank
-            </span>
-
-            <div class="rank-details">
-
-                <p>
-                    Adamantine adventurers are legendary figures within
-                    the guild. Their actions shape history, protect
-                    kingdoms, and define the legacy of the Adventurer's
-                    Guild.
-                </p>
-
-                <a class="guild-button"
-                   href="adamantine-rank.html">
-                    View Adamantine Rank
-                </a>
-
-            </div>
-
-        </div>
-
-        <span class="rank-levels">
-            Levels 17-20
-        </span>
-
-    </summary>
-
-</details>
-
-</section>
-
-<!-- ==========================
-Rank Advancement Section
-========================== -->
-
-<section class="rank-advancement"
-         id="rank-advancement">
-
-<!-- ==========================
-Rank Advancement Introduction
-========================== -->
-
-<header class="rank-advancement-intro">
-
-    <h2 class="decorative-header">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        How Rank Advancement Works
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <p>
-        Guild advancement combines character level with completed
-        quests. A character’s guild rank should generally remain close
-        to their character level while also representing the experience,
-        reliability, and reputation they have earned through guild
-        service.
-    </p>
-
-</header>
-
-<!-- ==========================
-Advancement Steps
-========================== -->
-
-<div class="rank-advancement-steps">
-
-<!-- ==========================
-Step 1: Field Training
-========================== -->
-
-<article class="advancement-step">
-
-    <span class="advancement-number"
-          aria-hidden="true">
-        1
-    </span>
-
-    <h3>Complete Field Training</h3>
-
-    <p>
-        Every accepted member begins with Field Training and Observation,
-        commonly called FTO. The recruit completes three introductory
-        quests while accompanied by an experienced Guild Trainer.
-    </p>
-
-    <p>
-        The trainer may provide guidance, correct unsafe decisions, or
-        intervene when the recruit is in serious danger. After completing
-        all three training quests, the character officially becomes a
-        Bronze 1 adventurer.
-    </p>
-
-</article>
-
-<!-- ==========================
-Step 2: Complete Quests
-========================== -->
-
-<article class="advancement-step">
-
-    <span class="advancement-number"
-          aria-hidden="true">
-        2
-    </span>
-
-    <h3>Complete Quests</h3>
-
-    <p>
-        After FTO, characters earn advancement by completing guild
-        quests. In an experience-based campaign, each quest may award
-        advancement experience comparable to the amount needed for a
-        normal character level increase.
-    </p>
-
-    <p>
-        In a milestone campaign, the Dungeon Master may instead require
-        a set number of successful quests. Three to five quests for each
-        advancement is generally recommended.
-    </p>
-
-</article>
-
-<!-- ==========================
-Step 3: Rank Requirements
-========================== -->
-
-<article class="advancement-step">
-
-    <span class="advancement-number"
-          aria-hidden="true">
-        3
-    </span>
-
-    <h3>Meet Rank Requirements</h3>
-
-    <p>
-        A character must complete the required quests and meet the
-        minimum character level for the next guild rank. Characters
-        advance through every numbered step and may not skip ranks.
-    </p>
-
-    <p>
-        Incremental promotions normally provide recognition or currency,
-        while advancement into a new rank may include a ceremony and a
-        level-appropriate magic item.
-    </p>
-
-</article>
-
-</div>
-
-<!-- ==========================
-Advancement Rules
-========================== -->
-
-<div class="rank-rule-grid">
-
-<!-- ==========================
-Level and Rank Requirements
-========================== -->
-
-<article class="rank-rule-card">
-
-    <h3>Level and Rank Requirements</h3>
-
-    <ul>
-
-        <li>
-            Characters must meet the minimum character level for a rank.
-        </li>
-
-        <li>
-            A character must be at least level 5 before normally
-            qualifying for Silver 1.
-        </li>
-
-        <li>
-            New members begin at Bronze 1 regardless of their existing
-            character level.
-        </li>
-
-        <li>
-            Higher-level characters may have their early promotions
-            expedited until their rank more closely matches their level.
-        </li>
-
-        <li>
-            Characters cannot skip a rank or any numbered stage within
-            that rank.
-        </li>
-
-        <li>
-            Early promotion is possible, but it may give a character
-            access to quests beyond their current abilities.
-        </li>
-
-    </ul>
-
-</article>
-
-<!-- ==========================
-Failure and Demotion
-========================== -->
-
-<article class="rank-rule-card">
-
-    <h3>Failure and Demotion</h3>
-
-    <ul>
-
-        <li>
-            Repeated quest failures may result in demotion at the
-            Dungeon Master’s discretion.
-        </li>
-
-        <li>
-            Five failed quests is the recommended guideline for
-            considering a demotion.
-        </li>
-
-        <li>
-            Demotion does not reduce the character’s actual level.
-        </li>
-
-        <li>
-            Demoted characters lose access to higher-paying and more
-            prestigious contracts.
-        </li>
-
-        <li>
-            Guild officials and other NPCs may recognize the character’s
-            damaged reputation.
-        </li>
-
-        <li>
-            Contract rewards may be reduced by 10% for each rank lost
-            through demotion.
-        </li>
-
-    </ul>
-
-</article>
-
-</div>
-
-<!-- ==========================
-Dungeon Master Guidance
+                ========================== -->
+                <details class="rank-row adamantine-rank" name="guild-ranks">
+                    <summary>
+                        <img src="images/Adamantine%20Image.webp" alt="Adamantine Rank Symbol" class="rank-icon">
+                        <span class="rank-main"><span class="rank-name">Adamantine Rank</span></span>
+                        <span class="rank-levels">Levels 17-20</span>
+                    </summary>
+                    <div class="rank-details">
+                        <p>
+                            Adamantine adventurers are legendary figures within the guild. Their actions shape history, protect kingdoms, and define the legacy of the Adventurer's Guild.
+                        </p>
+                        <a class="guild-button" href="adamantine-rank.html">View Adamantine Rank</a>
+                    </div>
+                </details>
+            </section>
+
+            <!-- ==========================
+            Rank Advancement
+            ========================== -->
+            <section class="rank-advancement" id="rank-advancement">
+
+                <!-- ==========================
+                Rank Advancement Introduction
+                ========================== -->
+                <header class="rank-advancement-intro">
+                    <h2 class="decorative-header">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        How Rank Advancement Works
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <p>
+                        Guild advancement combines character level with completed quests. A character’s guild rank should generally remain close to their character level while also representing the experience, reliability, and reputation they have earned through guild service.
+                    </p>
+                </header>
+
+                <!-- ==========================
+                Advancement Steps
+                ========================== -->
+                <div class="rank-advancement-steps">
+
+                    <!-- ==========================
+                    Step 1: Field Training
+                    ========================== -->
+                    <article class="advancement-step">
+                        <span class="advancement-number" aria-hidden="true">1</span>
+                        <h3>Complete Field Training</h3>
+                        <p>
+                            Every accepted member begins with Field Training and Observation, commonly called FTO. The recruit completes three introductory quests while accompanied by an experienced Guild Trainer.
+                        </p>
+                        <p>
+                            The trainer may provide guidance, correct unsafe decisions, or intervene when the recruit is in serious danger. After completing all three training quests, the character officially becomes a Bronze 1 adventurer.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Step 2: Complete Quests
+                    ========================== -->
+                    <article class="advancement-step">
+                        <span class="advancement-number" aria-hidden="true">2</span>
+                        <h3>Complete Quests</h3>
+                        <p>
+                            After FTO, characters earn advancement by completing guild quests. In an experience-based campaign, each quest may award advancement experience comparable to the amount needed for a normal character level increase.
+                        </p>
+                        <p>
+                            In a milestone campaign, the Dungeon Master may instead require a set number of successful quests. Three to five quests for each advancement is generally recommended.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Step 3: Rank Requirements
+                    ========================== -->
+                    <article class="advancement-step">
+                        <span class="advancement-number" aria-hidden="true">3</span>
+                        <h3>Meet Rank Requirements</h3>
+                        <p>
+                            A character must complete the required quests and meet the minimum character level for the next guild rank. Characters advance through every numbered step and may not skip ranks.
+                        </p>
+                        <p>
+                            Incremental promotions normally provide recognition or currency, while advancement into a new rank may include a ceremony and a level-appropriate magic item.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- ==========================
+                Advancement Rules
+                ========================== -->
+                <div class="rank-rule-grid">
+
+                    <!-- ==========================
+                    Level and Rank Requirements
+                    ========================== -->
+                    <article class="rank-rule-card">
+                        <h3>Level and Rank Requirements</h3>
+                        <ul>
+                            <li>
+                                Characters must meet the minimum character level for a rank.
+                            </li>
+                            <li>
+                                A character must be at least level 5 before normally qualifying for Silver 1.
+                            </li>
+                            <li>
+                                New members begin at Bronze 1 regardless of their existing character level.
+                            </li>
+                            <li>
+                                Higher-level characters may have their early promotions expedited until their rank more closely matches their level.
+                            </li>
+                            <li>
+                                Characters cannot skip a rank or any numbered stage within that rank.
+                            </li>
+                            <li>
+                                Early promotion is possible, but it may give a character access to quests beyond their current abilities.
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- ==========================
+                    Failure and Demotion
+                    ========================== -->
+                    <article class="rank-rule-card">
+                        <h3>Failure and Demotion</h3>
+                        <ul>
+                            <li>
+                                Repeated quest failures may result in demotion at the Dungeon Master’s discretion.
+                            </li>
+                            <li>
+                                Five failed quests is the recommended guideline for considering a demotion.
+                            </li>
+                            <li>
+                                Demotion does not reduce the character’s actual level.
+                            </li>
+                            <li>
+                                Demoted characters lose access to higher-paying and more prestigious contracts.
+                            </li>
+                            <li>
+                                Guild officials and other NPCs may recognize the character’s damaged reputation.
+                            </li>
+                            <li>
+                                Contract rewards may be reduced by 10% for each rank lost through demotion.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!-- ==========================
+                Dungeon Master Guidance
 Achievement 3 Trigger
-========================== -->
+                ========================== -->
+                <aside class="rank-dm-guidance" id="rank-guidance">
+                    <h3><a href="#achievement-3" class="rank-achievement-trigger" aria-label="Open hidden achievement 3 of 10">Dungeon Master Guidance</a></h3>
+                    <p>
+                        For milestone advancement, requiring three to five successful quests for each rank increase is recommended. Incremental promotions may provide currency rewards, while advancement into a new rank may include a level-appropriate magic item and a Rank Advancement Ceremony.
+                    </p>
+                    <p>
+                        A Rank Advancement Ceremony can serve as a roleplaying session in which the characters receive recognition, celebrate their accomplishments, interact with guild members, and take a break from regular adventuring.
+                    </p>
+                </aside>
+            </section>
 
-<aside class="rank-dm-guidance"
-       id="rank-guidance">
+            <!-- ==========================
+            Achievement 3 Lightbox
+            ========================== -->
+            <div class="lightbox" id="achievement-3" role="dialog" aria-modal="true" aria-label="Achievement 3 of 10: Behind the Screen">
 
-    <h3>
+                <!-- ==========================
+                Close Button
+                ========================== -->
+                <a href="#rank-guidance" class="lightbox-close" aria-label="Close achievement">×</a>
 
-        <a href="#achievement-3"
-           class="rank-achievement-trigger"
-           aria-label="Open hidden achievement 3 of 10">
+                <!-- ==========================
+                Achievement Image
+                ========================== -->
+                <a href="#rank-guidance" aria-label="Close achievement and return to Dungeon Master Guidance">
+                    <img src="images/behind_the_screen_achievement_unlocked.png" alt="Achievement unlocked: Behind the Screen. You guide the path and shape the story. True wisdom often comes from those who see the whole board. Achievement 3 of 10 hidden achievements.">
+                </a>
+            </div>
+        </main>
 
-            Dungeon Master Guidance
+        <!-- ==========================
+        Site Footer
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-content">
 
-        </a>
+                <!-- ==========================
+                Adventurer Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Adventurer Resources</h2>
+                    <ul>
+                        <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                        <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                        <li><a href="../join/join-index.html">Join the Guild</a></li>
+                        <li><a href="../resources/resources-index.html">Guild Handbook</a></li>
+                    </ul>
+                </section>
 
-    </h3>
+                <!-- ==========================
+                Game Master Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>GM Resources</h2>
+                    <ul>
+                        <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                        <li><a href="../resources/npc-directory.html">NPC Directory</a></li>
+                        <li><a href="../resources/quest-templates.html">Quest Templates</a></li>
+                        <li><a href="../resources/adventure-hooks.html">Adventure Hooks</a></li>
+                    </ul>
+                </section>
 
-    <p>
-        For milestone advancement, requiring three to five successful
-        quests for each rank increase is recommended. Incremental
-        promotions may provide currency rewards, while advancement into
-        a new rank may include a level-appropriate magic item and a Rank
-        Advancement Ceremony.
-    </p>
+                <!-- ==========================
+                Guild Notices
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Guild Notices</h2>
+                    <ul>
+                        <li><a href="../news/news-index.html#announcements">Latest Announcements</a></li>
+                        <li><a href="../news/news-index.html#expeditions">Upcoming Expeditions</a></li>
+                        <li><a href="../news/news-index.html#events">Guild Events</a></li>
+                        <li><a href="../resources/resources-index.html">Code of Conduct</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
 
-    <p>
-        A Rank Advancement Ceremony can serve as a roleplaying session
-        in which the characters receive recognition, celebrate their
-        accomplishments, interact with guild members, and take a break
-        from regular adventuring.
-    </p>
-
-</aside>
-
-</section>
-
-<!-- ==========================
-Achievement 3 Lightbox
-========================== -->
-
-<section class="lightbox"
-         id="achievement-3"
-         role="dialog"
-         aria-modal="true"
-         aria-label="Achievement 3 of 10: Behind the Screen">
-
-    <!-- Close Button -->
-
-    <a href="#rank-guidance"
-       class="lightbox-close"
-       aria-label="Close achievement">
-        &times;
-    </a>
-
-    <!-- Achievement Image -->
-
-    <a href="#rank-guidance"
-       aria-label="Close achievement and return to Dungeon Master Guidance">
-
-        <img src="images/behind_the_screen_achievement_unlocked.png"
-             alt="Achievement unlocked: Behind the Screen. You guide the path and shape the story. True wisdom often comes from those who see the whole board. Achievement 3 of 10 hidden achievements.">
-
-    </a>
-
-</section>
-
-</main>
-
-<!-- ==========================
-Footer
-========================== -->
-
-<footer class="footer">
-
-<div class="footer-content">
-
-<!-- ==========================
-Adventurer Resources
-========================== -->
-
-<section class="footer-section">
-
-    <h2>Adventurer Resources</h2>
-
-    <ul>
-
-        <li>
-            <a href="../ranks/ranks-index.html">
-                Guild Ranks
-            </a>
-        </li>
-
-        <li>
-            <a href="../quests/quests-index.html">
-                Quest Board
-            </a>
-        </li>
-
-        <li>
-            <a href="../join/join-index.html">
-                Join the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/player-resources.html">
-                Guild Handbook
-            </a>
-        </li>
-
-    </ul>
-
-</section>
-
-<!-- ==========================
-GM Resources
-========================== -->
-
-<section class="footer-section">
-
-    <h2>GM Resources</h2>
-
-    <ul>
-
-        <li>
-            <a href="../locations/locations-index.html">
-                Guild Locations
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/npc-directory.html">
-                NPC Directory
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/gm-resources.html">
-                Quest Templates
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/gm-resources.html">
-                Adventure Hooks
-            </a>
-        </li>
-
-    </ul>
-
-</section>
-
-<!-- ==========================
-Guild Notices
-========================== -->
-
-<section class="footer-section">
-
-    <h2>Guild Notices</h2>
-
-    <ul>
-
-        <li>
-            <a href="../news/announcements.html">
-                Latest Announcements
-            </a>
-        </li>
-
-        <li>
-            <a href="../news/expeditions.html">
-                Upcoming Expeditions
-            </a>
-        </li>
-
-        <li>
-            <a href="../news/events.html">
-                Guild Events
-            </a>
-        </li>
-
-        <li>
-            <a href="../resources/code-of-conduct.html">
-                Code of Conduct
-            </a>
-        </li>
-
-    </ul>
-
-</section>
-
-</div>
-
-</footer>
-
-<!-- ==========================
-Copyright
-========================== -->
-
-<section class="copyright">
-
-    <p>
-        &copy; 2026 The Adventurer's Guild.
-        All Rights Reserved.
-    </p>
-
-</section>
-
-</body>
-
+        <!-- ==========================
+        Copyright
+        ========================== -->
+        <div class="copyright">
+            <p>© 2026 The Adventurer's Guild. All Rights Reserved.</p>
+        </div>
+    </body>
 </html>
