@@ -6,9 +6,9 @@
     ========================== -->
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Review the colors, typography, layout standards, imagery, and design guidelines used throughout The Adventurer&#x27;s Guild website.">
+        <meta name="description" content="Explore the headquarters, regional branches, special facilities, and notable guild locations found throughout the fantasy world of Avadon.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Website Style Guide | The Adventurer's Guild</title>
+        <title>Guild Locations | Headquarters, Branches, and Facilities</title>
         <link rel="stylesheet" href="../global/css/style.css">
     </head>
     <body>
@@ -31,10 +31,10 @@
                 <li><a href="../home/index.html">Home</a></li>
                 <li><a href="../about/about-index.html">About the Guild</a></li>
                 <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
-                <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                <li><a href="../locations/locations-index.html" aria-current="page">Guild Locations</a></li>
                 <li><a href="../quests/quests-index.html">Quest Board</a></li>
                 <li><a href="../join/join-index.html">Join the Guild</a></li>
-                <li><a href="../resources/resources-index.html" aria-current="page">Resources</a></li>
+                <li><a href="../resources/resources-index.html">Resources</a></li>
                 <li><a href="../news/news-index.html">News</a></li>
             </ul>
         </nav>
@@ -45,166 +45,487 @@
         <main class="page-content">
 
             <!-- ==========================
-            Style Guide Introduction
+            Locations Introduction
             ========================== -->
-            <section class="style-guide-intro">
-                <h2>Style Guide</h2>
-                <p>
-                    This page documents the visual design system for The Adventurer's Guild website, including the logo, colors, typography, tables, buttons, news items, and common page elements.
+            <section class="locations-upper">
+                <h2 class="decorative-header">
+                    <span class="line"></span>
+                    <span class="star star-left" aria-hidden="true">✦</span>
+                    Guild Locations
+                    <span class="star star-right" aria-hidden="true">✦</span>
+                    <span class="line"></span>
+                </h2>
+                <p class="locations-introduction">
+                    The Adventurer’s Guild maintains a connected network of headquarters, regional branches, minor offices, outposts, and specialized facilities throughout Avadon. These locations allow Guild members to find contracts, report completed assignments, receive training, conduct research, obtain supplies, and secure lodging while traveling.
                 </p>
+                <p class="locations-introduction">
+                    The size and services of each location depend on the needs of the surrounding region. Major cities may support full Guild halls with archives, training areas, and permanent staff, while villages and frontier settlements may rely on smaller contract houses or roadside posts.
+                </p>
+                <p class="locations-instructions">Open a location category below and select a specific location to view additional information.</p>
+
+                <!-- ==========================
+                Map of Avadon
+                ========================== -->
+                <img src="images/Avadon%20Map.png" alt="Map of Avadon showing the regions served by the Adventurer&#x27;s Guild" class="locations-map">
             </section>
 
             <!-- ==========================
-            Logo
+            Interactive Guild Locations
             ========================== -->
-            <section class="style-guide-logo">
-                <h2>Logo</h2>
-                <p>The guild crest is used as the primary symbol of The Adventurer's Guild.</p>
-                <img src="../global/images/Adventurers%20Guild%20Symbol.jpg" alt="The Adventurer&#x27;s Guild Logo" width="150">
-            </section>
+            <div class="locations-interactive">
 
-            <!-- ==========================
-            Typography
-            ========================== -->
-            <section class="style-guide-typography">
-                <h2>Typography</h2>
-                <p class="style-guide-heading-example style-guide-heading-one">Heading One Example</p>
-                <h2>Heading Two Example</h2>
-                <h3>Heading Three Example</h3>
-                <p>This is an example of body text. Body text uses Times New Roman for a readable, traditional appearance that matches the fantasy theme of the website.</p>
-            </section>
+                <!-- ==========================
+                Location Selection Controls
+                ========================== -->
 
-            <!-- ==========================
-            Buttons
-            ========================== -->
-            <section class="style-guide-buttons">
-                <h2>Buttons</h2>
-                <p>Buttons use the guild's gunmetal gray and gold colors to create a strong call to action.</p>
-                <p><a class="guild-button" href="../join/join-index.html">Join the Guild</a></p>
-            </section>
+                <!-- ==========================
+                Default Avadon Description
+                ========================== -->
+                <input type="radio" name="guild-location" id="location-avadon" class="location-selector" checked>
 
-            <!-- ==========================
-            News Item Style
-            ========================== -->
-            <section class="style-guide-news">
-                <h2>News Item Style</h2>
-                <article class="latest-news">
-                    <img src="../global/images/Adventurers%20Guild%20Symbol.jpg" alt="The Adventurer&#x27;s Guild Logo">
-                    <div class="news-text">
-                        <h3 class="news-title">Guild Hall Opens Its Doors to New Adventurers</h3>
-                        <p class="news-date">Posted: May 26, 2026</p>
-                    </div>
-                    <a class="guild-button" href="../news/news-index.html">Read More</a>
-                </article>
-            </section>
+                <!-- ==========================
+                Headquarters Locations
+                ========================== -->
+                <input type="radio" name="guild-location" id="location-grand-guild-hall" class="location-selector">
+                <input type="radio" name="guild-location" id="location-council-chambers" class="location-selector">
+                <input type="radio" name="guild-location" id="location-masters-office" class="location-selector">
+                <input type="radio" name="guild-location" id="location-hall-of-records" class="location-selector">
+                <input type="radio" name="guild-location" id="location-high-contract-office" class="location-selector">
 
-            <!-- ==========================
-            Color Palette
-            ========================== -->
-            <section class="style-guide-colors">
-                <h2>Color Palette</h2>
-                <table class="style-guide-color-table">
-                    <caption>The Adventurer's Guild Website Color Palette</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Color Name</th>
-                            <th scope="col">Preview</th>
-                            <th scope="col">Hex Code</th>
-                            <th scope="col">Suggested Use</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Guild Gold</td>
-                            <td style="background-color:#D4AF37;"></td>
-                            <td>#D4AF37</td>
-                            <td>Buttons, Links, Highlights, Headers</td>
-                        </tr>
-                        <tr>
-                            <td>Gunmetal Gray</td>
-                            <td style="background-color:#2F3A3D;"></td>
-                            <td>#2F3A3D</td>
-                            <td>Navigation Bar, Footer, Dark Panels</td>
-                        </tr>
-                        <tr>
-                            <td>Parchment</td>
-                            <td style="background-color:#F4F1E8;"></td>
-                            <td>#F4F1E8</td>
-                            <td>Main Page Background</td>
-                        </tr>
-                        <tr>
-                            <td>Ivory</td>
-                            <td style="background-color:#FFF8E7;"></td>
-                            <td>#FFF8E7</td>
-                            <td>Content Cards, Information Boxes</td>
-                        </tr>
-                        <tr>
-                            <td>Deep Crimson</td>
-                            <td style="background-color:#8B1E1E;"></td>
-                            <td>#8B1E1E</td>
-                            <td>Alerts, Important Notices, Elite Quests</td>
-                        </tr>
-                        <tr>
-                            <td>Black</td>
-                            <td style="background-color:#000000;"></td>
-                            <td>#000000</td>
-                            <td>Borders, Text, Dividers</td>
-                        </tr>
-                        <tr>
-                            <td>White</td>
-                            <td style="background-color:#FFFFFF;"></td>
-                            <td>#FFFFFF</td>
-                            <td>Header Backgrounds, Text Contrast</td>
-                        </tr>
-                        <tr>
-                            <td>Bronze Rank</td>
-                            <td style="background-color:#B08D57;"></td>
-                            <td>#B08D57</td>
-                            <td>Bronze Adventurer Rank</td>
-                        </tr>
-                        <tr>
-                            <td>Silver Rank</td>
-                            <td style="background-color:#A8A9AD;"></td>
-                            <td>#A8A9AD</td>
-                            <td>Silver Adventurer Rank</td>
-                        </tr>
-                        <tr>
-                            <td>Gold Rank</td>
-                            <td style="background-color:#D4AF37;"></td>
-                            <td>#D4AF37</td>
-                            <td>Gold Adventurer Rank</td>
-                        </tr>
-                        <tr>
-                            <td>Platinum Rank</td>
-                            <td style="background-color:#D3E5EF;"></td>
-                            <td>#D3E5EF</td>
-                            <td>Platinum Adventurer Rank</td>
-                        </tr>
-                        <tr>
-                            <td>Adamantine Rank</td>
-                            <td style="background-color:#BAC8B0;"></td>
-                            <td>#BAC8B0</td>
-                            <td>Adamantine Adventurer Rank</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+                <!-- ==========================
+                Major Branch Locations
+                ========================== -->
+                <input type="radio" name="guild-location" id="location-aeridell-branch" class="location-selector">
+                <input type="radio" name="guild-location" id="location-park-royal-hall" class="location-selector">
+                <input type="radio" name="guild-location" id="location-rivergate-hall" class="location-selector">
+                <input type="radio" name="guild-location" id="location-highwatch-hall" class="location-selector">
 
-            <!-- ==========================
-            Navigation Style
-            ========================== -->
-            <section class="style-guide-navigation">
-                <h2>Navigation Style</h2>
-                <p>Navigation links use Times New Roman by default and change to Evil Empire with a gold color when hovered over by the user.</p>
-            </section>
+                <!-- ==========================
+                Minor Branch Locations
+                ========================== -->
+                <input type="radio" name="guild-location" id="location-frontier-outposts" class="location-selector">
+                <input type="radio" name="guild-location" id="location-village-contract-houses" class="location-selector">
+                <input type="radio" name="guild-location" id="location-roadside-guild-posts" class="location-selector">
+                <input type="radio" name="guild-location" id="location-regional-guild-offices" class="location-selector">
 
-            <!-- ==========================
-            Table Style
-            ========================== -->
-            <section class="style-guide-table">
-                <h2>Table Style</h2>
-                <p>Tables use a dark header row, clear borders, and light backgrounds for readability.</p>
-            </section>
+                <!-- ==========================
+                Special Facilities
+                ========================== -->
+                <input type="radio" name="guild-location" id="location-training-grounds" class="location-selector">
+                <input type="radio" name="guild-location" id="location-guild-archives" class="location-selector">
+                <input type="radio" name="guild-location" id="location-supply-depots" class="location-selector">
+                <input type="radio" name="guild-location" id="location-member-lodging" class="location-selector">
+                <input type="radio" name="guild-location" id="location-guild-stables" class="location-selector">
+                <input type="radio" name="guild-location" id="location-research-laboratories" class="location-selector">
+
+                <!-- ==========================
+                Locations Table
+                ========================== -->
+                <section class="locations-table" aria-label="Guild location categories">
+
+                    <!-- ==========================
+                    Headquarters
+                    ========================== -->
+                    <details class="location-column" name="guild-locations">
+                        <summary>
+                            <img src="images/Adventurers%20Guild%20Headquarters.png" alt="Adventurer&#x27;s Guild Headquarters">
+                            <h3>Headquarters</h3>
+                        </summary>
+                        <div class="location-details">
+                            <ul>
+                                <li><label for="location-grand-guild-hall">Grand Guild Hall</label></li>
+                                <li><label for="location-council-chambers">Council Chambers</label></li>
+                                <li><label for="location-masters-office">Master's Office</label></li>
+                                <li><label for="location-hall-of-records">Hall of Records</label></li>
+                                <li><label for="location-high-contract-office">High Contract Office</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- ==========================
+                    Major Branches
+                    ========================== -->
+                    <details class="location-column" name="guild-locations">
+                        <summary>
+                            <img src="images/Adventurers%20Guild%20Major%20Branches.png" alt="Adventurer&#x27;s Guild Major Branches">
+                            <h3>Major Branches</h3>
+                        </summary>
+                        <div class="location-details">
+                            <ul>
+                                <li><label for="location-aeridell-branch">Aeridell Branch Hall</label></li>
+                                <li><label for="location-park-royal-hall">Park Royal Hall</label></li>
+                                <li><label for="location-rivergate-hall">Rivergate Guild Hall</label></li>
+                                <li><label for="location-highwatch-hall">Highwatch Guild Hall</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- ==========================
+                    Minor Branches
+                    ========================== -->
+                    <details class="location-column" name="guild-locations">
+                        <summary>
+                            <img src="images/Adventurers%20Guild%20Minor%20Branches.png" alt="Adventurer&#x27;s Guild Minor Branches">
+                            <h3>Minor Branches</h3>
+                        </summary>
+                        <div class="location-details">
+                            <ul>
+                                <li><label for="location-frontier-outposts">Frontier Outposts</label></li>
+                                <li><label for="location-village-contract-houses">Village Contract Houses</label></li>
+                                <li><label for="location-roadside-guild-posts">Roadside Guild Posts</label></li>
+                                <li><label for="location-regional-guild-offices">Regional Guild Offices</label></li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- ==========================
+                    Special Facilities
+                    ========================== -->
+                    <details class="location-column" name="guild-locations">
+                        <summary>
+                            <img src="images/Adventurers%20Guild%20Special%20Facilities.png" alt="Adventurer&#x27;s Guild Special Facilities">
+                            <h3>Special Facilities</h3>
+                        </summary>
+                        <div class="location-details">
+                            <ul>
+                                <li><label for="location-training-grounds">Training Grounds</label></li>
+                                <li><label for="location-guild-archives">Guild Archives</label></li>
+                                <li><label for="location-supply-depots">Supply Depots</label></li>
+                                <li><label for="location-member-lodging">Member Lodging</label></li>
+                                <li><label for="location-guild-stables">Guild Stables</label></li>
+                                <li><label for="location-research-laboratories">Research Laboratories</label></li>
+                            </ul>
+                        </div>
+                    </details>
+                </section>
+
+                <!-- ==========================
+                Location Description Box
+                ========================== -->
+                <div class="location-description-box" aria-live="polite">
+
+                    <!-- ==========================
+                    World of Avadon
+                    ========================== -->
+                    <article class="location-description description-avadon">
+                        <p class="location-description-category">The Guild's Home World</p>
+                        <h2 id="world-of-avadon-heading">
+                            The World of Avadon
+                            <a href="#achievement-4" class="location-achievement-trigger" aria-label="Open hidden achievement 4 of 10">
+                                <span aria-hidden="true">✦</span>
+                            </a>
+                        </h2>
+                        <p>
+                            Avadon is a vast and varied world divided among three great continents: Avadur in the west, Eryndor at its center, and Mythoria in the east. Across these lands are sixty-eight recognized countries, each shaped by its own cultures, governments, religions, magical traditions, and conflicts. Between them lie great oceans, island kingdoms, inland seas, mountain ranges, forests, deserts, and territories that remain only partially explored.
+                        </p>
+                        <p>
+                            Long ago, a star fell during a battle over a mineral-rich border. Its impact scarred the land, shattered the object, and released magic across the world. That magic now moves through Avadon along ley lines, waterways, mountain chains, geological boundaries, and places of spiritual importance. Some regions have embraced its power, others regulate or fear it, and a few actively suppress it.
+                        </p>
+                        <p>
+                            Beyond the protection of settled lands, Avadon remains filled with forgotten ruins, dangerous wilderness, magical disturbances, unusual creatures, and evidence of civilizations older than recorded history. Political rivalries, shifting borders, hazardous roads, and supernatural threats can turn even an ordinary journey into an expedition.
+                        </p>
+                        <p>
+                            The Adventurer’s Guild was established to connect the people of Avadon with those capable of facing these dangers. Its network of headquarters, regional branches, contract houses, outposts, and specialized facilities provides adventurers with contracts, training, supplies, research, lodging, and reliable support wherever their travels may lead.
+                        </p>
+                        <p><strong>Select a location above</strong>to learn more about a specific Guild branch or facility.</p>
+                    </article>
+
+                    <!-- ==========================
+                    Grand Guild Hall
+                    ========================== -->
+                    <article class="location-description description-grand-guild-hall">
+                        <p class="location-description-category">Headquarters</p>
+                        <h2>Grand Guild Hall</h2>
+                        <p>
+                            The Grand Guild Hall is the public center of the Adventurer’s Guild and the primary gathering place for members visiting headquarters. Its main chamber contains announcement boards, reception desks, meeting areas, and spaces where adventurers can speak with Guild officials.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Member registration, general contracts, official announcements, meetings, ceremonies, and public Guild business.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Council Chambers
+                    ========================== -->
+                    <article class="location-description description-council-chambers">
+                        <p class="location-description-category">Headquarters</p>
+                        <h2>Council Chambers</h2>
+                        <p>
+                            The Council Chambers are used by senior Guild leaders to review policy, discuss regional threats, approve major expenditures, and coordinate operations involving multiple branches. Representatives from allied organizations may also be invited to attend important meetings.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Guild leadership meetings, strategic planning, policy decisions, emergency coordination, and diplomatic discussions.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Master's Office
+                    ========================== -->
+                    <article class="location-description description-masters-office">
+                        <p class="location-description-category">Headquarters</p>
+                        <h2>Master's Office</h2>
+                        <p>
+                            The Master’s Office serves as the private workplace of the Guild Master. Important reports, confidential assignments, disciplinary matters, and requests requiring the highest level of Guild approval are brought here.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Executive decisions, private meetings, confidential contracts, senior appointments, and final Guild authorization.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Hall of Records
+                    ========================== -->
+                    <article class="location-description description-hall-of-records">
+                        <p class="location-description-category">Headquarters</p>
+                        <h2>Hall of Records</h2>
+                        <p>
+                            The Hall of Records preserves the official history of the Guild. Its clerks maintain membership files, completed contract reports, disciplinary records, financial ledgers, regional maps, and accounts of important discoveries.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Member records, contract histories, official reports, maps, legal documents, and historical research.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    High Contract Office
+                    ========================== -->
+                    <article class="location-description description-high-contract-office">
+                        <p class="location-description-category">Headquarters</p>
+                        <h2>High Contract Office</h2>
+                        <p>
+                            The High Contract Office reviews assignments involving powerful enemies, political consequences, restricted information, or threats extending beyond a single region. Access is generally limited to experienced adventurers and authorized Guild staff.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            High-rank contracts, classified assignments, threat assessment, mission authorization, and specialized operational support.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Aeridell Branch Hall
+                    ========================== -->
+                    <article class="location-description description-aeridell-branch">
+                        <p class="location-description-category">Major Branch</p>
+                        <h2>Aeridell Branch Hall</h2>
+                        <p>
+                            The Aeridell Branch Hall coordinates Guild activity throughout Aeridell and its surrounding communities. The branch is known for assignments involving wilderness travel, ancient sites, regional diplomacy, and threats affecting settlements beyond the protection of city walls.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Regional contracts, wilderness maps, local guides, diplomatic contacts, member lodging, and field supplies.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Park Royal Hall
+                    ========================== -->
+                    <article class="location-description description-park-royal-hall">
+                        <p class="location-description-category">Major Branch</p>
+                        <h2>Park Royal Hall</h2>
+                        <p>
+                            Park Royal Hall serves as the Guild’s principal branch within the Kingdom of Park. Its members regularly work with royal officials, city authorities, merchants, and magical organizations on politically sensitive or high-profile assignments.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Royal contracts, political liaison work, magical investigations, city assignments, secure meetings, and regional coordination.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Rivergate Guild Hall
+                    ========================== -->
+                    <article class="location-description description-rivergate-hall">
+                        <p class="location-description-category">Major Branch</p>
+                        <h2>Rivergate Guild Hall</h2>
+                        <p>
+                            Rivergate Guild Hall oversees contracts connected to waterways, trade routes, merchant caravans, docks, and river communities. Its adventurers frequently protect valuable cargo, investigate missing shipments, and respond to threats disrupting regional commerce.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Trade-route contracts, caravan coordination, shipping records, merchant contacts, river maps, and cargo protection.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Highwatch Guild Hall
+                    ========================== -->
+                    <article class="location-description description-highwatch-hall">
+                        <p class="location-description-category">Major Branch</p>
+                        <h2>Highwatch Guild Hall</h2>
+                        <p>
+                            Highwatch Guild Hall supports adventurers operating in remote, elevated, and difficult terrain. The branch monitors isolated roads, mountain settlements, abandoned ruins, and dangerous regions where help may be several days away.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Mountain contracts, survival equipment, remote-area reports, rescue coordination, guides, and secure lodging.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Frontier Outposts
+                    ========================== -->
+                    <article class="location-description description-frontier-outposts">
+                        <p class="location-description-category">Minor Branch</p>
+                        <h2>Frontier Outposts</h2>
+                        <p>
+                            Frontier outposts are small, fortified Guild stations positioned near dangerous borders, remote roads, and unsettled regions. They provide adventurers with a safe place to report threats, replenish basic supplies, and request emergency assistance.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Local contracts, threat reports, emergency shelter, basic supplies, message delivery, and frontier maps.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Village Contract Houses
+                    ========================== -->
+                    <article class="location-description description-village-contract-houses">
+                        <p class="location-description-category">Minor Branch</p>
+                        <h2>Village Contract Houses</h2>
+                        <p>
+                            Village contract houses provide smaller communities with direct access to the Adventurer’s Guild. These locations are often operated by a single Guild clerk, retired adventurer, or local representative who records requests and posts approved assignments.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Local notices, basic contracts, member check-in, community reports, and communication with larger Guild branches.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Roadside Guild Posts
+                    ========================== -->
+                    <article class="location-description description-roadside-guild-posts">
+                        <p class="location-description-category">Minor Branch</p>
+                        <h2>Roadside Guild Posts</h2>
+                        <p>
+                            Roadside Guild posts are simple facilities established along heavily traveled routes. They offer a recognizable and secure stopping point where Guild members can exchange messages, review road conditions, and rest during long journeys.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Travel notices, message exchange, temporary shelter, road maps, water, and limited emergency supplies.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Regional Guild Offices
+                    ========================== -->
+                    <article class="location-description description-regional-guild-offices">
+                        <p class="location-description-category">Minor Branch</p>
+                        <h2>Regional Guild Offices</h2>
+                        <p>
+                            Regional Guild offices handle administrative work in areas that do not require a complete Guild hall. Their staff coordinate contracts, maintain local records, communicate with nearby branches, and support adventurers working throughout the region.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Contract administration, regional records, member verification, scheduling, correspondence, and branch coordination.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Training Grounds
+                    ========================== -->
+                    <article class="location-description description-training-grounds">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Training Grounds</h2>
+                        <p>
+                            Guild training grounds provide controlled spaces where members can practice combat, survival techniques, spellcasting, teamwork, and specialized professional skills under the supervision of qualified instructors.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Skill training, combat practice, Field Training and Observation, equipment testing, and team exercises.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Guild Archives
+                    ========================== -->
+                    <article class="location-description description-guild-archives">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Guild Archives</h2>
+                        <p>
+                            Guild archives contain historical reports, creature records, maps, magical research, expedition journals, and information gathered during completed contracts. Access to sensitive sections depends on a member’s rank and authorization.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Research, maps, historical records, threat information, expedition reports, and restricted documents.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Supply Depots
+                    ========================== -->
+                    <article class="location-description description-supply-depots">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Supply Depots</h2>
+                        <p>
+                            Supply depots store equipment and materials commonly needed during Guild operations. Available resources vary by location, but most depots maintain basic tools, travel supplies, medical materials, replacement gear, and emergency provisions.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Equipment distribution, replacement supplies, emergency provisions, repair materials, and mission-specific resources.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Member Lodging
+                    ========================== -->
+                    <article class="location-description description-member-lodging">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Member Lodging</h2>
+                        <p>
+                            Member lodging provides Guild adventurers with safe and reliable accommodations while traveling on official business. The quality and privacy of the rooms may depend on the facility, the member’s rank, and current availability.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Sleeping quarters, common rooms, meals, secure storage, bathing facilities, and extended recovery stays.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Guild Stables
+                    ========================== -->
+                    <article class="location-description description-guild-stables">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Guild Stables</h2>
+                        <p>
+                            Guild stables care for horses, pack animals, mounts, and other approved forms of transportation used by adventurers. Stable staff may also arrange replacement mounts or prepare animals for long-distance assignments.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Animal care, feed, secure stalls, mount rental, transportation preparation, and basic veterinary assistance.
+                        </p>
+                    </article>
+
+                    <!-- ==========================
+                    Research Laboratories
+                    ========================== -->
+                    <article class="location-description description-research-laboratories">
+                        <p class="location-description-category">Special Facility</p>
+                        <h2>Research Laboratories</h2>
+                        <p>
+                            Guild research laboratories allow approved specialists to examine magical objects, unusual creatures, alchemical materials, curses, diseases, and evidence recovered during difficult contracts.
+                        </p>
+                        <p>
+                            <strong>Primary services:</strong>
+                            Magical analysis, alchemical testing, artifact examination, specimen research, identification, and controlled experimentation.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- ==========================
+                Achievement 4 Lightbox
+                ========================== -->
+                <div class="location-achievement-lightbox" id="achievement-4" role="dialog" aria-modal="true" aria-label="Achievement 4 of 10: Discovering Avadon">
+                    <a href="#world-of-avadon-heading" class="location-achievement-close" aria-label="Close achievement">×</a>
+                    <a href="#world-of-avadon-heading" class="location-achievement-image-link" aria-label="Close achievement and return to the World of Avadon">
+                        <img src="images/world_of_avadon_achievement_unlocked.png" alt="Achievement unlocked for discovering the World of Avadon. Achievement 4 of 10.">
+                    </a>
+                </div>
+            </div>
         </main>
 
         <!-- ==========================
