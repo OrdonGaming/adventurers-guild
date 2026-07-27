@@ -1,321 +1,269 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-<head>
+    <!-- ==========================
+    Document Setup
+    ========================== -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Browse The Adventurer&#x27;s Guild archives for handbooks, maps, forms, quest materials, reference documents, and resources for players and Game Masters.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guild Archives | Guides, Maps, and Resources</title>
+        <link rel="stylesheet" href="../global/css/style.css">
+    </head>
+    <body>
 
-<!-- ==========================
-Document Setup
-========================== -->
-
-<meta charset="UTF-8">
-<title>Guild Archives | The Adventurer's Guild</title>
-<link rel="stylesheet" href="../global/css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-
-<body>
-
-<!-- ==========================
-Site Header
-========================== -->
-
-<header class="site-title">
-
-<a href="../home/index.html">
-    <img src="../global/images/Adventurers Guild Symbol.jpg" alt="The Adventurer's Guild Logo">
-</a>
-
-<div class="title-text">
-
-    <a href="../home/index.html" class="site-title-link">
-        <h1>The Adventurer's Guild</h1>
-    </a>
-
-</div>
-
-</header>
-
-<!-- ==========================
-Navigation Bar
-========================== -->
-
-<nav class="nav-bar">
-
-<ul>
-    <li><a href="../home/index.html">Home</a></li>
-    <li><a href="../about/about-index.html">About the Guild</a></li>
-    <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
-    <li><a href="../locations/locations-index.html">Guild Locations</a></li>
-    <li><a href="../quests/quests-index.html">Quest Board</a></li>
-    <li><a href="../join/join-index.html">Join the Guild</a></li>
-    <li><a href="../resources/resources-index.html">Resources</a></li>
-    <li><a href="../news/news-index.html">News</a></li>
-</ul>
-
-</nav>
-
-<!-- ==========================
-Page Content
-========================== -->
-
-<main class="page-content">
-
-<section class="gallery-upper">
-
-    <h2 class="decorative-header">
-        <span class="line"></span>
-        <span class="star star-left">✦</span>
-        Guild Archives
-        <span class="star star-right">✦</span>
-        <span class="line"></span>
-    </h2>
-
-    <p>
-        The Guild Archives preserve artwork, screenshots, campaign moments,
-        maps, character portraits, and legendary memories from adventurers
-        across the realm.
-    </p>
-
-</section>
-
-<section class="gallery-wrapper">
-
-    <!-- Hidden Gallery Controls -->
-
-    <input type="radio" name="gallery-choice" id="gallery-none" checked>
-
-    <input type="radio" name="gallery-choice" id="expedition-gallery">
-    <input type="radio" name="gallery-choice" id="campaign-gallery">
-    <input type="radio" name="gallery-choice" id="artwork-gallery">
-    <input type="radio" name="gallery-choice" id="map-gallery">
-    <input type="radio" name="gallery-choice" id="portrait-gallery">
-    <input type="radio" name="gallery-choice" id="memory-gallery">
-
-    <!-- Gallery Category Cards -->
-
-    <div class="gallery-grid">
-
-        <label for="expedition-gallery" class="gallery-card">
-            <img src="images/Phandalin_Image_Resized.jpg" alt="Expedition records preview image">
-            <h3>Expedition Records</h3>
-        </label>
-
-        <label for="campaign-gallery" class="gallery-card">
-            <img src="images/Oathbound Campaign Cover Image.png" alt="Campaign moments preview image">
-            <h3>Campaign Moments</h3>
-        </label>
-
-        <label for="artwork-gallery" class="gallery-card">
-            <img src="images/gallery-3.jpg" alt="Guild artwork preview image">
-            <h3>Guild Artwork</h3>
-        </label>
-
-        <label for="map-gallery" class="gallery-card">
-            <img src="images/Map of Faerun.jpg" alt="Map records preview image">
-            <h3>Map Records</h3>
-        </label>
-
-        <label for="portrait-gallery" class="gallery-card">
-            <img src="images/Oathbound Party.png" alt="Character portraits preview image">
-            <h3>Character Portraits</h3>
-        </label>
-
-        <label for="memory-gallery" class="gallery-card">
-            <img src="images/gallery-6.jpg" alt="Adventure memories preview image">
-            <h3>Adventure Memories</h3>
-        </label>
-
-    </div>
-
-    <!-- Gallery Results -->
-
-    <div class="gallery-results">
-
-        <!-- Expedition Records -->
-
-        <div class="gallery-result expedition-result">
-
-            <div class="gallery-result-header">
-                <h2>Expedition Records</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
+        <!-- ==========================
+        Site Header
+        ========================== -->
+        <header class="site-title">
+            <a href="../home/index.html"><img src="../global/images/Adventurers%20Guild%20Symbol.jpg" alt="The Adventurer&#x27;s Guild Logo"></a>
+            <div class="title-text">
+                <a href="../home/index.html" class="site-title-link"><h1>The Adventurer's Guild</h1></a>
             </div>
+        </header>
 
-            <div class="gallery-image-grid">
-                <img src="images/expedition-1.jpg" alt="Expedition archive image">
-                <img src="images/expedition-2.jpg" alt="Expedition archive image">
-                <img src="images/expedition-3.jpg" alt="Expedition archive image">
-                <img src="images/expedition-4.jpg" alt="Expedition archive image">
-                <img src="images/expedition-5.jpg" alt="Expedition archive image">
-                <img src="images/expedition-6.jpg" alt="Expedition archive image">
+        <!-- ==========================
+        Main Navigation
+        ========================== -->
+        <nav class="nav-bar" aria-label="Main navigation">
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../about/about-index.html">About the Guild</a></li>
+                <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                <li><a href="../join/join-index.html">Join the Guild</a></li>
+                <li><a href="../resources/resources-index.html" aria-current="page">Resources</a></li>
+                <li><a href="../news/news-index.html">News</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==========================
+        Main Page Content
+        ========================== -->
+        <main class="page-content">
+            <section class="gallery-upper">
+                <h2 class="decorative-header">
+                    <span class="line"></span>
+                    <span class="star star-left" aria-hidden="true">✦</span>
+                    Guild Archives
+                    <span class="star star-right" aria-hidden="true">✦</span>
+                    <span class="line"></span>
+                </h2>
+                <p>The Guild Archives preserve artwork, screenshots, campaign moments, maps, character portraits, and legendary memories from adventurers across the realm.</p>
+            </section>
+            <section class="gallery-wrapper">
+
+                <!-- ==========================
+                Hidden Gallery Controls
+                ========================== -->
+                <input type="radio" name="gallery-choice" id="gallery-none" checked>
+                <input type="radio" name="gallery-choice" id="expedition-gallery">
+                <input type="radio" name="gallery-choice" id="campaign-gallery">
+                <input type="radio" name="gallery-choice" id="artwork-gallery">
+                <input type="radio" name="gallery-choice" id="map-gallery">
+                <input type="radio" name="gallery-choice" id="portrait-gallery">
+                <input type="radio" name="gallery-choice" id="memory-gallery">
+
+                <!-- ==========================
+                Gallery Category Cards
+                ========================== -->
+                <div class="gallery-grid">
+                    <label for="expedition-gallery" class="gallery-card">
+                        <img src="images/Phandalin_Image_Resized.jpg" alt="Expedition records preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Expedition Records</span>
+                    </label>
+                    <label for="campaign-gallery" class="gallery-card">
+                        <img src="images/Oathbound%20Campaign%20Cover%20Image.png" alt="Campaign moments preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Campaign Moments</span>
+                    </label>
+                    <label for="artwork-gallery" class="gallery-card">
+                        <img src="images/Landscapes-2.jpg" alt="Guild artwork preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Guild Artwork</span>
+                    </label>
+                    <label for="map-gallery" class="gallery-card">
+                        <img src="images/Map%20of%20Faerun.jpg" alt="Map records preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Map Records</span>
+                    </label>
+                    <label for="portrait-gallery" class="gallery-card">
+                        <img src="images/Oathbound%20Party.png" alt="Character portraits preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Character Portraits</span>
+                    </label>
+                    <label for="memory-gallery" class="gallery-card">
+                        <img src="images/Doctor's%20Laboratory%20-%202%20Main%20Lab.jpg" alt="Adventure memories preview image">
+                        <span class="gallery-card-title" role="heading" aria-level="3">Adventure Memories</span>
+                    </label>
+                </div>
+
+                <!-- ==========================
+                Gallery Results
+                ========================== -->
+                <div class="gallery-results">
+
+                    <!-- ==========================
+                    Expedition Records
+                    ========================== -->
+                    <div class="gallery-result expedition-result">
+                        <div class="gallery-result-header">
+                            <h2>Expedition Records</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/Expedition%20Record%20-%20Blank.png" alt="Expedition archive image">
+                            <img src="images/Expedition%20Record%20-%20Waterdeep%20To%20Phandalin.png" alt="Expedition archive image">
+                            <img src="images/Expedition%20Record%20-%20Kopjer%20To%20Zagen.png" alt="Expedition archive image">
+                            <img src="images/Expedition%20Record%20-%20Zagen%20To%20Enthalor.png" alt="Expedition archive image">
+                            <img src="images/Expedition%20Record%20-%20Enthalor%20To%20Sylvanthorn.png" alt="Expedition archive image">
+                            <img src="images/Expedition%20Record%20-%20Sylvanthorn%20To%20Academy%20of%20Magic.png" alt="Expedition archive image">
+                        </div>
+                    </div>
+
+                    <!-- ==========================
+                    Campaign Moments
+                    ========================== -->
+                    <div class="gallery-result campaign-result">
+                        <div class="gallery-result-header">
+                            <h2>Campaign Moments</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/Oathbound%20Campaign%20Cover%20Image.png" alt="Oathbound Campaign Image">
+                            <img src="images/Furniture%20Guide%20Cover%20Image.jpg" alt="Campaign moment image">
+                            <img src="images/Moto%20Image.jpg" alt="Campaign moment image">
+                            <img src="images/Journal%20Cover.png" alt="Campaign moment image">
+                            <img src="images/Guide%20To%20Thieves%20Cant%20Front%20Cover.jpg" alt="Campaign moment image">
+                            <img src="images/Kingdom%20of%20Park%20Article%20Banner.png" alt="Campaign moment image">
+                        </div>
+                    </div>
+
+                    <!-- ==========================
+                    Guild Artwork
+                    ========================== -->
+                    <div class="gallery-result artwork-result">
+                        <div class="gallery-result-header">
+                            <h2>Guild Artwork</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/elmore-dragon-slayers.jpg" alt="Guild artwork image">
+                            <img src="images/Landscapes-1.jpg" alt="Guild artwork image">
+                            <img src="images/Marculus.jpg" alt="Guild artwork image">
+                            <img src="images/Royal%20Portrait.png" alt="Guild artwork image">
+                            <img src="images/spiritdragon.jpg" alt="Guild artwork image">
+                            <img src="images/Village.jpg" alt="Guild artwork image">
+                        </div>
+                    </div>
+
+                    <!-- ==========================
+                    Map Records
+                    ========================== -->
+                    <div class="gallery-result map-result">
+                        <div class="gallery-result-header">
+                            <h2>Map Records</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/aeridell.png" alt="Map of Aeridell">
+                            <img src="images/City%20of%20Enthalor.png" alt="Map of Enthalor">
+                            <img src="images/Map%20of%20Kopjer%20(Player).png" alt="Map of Kopjer">
+                            <img src="images/Map%20of%20Zagen%20(Player).png" alt="Map of Zagen">
+                            <img src="images/0.5%20SOUTH%20WARD.jpg" alt="Map of the South Ward of Waterdeep">
+                            <img src="images/0.7%20CITY%20OF%20THE%20DEAD.jpg" alt="Map of the city of the Dead in Waterdeep">
+                        </div>
+                    </div>
+
+                    <!-- ==========================
+                    Character Portraits
+                    ========================== -->
+                    <div class="gallery-result portrait-result">
+                        <div class="gallery-result-header">
+                            <h2>Character Portraits</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/Baynor_Detsk%20Character%20Portrait_1x1.png" alt="Baynor character portrait">
+                            <img src="images/Oruson%20screenshot.png" alt="Oruson character portrait">
+                            <img src="images/Scripts%20Character%20Portrait.png" alt="Scripts character portrait">
+                            <img src="images/Sa%27yvia%20Ve%27lephi%20Character%20Portrait_1x1.png" alt="Sa&#x27;yvia Ve&#x27;lephi character portrait">
+                            <img src="images/Varis%20Galanodel.jpeg" alt="Varis Galanodel character portrait">
+                            <img src="images/Zaalevaris_Thal%27kyrin%20Character%20Portrait.png" alt="Zaalevaris Thal&#x27;kyrin character portrait">
+                        </div>
+                    </div>
+
+                    <!-- ==========================
+                    Adventure Memories
+                    ========================== -->
+                    <div class="gallery-result memory-result">
+                        <div class="gallery-result-header">
+                            <h2>Adventure Memories</h2>
+                            <label for="gallery-none" class="gallery-close">×</label>
+                        </div>
+                        <div class="gallery-image-grid">
+                            <img src="images/Dungeon%201%20-%20Goblin's%20First%20Appearance.png" alt="Adventure memory image">
+                            <img src="images/Dungeon%201%20-%20Rune%20Stone%20Key%20and%20Glyph.png" alt="Adventure memory image">
+                            <img src="images/Dungeon%201%20-%20Level%201%20Goblin%20Encampment.png" alt="Adventure memory image">
+                            <img src="images/Dungeon%201%20-%20Level%203%20Boss%20Chamber.png" alt="Adventure memory image">
+                            <img src="images/Dungeon%201%20-%20Level%203%20Boss.png" alt="Adventure memory image">
+                            <img src="images/Dungeon%201%20-%20Level%203%20Epic%20Loot%20-%20The%20Crystal%20Tablet.png" alt="Adventure memory image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ==========================
+        Site Footer
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-content">
+
+                <!-- ==========================
+                Adventurer Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Adventurer Resources</h2>
+                    <ul>
+                        <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                        <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                        <li><a href="../join/join-index.html">Join the Guild</a></li>
+                        <li><a href="../resources/resources-index.html">Guild Handbook</a></li>
+                    </ul>
+                </section>
+
+                <!-- ==========================
+                Game Master Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>GM Resources</h2>
+                    <ul>
+                        <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                        <li><a href="../resources/npc-directory.html">NPC Directory</a></li>
+                        <li><a href="../resources/quest-templates.html">Quest Templates</a></li>
+                        <li><a href="../resources/adventure-hooks.html">Adventure Hooks</a></li>
+                    </ul>
+                </section>
+
+                <!-- ==========================
+                Guild Notices
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Guild Notices</h2>
+                    <ul>
+                        <li><a href="../news/news-index.html#announcements">Latest Announcements</a></li>
+                        <li><a href="../news/news-index.html#expeditions">Upcoming Expeditions</a></li>
+                        <li><a href="../news/news-index.html#events">Guild Events</a></li>
+                        <li><a href="../resources/resources-index.html">Code of Conduct</a></li>
+                    </ul>
+                </section>
             </div>
+        </footer>
 
+        <!-- ==========================
+        Copyright
+        ========================== -->
+        <div class="copyright">
+            <p>© 2026 The Adventurer's Guild. All Rights Reserved.</p>
         </div>
-
-        <!-- Campaign Moments -->
-
-        <div class="gallery-result campaign-result">
-
-            <div class="gallery-result-header">
-                <h2>Campaign Moments</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
-            </div>
-
-            <div class="gallery-image-grid">
-                <img src="images/Oathbound Campaign Cover Image.png" alt="Oathbound Campaign Image">
-                <img src="images/campaign-2.jpg" alt="Campaign moment image">
-                <img src="images/campaign-3.jpg" alt="Campaign moment image">
-                <img src="images/campaign-4.jpg" alt="Campaign moment image">
-                <img src="images/campaign-5.jpg" alt="Campaign moment image">
-                <img src="images/campaign-6.jpg" alt="Campaign moment image">
-            </div>
-
-        </div>
-
-        <!-- Guild Artwork -->
-
-        <div class="gallery-result artwork-result">
-
-            <div class="gallery-result-header">
-                <h2>Guild Artwork</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
-            </div>
-
-            <div class="gallery-image-grid">
-                <img src="images/artwork-1.jpg" alt="Guild artwork image">
-                <img src="images/artwork-2.jpg" alt="Guild artwork image">
-                <img src="images/artwork-3.jpg" alt="Guild artwork image">
-                <img src="images/artwork-4.jpg" alt="Guild artwork image">
-                <img src="images/artwork-5.jpg" alt="Guild artwork image">
-                <img src="images/artwork-6.jpg" alt="Guild artwork image">
-            </div>
-
-        </div>
-
-        <!-- Map Records -->
-
-        <div class="gallery-result map-result">
-
-            <div class="gallery-result-header">
-                <h2>Map Records</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
-            </div>
-
-            <div class="gallery-image-grid">
-                <img src="images/map-1.jpg" alt="Map archive image">
-                <img src="images/map-2.jpg" alt="Map archive image">
-                <img src="images/map-3.jpg" alt="Map archive image">
-                <img src="images/map-4.jpg" alt="Map archive image">
-                <img src="images/map-5.jpg" alt="Map archive image">
-                <img src="images/map-6.jpg" alt="Map archive image">
-            </div>
-
-        </div>
-
-        <!-- Character Portraits -->
-
-        <div class="gallery-result portrait-result">
-
-            <div class="gallery-result-header">
-                <h2>Character Portraits</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
-            </div>
-
-            <div class="gallery-image-grid">
-                <img src="images/Baynor_Detsk Character Portrait_1x1.png" alt="Baynor character portrait">
-                <img src="images/Oruson screenshot.png" alt="Oruson character portrait">
-                <img src="images/Scripts Character Portrait.png" alt="Scripts character portrait">
-                <img src="images/Sa'yvia Ve'lephi Character Portrait_1x1.png" alt="Sa'yvia Ve'lephi character portrait">
-                <img src="images/Varis Galanodel.jpeg" alt="Varis Galanodel character portrait">
-                <img src="images/Zaalevaris_Thal'kyrin Character Portrait.png" alt="Zaalevaris Thal'kyrin character portrait">
-            </div>
-
-        </div>
-
-        <!-- Adventure Memories -->
-
-        <div class="gallery-result memory-result">
-
-            <div class="gallery-result-header">
-                <h2>Adventure Memories</h2>
-                <label for="gallery-none" class="gallery-close">×</label>
-            </div>
-
-            <div class="gallery-image-grid">
-                <img src="images/memory-1.jpg" alt="Adventure memory image">
-                <img src="images/memory-2.jpg" alt="Adventure memory image">
-                <img src="images/memory-3.jpg" alt="Adventure memory image">
-                <img src="images/memory-4.jpg" alt="Adventure memory image">
-                <img src="images/memory-5.jpg" alt="Adventure memory image">
-                <img src="images/memory-6.jpg" alt="Adventure memory image">
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-<!-- ==========================
-Footer
-========================== -->
-
-<footer class="footer">
-
-<div class="footer-content">
-
-    <section class="footer-section">
-
-        <h2>Adventurer Resources</h2>
-
-        <ul>
-            <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
-            <li><a href="../quests/quests-index.html">Quest Board</a></li>
-            <li><a href="../join/join-index.html">Join the Guild</a></li>
-            <li><a href="../resources/player-resources.html">Guild Handbook</a></li>
-        </ul>
-
-    </section>
-
-    <section class="footer-section">
-
-        <h2>GM Resources</h2>
-
-        <ul>
-            <li><a href="../locations/locations-index.html">Guild Locations</a></li>
-            <li><a href="../resources/npc-directory.html">NPC Directory</a></li>
-            <li><a href="../resources/gm-resources.html">Quest Templates</a></li>
-            <li><a href="../resources/gm-resources.html">Adventure Hooks</a></li>
-        </ul>
-
-    </section>
-
-    <section class="footer-section">
-
-        <h2>Guild Notices</h2>
-
-        <ul>
-            <li><a href="../news/announcements.html">Latest Announcements</a></li>
-            <li><a href="../news/expeditions.html">Upcoming Expeditions</a></li>
-            <li><a href="../news/events.html">Guild Events</a></li>
-            <li><a href="../resources/code-of-conduct.html">Code of Conduct</a></li>
-        </ul>
-
-    </section>
-
-</div>
-
-</footer>
-
-<section class="copyright">
-
-<p>&copy; 2026 The Adventurer's Guild. All Rights Reserved.</p>
-
-</section>
-
-</body>
-
+    </body>
 </html>
