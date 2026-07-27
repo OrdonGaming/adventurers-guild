@@ -1,984 +1,443 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-<head>
+    <!-- ==========================
+    Document Setup
+    ========================== -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Browse a spoiler-safe directory of guild officers, archivists, merchants, specialists, and trusted contacts from The Adventurer&#x27;s Guild and the world of Avadon.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NPC Directory | Guild Members, Allies, and Contacts</title>
+        <link rel="stylesheet" href="../global/css/style.css">
+    </head>
+    <body>
 
-<!-- ==========================
-Document Setup
-========================== -->
+        <!-- ==========================
+        Site Header
+        ========================== -->
+        <header class="site-title">
+            <a href="../home/index.html"><img src="../global/images/Adventurers%20Guild%20Symbol.jpg" alt="The Adventurer&#x27;s Guild logo"></a>
+            <div class="title-text">
+                <a href="../home/index.html" class="site-title-link"><h1>The Adventurer's Guild</h1></a>
+                <p>Strength in Unity, Legacy in Action!</p>
+            </div>
+        </header>
 
-<meta charset="UTF-8">
+        <!-- ==========================
+        Main Navigation
+        ========================== -->
+        <nav class="nav-bar" aria-label="Main navigation">
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../about/about-index.html">About the Guild</a></li>
+                <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                <li><a href="../join/join-index.html">Join the Guild</a></li>
+                <li><a href="../resources/resources-index.html" aria-current="page">Resources</a></li>
+                <li><a href="../news/news-index.html">News</a></li>
+            </ul>
+        </nav>
 
-<meta name="description"
-      content="Browse a spoiler-safe directory of guild officers, archivists, merchants, specialists, and trusted contacts from The Adventurer's Guild and the world of Avadon.">
+        <!-- ==========================
+        Main Page Content
+        ========================== -->
+        <main class="page-content">
+            <section class="npc-directory-page">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+                <!-- ==========================
+                Directory Introduction
+                ========================== -->
+                <header class="npc-directory-intro">
+                    <h2 class="decorative-header">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        NPC Directory
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <p>
+                        This directory records notable guild officers, scholars, merchants, specialists, and trusted contacts encountered throughout Avadon. Entries contain information commonly available to guild members and avoid confidential reports, hidden loyalties, and other restricted records.
+                    </p>
+                </header>
 
-<title>
-    NPC Directory | Guild Members, Allies, and Contacts
-</title>
+                <!-- ==========================
+                Directory Category Links
+                ========================== -->
+                <nav class="npc-category-links" aria-label="NPC directory categories">
+                    <ul>
+                        <li><a href="#guild-officers">Guild Officers</a></li>
+                        <li><a href="#scholars-and-records">Scholars &amp; Records</a></li>
+                        <li><a href="#merchants-and-specialists">Merchants &amp; Specialists</a></li>
+                        <li><a href="#travelers-and-contacts">Travelers &amp; Contacts</a></li>
+                    </ul>
+                </nav>
 
-<link rel="stylesheet"
-      href="../global/css/style.css?v=17">
-
-</head>
-
-<body>
-
-<!-- ==========================
-Site Header
-========================== -->
-
-<header class="site-title">
-
-    <a href="../home/index.html">
-
-        <img src="../global/images/Adventurers Guild Symbol.jpg"
-             alt="The Adventurer's Guild logo">
-
-    </a>
-
-    <div class="title-text">
-
-        <a href="../home/index.html"
-           class="site-title-link">
-
-            <h1>
-                The Adventurer's Guild
-            </h1>
-
-        </a>
-
-        <p>
-            Strength in Unity, Legacy in Action!
-        </p>
-
-    </div>
-
-</header>
-
-<!-- ==========================
-Navigation Bar
-========================== -->
-
-<nav class="nav-bar"
-     aria-label="Main navigation">
-
-    <ul>
-
-        <li>
-            <a href="../home/index.html">
-                Home
-            </a>
-        </li>
-
-        <li>
-            <a href="../about/about-index.html">
-                About the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="../ranks/ranks-index.html">
-                Guild Ranks
-            </a>
-        </li>
-
-        <li>
-            <a href="../locations/locations-index.html">
-                Guild Locations
-            </a>
-        </li>
-
-        <li>
-            <a href="../quests/quests-index.html">
-                Quest Board
-            </a>
-        </li>
-
-        <li>
-            <a href="../join/join-index.html">
-                Join the Guild
-            </a>
-        </li>
-
-        <li>
-            <a href="resources-index.html"
-               aria-current="page">
-                Resources
-            </a>
-        </li>
-
-        <li>
-            <a href="../news/news-index.html">
-                News
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
-<!-- ==========================
-Page Content
-========================== -->
-
-<main class="page-content">
-
-<section class="npc-directory-page">
-
-<!-- ==========================
-Directory Introduction
-========================== -->
-
-<header class="npc-directory-intro">
-
-    <h2 class="decorative-header">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        NPC Directory
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <p>
-        This directory records notable guild officers, scholars,
-        merchants, specialists, and trusted contacts encountered
-        throughout Avadon. Entries contain information commonly
-        available to guild members and avoid confidential reports,
-        hidden loyalties, and other restricted records.
-    </p>
-
-</header>
-
-<!-- ==========================
-Directory Category Links
-========================== -->
-
-<nav class="npc-category-links"
-     aria-label="NPC directory categories">
-
-    <ul>
-
-        <li>
-            <a href="#guild-officers">
+                <!-- ==========================
                 Guild Officers
-            </a>
-        </li>
+                ========================== -->
+                <section class="npc-directory-section" id="guild-officers">
+                    <h2 class="decorative-header npc-section-heading">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        Guild Officers
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <div class="npc-card-grid">
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">OM</span>
+                                <div>
+                                    <p class="npc-card-category">Administration &amp; Logistics</p>
+                                    <h3>Oren Mossledger</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Position</dt>
+                                    <dd>Quartermaster-General</dd>
+                                </div>
+                                <div>
+                                    <dt>Office</dt>
+                                    <dd>Stores and Provisioning</dd>
+                                </div>
+                                <div>
+                                    <dt>Specialty</dt>
+                                    <dd>Contracts, records, finances, permits, and supplies</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Oren believes heroic work can only endure when it is supported by dependable records, lawful agreements, and carefully managed resources. He oversees much of the Guild's administrative and logistical work.
+                            </p>
+                            <p class="npc-quote">“Heroism needs structure to survive.”</p>
+                        </article>
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">SB</span>
+                                <div>
+                                    <p class="npc-card-category">Field Operations</p>
+                                    <h3>Sarya Briarwatch</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Position</dt>
+                                    <dd>Field Captain and Training Master</dd>
+                                </div>
+                                <div>
+                                    <dt>Affiliation</dt>
+                                    <dd>Former Thornroot Warden and Hunter's Accord captain</dd>
+                                </div>
+                                <div>
+                                    <dt>Specialty</dt>
+                                    <dd>Recruit training, dangerous assignments, and field safety</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Sarya trains young hunters and adventurers to treat dangerous work as a responsibility rather than a test of pride. She expects clear orders, proper preparation, and fair compensation for those sent into the field.
+                            </p>
+                            <p class="npc-quote">“A Guild is responsible for everyone it sends out.”</p>
+                        </article>
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">TR</span>
+                                <div>
+                                    <p class="npc-card-category">Construction &amp; Facilities</p>
+                                    <h3>Thalara Rootwright</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Profession</dt>
+                                    <dd>Livingwood architect</dd>
+                                </div>
+                                <div>
+                                    <dt>Affiliation</dt>
+                                    <dd>Sylvan Foresters' Compact</dd>
+                                </div>
+                                <div>
+                                    <dt>Specialty</dt>
+                                    <dd>Guildhall design, expansion, surveys, and local approvals</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Thalara designs structures that belong to their surroundings rather than simply occupying them. She can survey prospective sites, plan a guildhall, and help navigate the environmental and civic requirements of Sylvanthorn.
+                            </p>
+                            <p class="npc-quote">“A Guild must belong to its surroundings.”</p>
+                        </article>
+                    </div>
+                </section>
 
-        <li>
-            <a href="#scholars-and-records">
-                Scholars &amp; Records
-            </a>
-        </li>
+                <!-- ==========================
+                Scholars and Records
+                ========================== -->
+                <section class="npc-directory-section" id="scholars-and-records">
+                    <h2 class="decorative-header npc-section-heading">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        Scholars &amp; Records
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <div class="npc-card-grid npc-card-grid-centered">
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">OM</span>
+                                <div>
+                                    <p class="npc-card-category">History &amp; Archives</p>
+                                    <h3>Othriel Mossward</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Position</dt>
+                                    <dd>Senior Archivist</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>The Root Archives, Sylvanthorn</dd>
+                                </div>
+                                <div>
+                                    <dt>Specialty</dt>
+                                    <dd>Historical routes, surviving structures, names, maps, and old records</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Othriel is an elderly elf known for his remarkable memory and robes filled with more pockets than seems possible. He cares for records written in ink, carved into stone, and grown directly into preserved wood.
+                            </p>
+                            <p class="npc-quote">“A memorable request is still a record.”</p>
+                        </article>
+                    </div>
+                </section>
 
-        <li>
-            <a href="#merchants-and-specialists">
-                Merchants &amp; Specialists
-            </a>
-        </li>
+                <!-- ==========================
+                Merchants and Specialists
+                ========================== -->
+                <section class="npc-directory-section" id="merchants-and-specialists">
+                    <h2 class="decorative-header npc-section-heading">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        Merchants &amp; Specialists
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <div class="npc-card-grid">
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">TM</span>
+                                <div>
+                                    <p class="npc-card-category">Gems &amp; Crystals</p>
+                                    <h3>Talen Mire</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Species</dt>
+                                    <dd>Gnome</dd>
+                                </div>
+                                <div>
+                                    <dt>Business</dt>
+                                    <dd>Prism &amp; Cut</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Enthalor</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Talen sells gems, crystals, and crafted jewelry from a quiet shop filled with precise tools. He creates custom pieces, identifies unusual stones, and studies the properties held within rare crystals.
+                            </p>
+                            <p class="npc-quote">“You don't shape the stone. You uncover it.”</p>
+                        </article>
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">EV</span>
+                                <div>
+                                    <p class="npc-card-category">Clothing &amp; Textiles</p>
+                                    <h3>Elira Voss</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Species</dt>
+                                    <dd>Human</dd>
+                                </div>
+                                <div>
+                                    <dt>Business</dt>
+                                    <dd>Sunweave Silks</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Enthalor</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Elira provides fine clothing, textiles, and custom garments for travelers who need to make the right impression. Her work is valued by diplomats, performers, merchants, and adventurers preparing for formal occasions.
+                            </p>
+                        </article>
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">RT</span>
+                                <div>
+                                    <p class="npc-card-category">Travel &amp; Survival</p>
+                                    <h3>Renn Tal</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Species</dt>
+                                    <dd>Half-Orc</dd>
+                                </div>
+                                <div>
+                                    <dt>Business</dt>
+                                    <dd>Trailwright Outfitters</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Enthalor</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Renn supplies adventuring gear, travel equipment, and practical survival tools. Customers value advice that comes from experience rather than salesmanship, especially when preparing for difficult roads.
+                            </p>
+                        </article>
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">VS</span>
+                                <div>
+                                    <p class="npc-card-category">Magic &amp; Enchantment</p>
+                                    <h3>Vaelor Syn</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Species</dt>
+                                    <dd>Elf</dd>
+                                </div>
+                                <div>
+                                    <dt>Business</dt>
+                                    <dd>The Runed Exchange</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Kingdom of Park</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Vaelor deals in magical items, scrolls, enchantments, and the identification of unusual magical effects. Guild members are advised to bring clear records of an object's origin before requesting a full appraisal.
+                            </p>
+                        </article>
+                    </div>
+                </section>
 
-        <li>
-            <a href="#travelers-and-contacts">
-                Travelers &amp; Contacts
-            </a>
-        </li>
+                <!-- ==========================
+                Travelers and Contacts
+                ========================== -->
+                <section class="npc-directory-section" id="travelers-and-contacts">
+                    <h2 class="decorative-header npc-section-heading">
+                        <span class="line"></span>
+                        <span class="star star-left" aria-hidden="true">✦</span>
+                        Travelers &amp; Contacts
+                        <span class="star star-right" aria-hidden="true">✦</span>
+                        <span class="line"></span>
+                    </h2>
+                    <div class="npc-card-grid npc-card-grid-centered">
+                        <article class="npc-card">
+                            <header class="npc-card-header">
+                                <span class="npc-monogram" aria-hidden="true">EH</span>
+                                <div>
+                                    <p class="npc-card-category">Caravan &amp; Trade Roads</p>
+                                    <h3>Edrik Haleven</h3>
+                                </div>
+                            </header>
+                            <dl class="npc-facts">
+                                <div>
+                                    <dt>Profession</dt>
+                                    <dd>Caravan driver and trade-road contact</dd>
+                                </div>
+                                <div>
+                                    <dt>Common Route</dt>
+                                    <dd>North toward the Kingdom of Park</dd>
+                                </div>
+                                <div>
+                                    <dt>Specialty</dt>
+                                    <dd>Goods transport, wagon travel, and long-distance routes</dd>
+                                </div>
+                            </dl>
+                            <p>
+                                Edrik is an experienced caravan driver who regularly seeks capable guards for difficult deliveries. He is practical, observant, and familiar with the risks found along the roads between major settlements.
+                            </p>
+                        </article>
+                    </div>
+                </section>
 
-    </ul>
-
-</nav>
-
-<!-- ==========================
-Guild Officers
-========================== -->
-
-<section class="npc-directory-section"
-         id="guild-officers">
-
-    <h2 class="decorative-header npc-section-heading">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Guild Officers
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <div class="npc-card-grid">
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    OM
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Administration &amp; Logistics
+                <!-- ==========================
+                Directory Notice
+                ========================== -->
+                <aside class="npc-directory-notice">
+                    <h2>Directory Notice</h2>
+                    <p>
+                        This page contains public-facing information only. Dungeon Masters may keep additional notes concerning secrets, motivations, alliances, quest connections, or changing relationships in their private campaign records.
                     </p>
-
-                    <h3>
-                        Oren Mossledger
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Position</dt>
-                    <dd>Quartermaster-General</dd>
-                </div>
-
-                <div>
-                    <dt>Office</dt>
-                    <dd>Stores and Provisioning</dd>
-                </div>
-
-                <div>
-                    <dt>Specialty</dt>
-                    <dd>Contracts, records, finances, permits, and supplies</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Oren believes heroic work can only endure when it is
-                supported by dependable records, lawful agreements,
-                and carefully managed resources. He oversees much of
-                the Guild's administrative and logistical work.
-            </p>
-
-            <p class="npc-quote">
-                “Heroism needs structure to survive.”
-            </p>
-
-        </article>
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    SB
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Field Operations
-                    </p>
-
-                    <h3>
-                        Sarya Briarwatch
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Position</dt>
-                    <dd>Field Captain and Training Master</dd>
-                </div>
-
-                <div>
-                    <dt>Affiliation</dt>
-                    <dd>Former Thornroot Warden and Hunter's Accord captain</dd>
-                </div>
-
-                <div>
-                    <dt>Specialty</dt>
-                    <dd>Recruit training, dangerous assignments, and field safety</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Sarya trains young hunters and adventurers to treat
-                dangerous work as a responsibility rather than a test
-                of pride. She expects clear orders, proper preparation,
-                and fair compensation for those sent into the field.
-            </p>
-
-            <p class="npc-quote">
-                “A Guild is responsible for everyone it sends out.”
-            </p>
-
-        </article>
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    TR
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Construction &amp; Facilities
-                    </p>
-
-                    <h3>
-                        Thalara Rootwright
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Profession</dt>
-                    <dd>Livingwood architect</dd>
-                </div>
-
-                <div>
-                    <dt>Affiliation</dt>
-                    <dd>Sylvan Foresters' Compact</dd>
-                </div>
-
-                <div>
-                    <dt>Specialty</dt>
-                    <dd>Guildhall design, expansion, surveys, and local approvals</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Thalara designs structures that belong to their
-                surroundings rather than simply occupying them. She
-                can survey prospective sites, plan a guildhall, and
-                help navigate the environmental and civic requirements
-                of Sylvanthorn.
-            </p>
-
-            <p class="npc-quote">
-                “A Guild must belong to its surroundings.”
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Scholars and Records
-========================== -->
-
-<section class="npc-directory-section"
-         id="scholars-and-records">
-
-    <h2 class="decorative-header npc-section-heading">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Scholars &amp; Records
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <div class="npc-card-grid npc-card-grid-centered">
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    OM
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        History &amp; Archives
-                    </p>
-
-                    <h3>
-                        Othriel Mossward
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Position</dt>
-                    <dd>Senior Archivist</dd>
-                </div>
-
-                <div>
-                    <dt>Location</dt>
-                    <dd>The Root Archives, Sylvanthorn</dd>
-                </div>
-
-                <div>
-                    <dt>Specialty</dt>
-                    <dd>Historical routes, surviving structures, names, maps, and old records</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Othriel is an elderly elf known for his remarkable
-                memory and robes filled with more pockets than seems
-                possible. He cares for records written in ink, carved
-                into stone, and grown directly into preserved wood.
-            </p>
-
-            <p class="npc-quote">
-                “A memorable request is still a record.”
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Merchants and Specialists
-========================== -->
-
-<section class="npc-directory-section"
-         id="merchants-and-specialists">
-
-    <h2 class="decorative-header npc-section-heading">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Merchants &amp; Specialists
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <div class="npc-card-grid">
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    TM
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Gems &amp; Crystals
-                    </p>
-
-                    <h3>
-                        Talen Mire
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Species</dt>
-                    <dd>Gnome</dd>
-                </div>
-
-                <div>
-                    <dt>Business</dt>
-                    <dd>Prism &amp; Cut</dd>
-                </div>
-
-                <div>
-                    <dt>Location</dt>
-                    <dd>Enthalor</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Talen sells gems, crystals, and crafted jewelry from
-                a quiet shop filled with precise tools. He creates
-                custom pieces, identifies unusual stones, and studies
-                the properties held within rare crystals.
-            </p>
-
-            <p class="npc-quote">
-                “You don't shape the stone. You uncover it.”
-            </p>
-
-        </article>
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    EV
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Clothing &amp; Textiles
-                    </p>
-
-                    <h3>
-                        Elira Voss
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Species</dt>
-                    <dd>Human</dd>
-                </div>
-
-                <div>
-                    <dt>Business</dt>
-                    <dd>Sunweave Silks</dd>
-                </div>
-
-                <div>
-                    <dt>Location</dt>
-                    <dd>Enthalor</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Elira provides fine clothing, textiles, and custom
-                garments for travelers who need to make the right
-                impression. Her work is valued by diplomats,
-                performers, merchants, and adventurers preparing for
-                formal occasions.
-            </p>
-
-        </article>
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    RT
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Travel &amp; Survival
-                    </p>
-
-                    <h3>
-                        Renn Tal
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Species</dt>
-                    <dd>Half-Orc</dd>
-                </div>
-
-                <div>
-                    <dt>Business</dt>
-                    <dd>Trailwright Outfitters</dd>
-                </div>
-
-                <div>
-                    <dt>Location</dt>
-                    <dd>Enthalor</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Renn supplies adventuring gear, travel equipment, and
-                practical survival tools. Customers value advice that
-                comes from experience rather than salesmanship,
-                especially when preparing for difficult roads.
-            </p>
-
-        </article>
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    VS
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Magic &amp; Enchantment
-                    </p>
-
-                    <h3>
-                        Vaelor Syn
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Species</dt>
-                    <dd>Elf</dd>
-                </div>
-
-                <div>
-                    <dt>Business</dt>
-                    <dd>The Runed Exchange</dd>
-                </div>
-
-                <div>
-                    <dt>Location</dt>
-                    <dd>Kingdom of Park</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Vaelor deals in magical items, scrolls, enchantments,
-                and the identification of unusual magical effects.
-                Guild members are advised to bring clear records of
-                an object's origin before requesting a full appraisal.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Travelers and Contacts
-========================== -->
-
-<section class="npc-directory-section"
-         id="travelers-and-contacts">
-
-    <h2 class="decorative-header npc-section-heading">
-
-        <span class="line"></span>
-
-        <span class="star star-left"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        Travelers &amp; Contacts
-
-        <span class="star star-right"
-              aria-hidden="true">
-            ✦
-        </span>
-
-        <span class="line"></span>
-
-    </h2>
-
-    <div class="npc-card-grid npc-card-grid-centered">
-
-        <article class="npc-card">
-
-            <header class="npc-card-header">
-
-                <span class="npc-monogram"
-                      aria-hidden="true">
-                    EH
-                </span>
-
-                <div>
-
-                    <p class="npc-card-category">
-                        Caravan &amp; Trade Roads
-                    </p>
-
-                    <h3>
-                        Edrik Haleven
-                    </h3>
-
-                </div>
-
-            </header>
-
-            <dl class="npc-facts">
-
-                <div>
-                    <dt>Profession</dt>
-                    <dd>Caravan driver and trade-road contact</dd>
-                </div>
-
-                <div>
-                    <dt>Common Route</dt>
-                    <dd>North toward the Kingdom of Park</dd>
-                </div>
-
-                <div>
-                    <dt>Specialty</dt>
-                    <dd>Goods transport, wagon travel, and long-distance routes</dd>
-                </div>
-
-            </dl>
-
-            <p>
-                Edrik is an experienced caravan driver who regularly
-                seeks capable guards for difficult deliveries. He is
-                practical, observant, and familiar with the risks
-                found along the roads between major settlements.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-<!-- ==========================
-Directory Notice
-========================== -->
-
-<aside class="npc-directory-notice">
-
-    <h2>
-        Directory Notice
-    </h2>
-
-    <p>
-        This page contains public-facing information only. Dungeon
-        Masters may keep additional notes concerning secrets,
-        motivations, alliances, quest connections, or changing
-        relationships in their private campaign records.
-    </p>
-
-    <a href="resources-index.html"
-       class="guild-button">
-        Return to Guild Resources
-    </a>
-
-</aside>
-
-</section>
-
-</main>
-
-<!-- ==========================
-Footer
-========================== -->
-
-<footer class="footer">
-
-<div class="footer-content">
-
-    <section class="footer-section">
-
-        <h2>
-            Adventurer Resources
-        </h2>
-
-        <ul>
-
-            <li>
-                <a href="../ranks/ranks-index.html">
-                    Guild Ranks
-                </a>
-            </li>
-
-            <li>
-                <a href="../quests/quests-index.html">
-                    Quest Board
-                </a>
-            </li>
-
-            <li>
-                <a href="../join/join-index.html">
-                    Join the Guild
-                </a>
-            </li>
-
-            <li>
-                <a href="downloads/Adventurer%27s%20Guild%20Player%20Handbook.pdf"
-                   download>
-                    Guild Handbook
-                </a>
-            </li>
-
-        </ul>
-
-    </section>
-
-    <section class="footer-section">
-
-        <h2>
-            GM Resources
-        </h2>
-
-        <ul>
-
-            <li>
-                <a href="../locations/locations-index.html">
-                    Guild Locations
-                </a>
-            </li>
-
-            <li>
-                <a href="npc-directory.html"
-                   aria-current="page">
-                    NPC Directory
-                </a>
-            </li>
-
-            <li>
-                <a href="quest-templates.html">
-                    Quest Templates
-                </a>
-            </li>
-
-            <li>
-                <a href="adventure-hooks.html">
-                    Adventure Hooks
-                </a>
-            </li>
-
-        </ul>
-
-    </section>
-
-    <section class="footer-section">
-
-        <h2>
-            Guild Notices
-        </h2>
-
-        <ul>
-
-            <li>
-                <a href="../news/news-index.html#announcements">
-                    Latest Announcements
-                </a>
-            </li>
-
-            <li>
-                <a href="../news/news-index.html#expeditions">
-                    Upcoming Expeditions
-                </a>
-            </li>
-
-            <li>
-                <a href="../news/news-index.html#events">
-                    Guild Events
-                </a>
-            </li>
-
-            <li>
-                <a href="downloads/Adventurer%27s%20Guild%20Code%20of%20Conduct.pdf"
-                   download>
-                    Code of Conduct
-                </a>
-            </li>
-
-        </ul>
-
-    </section>
-
-</div>
-
-</footer>
-
-<!-- ==========================
-Copyright
-========================== -->
-
-<section class="copyright">
-
-    <p>
-        &copy; 2026 The Adventurer's Guild.
-        All Rights Reserved.
-    </p>
-
-</section>
-
-</body>
-
+                    <a href="resources-index.html" class="guild-button">Return to Guild Resources</a>
+                </aside>
+            </section>
+        </main>
+
+        <!-- ==========================
+        Site Footer
+        ========================== -->
+        <footer class="footer">
+            <div class="footer-content">
+
+                <!-- ==========================
+                Adventurer Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Adventurer Resources</h2>
+                    <ul>
+                        <li><a href="../ranks/ranks-index.html">Guild Ranks</a></li>
+                        <li><a href="../quests/quests-index.html">Quest Board</a></li>
+                        <li><a href="../join/join-index.html">Join the Guild</a></li>
+                        <li><a href="../resources/resources-index.html">Guild Handbook</a></li>
+                    </ul>
+                </section>
+
+                <!-- ==========================
+                Game Master Resources
+                ========================== -->
+                <section class="footer-section">
+                    <h2>GM Resources</h2>
+                    <ul>
+                        <li><a href="../locations/locations-index.html">Guild Locations</a></li>
+                        <li><a href="../resources/npc-directory.html" aria-current="page">NPC Directory</a></li>
+                        <li><a href="../resources/quest-templates.html">Quest Templates</a></li>
+                        <li><a href="../resources/adventure-hooks.html">Adventure Hooks</a></li>
+                    </ul>
+                </section>
+
+                <!-- ==========================
+                Guild Notices
+                ========================== -->
+                <section class="footer-section">
+                    <h2>Guild Notices</h2>
+                    <ul>
+                        <li><a href="../news/news-index.html#announcements">Latest Announcements</a></li>
+                        <li><a href="../news/news-index.html#expeditions">Upcoming Expeditions</a></li>
+                        <li><a href="../news/news-index.html#events">Guild Events</a></li>
+                        <li><a href="../resources/resources-index.html">Code of Conduct</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+
+        <!-- ==========================
+        Copyright
+        ========================== -->
+        <div class="copyright">
+            <p>© 2026 The Adventurer's Guild. All Rights Reserved.</p>
+        </div>
+    </body>
 </html>
