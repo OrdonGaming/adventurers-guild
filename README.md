@@ -1,8 +1,12 @@
 # The Adventurer's Guild
+<p align="center"> * This repository contains the original static website created as a Web Design project. * </p>
 
-A fantasy-themed website created as part of a Web Design course. The site serves as a fictional information hub for The Adventurer's Guild, an organization dedicated to connecting adventurers with quests, training, resources, and opportunities throughout the realm.
+<p align="center"> * Development of the new Adventurer's Guild campaign platform has moved to a separate private application repository. * </p>
+
+
 
 ## Project Overview
+A fantasy-themed website created as part of a Web Design course. The site serves as a fictional information hub for The Adventurer's Guild, an organization dedicated to connecting adventurers with quests, training, resources, and opportunities throughout the realm.
 
 The Adventurer's Guild website is designed to simulate a fully functioning guild organization within a fantasy setting. Visitors can learn about the guild, explore its ranks and locations, browse quest boards, review resources, and follow guild news and announcements.
 
